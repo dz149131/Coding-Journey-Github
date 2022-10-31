@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="eyemove.js"></script>
+		<style>
+			main {
+				display: grid;
+				place-items: center;
+				min-height: 100vh;
+				position: relative;
+			}
+			#eyes,
+			#eyes img {
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<img src="pepe.jpg" id="anchor" />
+			<div id="eyes">
+				<img src="eye.png" class="eye" style="top: -122px; right: -27px" />
+				<img src="eye.png" class="eye" style="top: -121px; right: -199px" />
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+a {
+    color: #ff001e;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    border: 1px black solid;
+    background-color: rgba(0, 0, 255, 0.199);
+    text-decoration: none;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    height: 100%;
+    margin: 0;
+}
+img {
+    border: black solid 1px;
+    margin: 5px;
+}
+div {
+    background-color: #0230472c;
+    border: 1px solid #023047;
+}
+section {
+    background-color: #344e4141;
+}
+.navbar {
+    background: #354f5285;
+    position: fixed;
+}
+nav a {
+    color: #f1eded;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.navbar ul {
+    background-color: transparent;
+    list-style: none;
+    margin: 0;
+}
+.navbar > ul > li{
+    float: left;
+    position: relative;
+}
+.navbar ul li a {
+    padding: 10px 15px;
+    display: block;
+}
+.navbar ul li:hover a{
+    background: #6f8f76;
+}
+.navbar ul ul {
+    position: absolute;
+    padding: 0;
+    min-width: 160px;
+    display: none;
+    top: 100%;
+    left: 0;
+}
+.navbar ul li:hover > ul {
+    display: block;
+}
+.navbar ul ul li:hover a {
+    background: #82b38c;
+}
+.navbar ul ul li {
+    position: relative;
+}
+.navbar ul ul ul {
+    top: 0;
+    left: 100%;
+}
+.navbar ul ul ul li:hover a {
+    background-color: #ef233c;
+}
+#basic_building_blocks {
+    padding-top: 40px;
+}
+h2 , h3 , h4 {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 10px;
+}
+.navbar ul li ul li {
+    border: #386342 solid 1px;
+}
+p {
+    background-color: #4ab35f52;;
+}
+#thisButton {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+#randomColorButton {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+.winner {
+    color: green;
+}
+.loser {
+    color: red;
+}

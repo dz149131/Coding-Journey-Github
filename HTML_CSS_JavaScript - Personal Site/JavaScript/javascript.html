@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="javascript.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="C:\Users\Danny\Desktop\Web Development\HTML - Personal Site">Main</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#basic_building_blocks">Basic Building Blocks</a>
+                <ul>
+                    <li><a href="#declaring_variables">Declaring Variables</a></li>
+                    <li><a href="#math">Math</a></li>
+                    <li><a href="#number">Number</a></li>
+                    <li><a href="#boolean_comparasion_operators">Boolean/Comparasion Operators</a></li>
+                    <li><a href="#null">Null</a></li>
+                    <li><a href="#undefined">Undefined</a></li>
+                </ul>
+            </li>
+            <li><a href="#string">String</a></li>
+            <li><a href="#java_decision_making">Java Decision Making</a></li>
+            <li><a href="#conditional_statements">Conditional Statements</a>
+                <ul>
+                    <li><a href="#if">If</a></li>
+                    <li><a href="#else_if">Else if</a></li>
+                    <li><a href="#else">Else</a></li>
+                </ul>
+            </li>
+            <li><a href="#combining_expressions">Combining Expressions</a>
+                <ul>
+                    <li><a href="#&&_logical_and">Logical And (&&)</a></li>
+                    <li><a href="#||_logical_or">Logical Or (||)</a></li>
+                    <li><a href="#logical&&_+_logical ||">Logical (&&) and Logical (||)</a></li>
+                    <li><a href="#!_logical_not">Logical Not (!)</a></li>
+                    <li><a href="#switch">Switch</a></li>
+                </ul>
+            </li>
+            <li><a href="#arrays">Arrays</a>
+                <ul>
+                    <li><a href="#push">Push</a></li>
+                    <li><a href="#pop">Pop</a></li>
+                    <li><a href="#shift">Shift</a></li>
+                    <li><a href="#unshift">Unshift</a></li>
+                    <li><a href="#concat">Concat</a></li>
+                    <li><a href="#indexOf">IndexOf</a></li>
+                    <li><a href="#includes">Includes</a></li>
+                    <li><a href="#reverse">Reverse</a></li>
+                    <li><a href="#slice">Slice</a></li>
+                    <li><a href="#splice">Splice</a></li>
+                    <li><a href="#sort">Sort</a></li>
+                </ul>
+            </li>
+            <li><a href="#object">Object</a>
+                <ul>
+                    <li><a href="#accessing_objects">Accessing Objects</a></li>
+                    <li><a href="#modifying_objects">Modifying Objects</a></li>
+                    <li><a href="#nesting_array_and_objects">Nesting Arrays and Objects</a></li>
+                </ul>
+            </li>
+            <li><a href="#loops">Loops</a>
+                <ul>
+                    <li><a href="#for_loop">for loop</a></li>
+                    <li><a href="#while_loop_and_break">while loop and break</a></li>
+                    <li><a href="#guessing_game_practice">guessing game project</a></li>
+                    <li><a href="#for...of_loop_iterating_objects/arrays">for...of loop iterating objects/arrays</a></li>
+                    <li><a href="#for..in_loop">for...in loop</a></li>
+                </ul>
+            </li>
+            <li><a href="#todolist_project">Todolist Project</a></li>
+            <li><a href="#function*">Functions*</a>
+                <ul>
+                    <li><a href="#function">Function</a></li>
+                    <li><a href="#arguments">Arguments</a></li>
+                    <li><a href="#return">Return</a></li>
+                </ul>
+            </li>
+            <li><a href="#exercises">Exercises</a></li>
+            <li><a href="#scope">Scopes</a>
+                <ul>
+                    <li><a href="#function_scope">Function Scope</a></li>
+                    <li><a href="#block_scope">Block Scope</a></li>
+                    <li><a href="#lexical_scope">Lexical Scope</a></li>
+                </ul>
+            </li>
+            <li><a href="#functions_lvl2*">Functions Lvl2*</a>
+                <ul>
+                    <li><a href="#function_expression">Function Expression</a></li>
+                    <li><a href="#functions_as_arguments">Functions As Arguments</a></li>
+                    <li><a href="#returing_functions">Returning Functions</a></li>
+                    <li><a href="#methods">Methods</a></li>
+                    <li><a href="#this">This</a></li>
+                    <li><a href="#try...catch">Try...Catch</a></li>
+                    <li><a href="#forEach">forEach</a></li>
+                    <li><a href="#map">Map</a></li>
+                    <li><a href="#arrow_functions">Arrow Functions</a></li>
+                    <li><a href="#setTimeout_setInterval">setTimeout/setInterval</a></li>
+                    <li><a href="#find">Find</a></li>
+                    <li><a href="#filter">Filter</a></li>
+                    <li><a href="#some_and_every_methods">Some / Every</a></li>
+                    <li><a href="#reduce">Reduce</a></li>
+                </ul>
+            </li>
+            <li><a href="#javascript_features">Javascript Features</a>
+                <ul>
+                    <li><a href="#parameters">Parameters</a></li>
+                    <li><a href="#spread">Spread</a></li>
+                    <li><a href="#destructuring">Destructuring</a></li>
+                </ul>
+            </li>
+            <li><a href="#dom">DOM</a>
+                <ul>
+                    <li><a href="#document">Document</a></li>
+                    <li><a href="#selectors">Selectors</a>
+                        <ul>
+                            <li><a href="#element">Element</a></li>
+                            <li><a href="#getElementById">getElementById</a></li>
+                            <li><a href="#getElementsByTagName">getElementsByTagName</a></li>
+                            <li><a href="#getElementsByClassName">getElementsByClassName</a></li>
+                            <li><a href="#querySelector">querySelector</a></li>
+                            <li><a href="#querySelectorAll">querySelectorAll</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#manipulate">Manipulate</a>
+                        <ul>
+                            <li><a href="#innerText">innerText</a></li>
+                            <li><a href="#textContent">textContent</a></li>
+                            <li><a href="#innerHtml">innerHtml</a></li>
+                            <li><a href="#practice">Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#properties_&_methods">Properties & Methods</a>
+                        <ul>
+                            <li><a href="#element.attributes">Element.attributes</a></li>
+                            <li><a href="#htmlelement.style">HTMLElement.style</a></li>
+                            <li><a href="#classList">classList</a></li>
+                            <li><a href="#transversing_parent/child/sibling">Transversing Parent/Child/Sibling</a></li>
+                            <li><a href="#createElement">createElement</a></li>
+                            <li><a href="#appendChild_prepend_append">appendChild & prepend & append</a></li>
+                            <li><a href="#insertAdjacentElement">insertAdjacentElement</a></li>
+                            <li><a href="#after_before">after & before</a></li>
+                            <li><a href="#100_button_exercise">100 Button Exercise</a></li>
+                            <li><a href="#pokemonSpritesProject">Pokemon Sprites Project</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#dom_2.0">DOM 2.0</a>
+                <ul>
+                    <li><a href="#events">Events</a>
+                        <ul>
+                            <li><a href="#inline_events">inline events</a></li>
+                            <li><a href="#onclick">onclick</a></li>
+                            <li><a href="#addEventListener">addEventListener</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#random_color_exercise">Random Color Exercise</a></li>
+                    <li><a href="#this_&_events">This & Events</a></li>
+                    <li><a href="#keyboard_events">Keyboard Events</a>
+                        <ul>
+                            <li><a href="#keyboard_event">Keyboard Event</a></li>
+                            <li><a href="#keyup_keydown">keyup & keydown</a></li>
+                            <li><a href="#keyboardEvent.key">keyboardEvent.key</a></li>
+                            <li><a href="#keyboardEvent.code">keyboardEvent.code</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#form_events">Form Events</a>
+                        <ul>
+                            <li><a href="#preventDefault">Event.preventDefault()</a></li>
+                            <li><a href="#event_form_practice">Event Form Practice</a></li>
+                            <li><a href="#twitter_form_practice">Twitter Form Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#input_&_change">Input & Change</a>
+                        <ul>
+                            <li><a href="#input">Input</a></li>
+                            <li><a href="#change">Change</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#eventBubbling">Event Bubbling</a>
+                        <ul>
+                            <li><a href="#bubbleContainer">bubbleContainer</a></li>
+                            <li><a href="#stopPropagation">stopPropagation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#event_delegation">Event Delegation</a></li>
+                </ul>
+            </li>
+            <li><a href="#scorekeeper">ScoreKeeper</a></li>
+        </ul>
+    </nav>
+
+    <section id="basic_building_blocks">
+        <ul>
+            <h1><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript:</a></h1>
+
+            <div id="declaring_variables">
+                <li>Declaring Variables:
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let:</a></li>
+                            <ul>
+                                <li>The let declaration declares a block-scoped local variable, optionally initializing it to a value.</li>
+                            </ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">const:</a></li>
+                            <ul>
+                                <li>Constants are block-scoped, much like variables declared using the let keyword. The value of a constant can't be changed through reassignment </li>
+                            </ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">var:</a></li>
+                            <ul>
+                                <li>The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.</li>
+                            </ul>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="math">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math:</a></li>   
+            </div>
+            
+            <div id="number">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number:</a></li>
+            </div>
+
+            <div id="boolean_comparasion_operators">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean:</a>
+                    <ul>
+                        <li>True or false</li>
+                        <li>Comparasion Operators:</li>
+                        <ul>
+                            <li> > // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">greater than</a></li>
+                            <li> < // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">less than</a></li>
+                            <li> >= // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">greater than or equal to</a></li>
+                            <li> <= // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">less than or equal to</a></li>
+                            <li> == // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality">equality</a></li>
+                            <li> != // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">inequality</a></li>
+                            <li> === // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">strict equality</a></li>
+                            <li> !== // <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">strict inequality</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </div>
+                 
+            <div id="null">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null">Null:</a>
+                    <ul>
+                        <li>Intentional absensce of any value</li>
+                        <li>Must be assigned</li>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="undefined">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">Undefined:</a>
+                    <ul>
+                        <li>Variables that do not have an assigned value are undefined</li>
+                    </ul>
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="string">   
+        <ul>
+            <div id="strings">
+                <h1>Strings</h1>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String:</a> 
+                    <ul>
+                        <li>Strings are useful for holding data that can be represented in text form. </li>
+                        <li>Methods:
+                            <ul>
+                                <li>built-in actions we can perform with individual strings
+                                    <ul>
+                                        <li>searching within a string</li>
+                                        <li>replacing part of a string</li>
+                                        <li>changing the casing of a string</li>
+                                    </ul>
+                                </li>
+                            </ul>        
+                            <img src="pictures - javascriptHtmlpage\string_practice.PNG" alt="">
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="string_template_literals">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">String Template Literals:</a>
+                    <ul>
+                        <li>
+                            Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, string interpolation with embedded expressions, and special constructs called tagged templates.<br>
+                            <img src="pictures - javascriptHtmlpage\string_template_literals.PNG" alt="">
+                        </li>
+                    </ul>   
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="java_decision_making">
+        <ul>
+            <div id="decision_making">
+                <h1>Decision Making</h1>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console.log("")</a></li>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">alert("")</a></li>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">prompt("")</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt()</a></li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="conditional_statements">
+        <ol>
+            <div id="if">
+                <h1>Conditional Statements</h1>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if</a>
+                    <ul>
+                        <li>The if statement executes a statement if a specified condition is truthy. <br>
+                         If the condition is falsy, another statement in the optional else clause will be executed.</li>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="else_if">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">else if</a>
+                    <ul>
+                        <li>The if statement executes a statement if a specified condition is truthy. <br>
+                             If the condition is falsy, another statement in the optional else clause will be executed.</li>
+                    </ul>
+                    <img src="pictures - javascriptHtmlpage\else_if_practice.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="else">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">else</a> <br>
+                    <img src="pictures - javascriptHtmlpage\else.PNG ">
+                </li>     
+            </div>       
+        </ol>
+    </section>
+<hr>
+    <section id="combining_expressions">
+        <ul>
+            <h1>Combining Expressions</h1>
+            <div id="&&_logical_and">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">&& (logical and)</a>
+                    <ul>
+                        <li>The logical AND (&&) operator (logical conjunction) for a set of boolean operands <u>will be true if and only if all the operands are true. Otherwise it will be false.</u></li>
+                    </ul>
+                    <img src="pictures - javascriptHtmlpage\logical _and(&&).PNG" alt="">
+                </li>
+            </div>
+
+            <div id="||_logical_or">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">|| (logical or)</a>
+                    <ul>
+                        <li>The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of its operands is true. <u>If one side is true, the entire thing is true</u></li>
+                    </ul>
+                    <img src="pictures - javascriptHtmlpage\logical_or.PNG" alt="">
+                </li>
+            </div>
+            
+            <div id="logical&&_+_logical ||">
+                <li>Logical && and Logical ||<br>
+                    <img src="pictures - javascriptHtmlpage\logical_or_and.PNG" alt="">
+                </li>
+            </div>
+            
+            <div id="!_logical_not">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">! (logical not)</a>
+                    <ul>
+                        <li>The logical NOT (!) operator (logical complement, negation) takes truth to falsity and vice versa. It is typically used with boolean (logical) values. <br>
+                            When used with non-Boolean values, it returns false if its single operand can be converted to true; otherwise, returns true. <u>Returns true if expression is false</u></li>
+                    </ul>
+                    <img src="pictures - javascriptHtmlpage\logical_not.PNG" alt="">
+                </li>
+            </div>
+           
+            <div id="switch">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">switch</a>
+                    <ul>
+                        <li>The <u>switch</u> statement evaluates an expression, matching the expression's value against a series of <u>case</u> clauses, and executes <br>
+                            statements after the first case clause with a matching value, until a <u>break</u> statement is encountered. The <u>default</u> clause of a <br>
+                            switch statement will be jumped to if no case matches the expression's value.</li>
+                    </ul>
+                    <img src="pictures - javascriptHtmlpage\switch.PNG" alt="">
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="arrays">
+        <ul>
+            <div id="arrays">
+                <h1>Arrays [ ]</h1>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">arrays</a>
+                    <ul>
+                        <li>The Array object, as with arrays in other programming languages, enables storing a collection of <br>
+                            multiple items under a single variable name, and has members for performing common array operations.</li>
+                        <li><b><u>Arrays + Const</u></b>
+                            <ul>
+                                <li> The values can change as long as the reference remains the same. (able to push/pop but not set arraytest = (another refrence) </li>
+                            </ul>
+                        </li>
+                        <li><u>SYNTAX:</u></li>
+                    </ul>
+                    <img src="pictures - javascriptHtmlpage\array_practice.PNG" alt="">
+                    <img src="pictures - javascriptHtmlpage\array.PNG" alt="">
+                    <h2> Multi-Dimensional Arrays</h2>
+                    <img src="pictures - javascriptHtmlpage\multi-dimensional_arrays.PNG" alt="">
+                </li>
+            </div>
+            
+            <div id="array_methods">
+                <h1>Array Methods:</h1>
+                <img src="pictures - javascriptHtmlpage\moreArrayMethods.PNG" alt="">
+                <div id="push">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Push</a>
+                        <ul>
+                            <li>add to end</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\push_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\push.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="pop">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">Pop</a>
+                        <ul>
+                            <li>remove from end</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\pop_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\pop.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="shift">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">Shift</a>
+                        <ul>
+                            <li>remove from start</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\shift_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\shift.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="unshift">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">Unshift</a>
+                        <ul>
+                            <li>add to start</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\unshift_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\unshift.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="concat">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat">Concat</a>
+                        <ul>
+                            <li>The concat() method is used to <u>merge two or more arrays.</u> This method does not change the existing arrays, but instead returns a new array.</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\concat_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\concat.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="indexOf">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a>
+                        <ul>
+                            <li>The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\indexOf_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\indexOf.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="includes">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Includes</a>
+                        <ul>
+                            <li>The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\includes_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\includes.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="reverse">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">Reverse</a>
+                        <ul>
+                            <li>The reverse() method reverses an array in place and returns the reference to the same array, the first array <br>
+                                element now becoming the last, and the last array element becoming the first. In other words, elements order in the <br>
+                                array will be turned towards the direction opposite to that previously stated.</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\reverse_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\reverse.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="slice">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Slice</a>
+                        <ul>
+                            <li>The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end <br>
+                                (end not included) where start and end represent the index of items in that array. The original array will not be modified.</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\slice_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\slice.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="splice">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Splice</a>
+                        <ul>    
+                            <li>The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. <br>
+                                To access part of an array without modifying it, see slice().</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\splice_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\splice.PNG" alt="">
+                    </li>
+                </div>
+
+                <div id="sort">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Sort</a>
+                        <ul>    
+                            <li>The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. <br>
+                                The default sort order is ascending, built upon converting the elements into strings, then comparing their <br>
+                                sequences of UTF-16 code units values.</li>
+                            <li><u>SYNTAX:<br><img src="pictures - javascriptHtmlpage\sort_syntax.PNG" alt=""></u></li>
+                        </ul>
+                        <img src="pictures - javascriptHtmlpage\sort.PNG" alt="">
+                    </li>
+                </div>
+
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="object">
+        <ul>
+            <div id="object">
+                <h1>Objects { }</h1>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></li>
+                    <ul>
+                        <b><li>LIKE ARRAYS EXCEPT REPLACE INDEX OF NUMBERS (0:, 1:, 2:, etc..) WITH A KEY VALUE YOU ASSIGN (filetype:, memberid:)</li></b>
+                        <li>Objects are collection of properties</li>
+                        <li>Rather than accessing data using an index, we use custom keys</li>
+                        <li><u>SYNTAX: o = {};</u></li>
+                    </ul>
+                <img src="pictures - javascriptHtmlpage\object.PNG" alt="">
+                <img src="pictures - javascriptHtmlpage\object_practice.PNG" alt="">    
+            </div>
+
+            <div id="accessing_objects">
+                <li><b>ACCESSING objects</b> <br>
+                    <img src="pictures - javascriptHtmlpage\accessing_object.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="modifying_objects">
+                <li><b>MODIFYING objects</b> <br>
+                    <img src="pictures - javascriptHtmlpage\modifying_object.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="nesting_array_and_objects">
+                <li><b>Nesting Arrays and Objects</b> <br>
+                    <img src="pictures - javascriptHtmlpage\nesting_arrays_and_objects.PNG" alt="">
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="loops">
+        <ul>
+            <h1>Loops</h1>
+            <div id="for_loop">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop:</a>
+                    <ul>
+                        <li>The for statement creates a loop that consists of three optional expressions, enclosed in parentheses <br>
+                            and separated by semicolons, followed by a statement (usually a block statement) to be executed in the loop. </li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\for_loop_syntax_0.PNG" alt=""></li>
+                        <h3>Examples:</h3>
+                            <img src="pictures - javascriptHtmlpage\for_loop.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\for_loop_ex0.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\for_loop_ex1.PNG" alt="">
+                    </ul>
+                    <h3>Looping Over Arrays and Nested Loops</h3>
+                        <ul>
+                            <li><b>Forward</b> <br>
+                                <img src="pictures - javascriptHtmlpage\looping_over_array.PNG" alt="">
+                            </li>
+                            <li><b>Reverse </b> <br>
+                                <img src="pictures - javascriptHtmlpage\looping_over_array_reverse.PNG" alt="">
+                            </li>
+                            <li><b>Iterating arrays and arrays exercise</b> <br>
+                                <img src="pictures - javascriptHtmlpage\iterating _arrays_exercise.PNG" alt="">
+                            </li>
+                            <li><b>Nested loops</b> <br>
+                                <img src="pictures - javascriptHtmlpage\nested_loop_ex1.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\nested_loop.PNG" alt="">
+                            </li>   
+                        </ul>
+                </li>
+            </div>
+
+            <div id="while_loop_and_break">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while">while loop:</a>
+                    <ul>
+                        <li>The while statement creates a loop that executes a specified statement <br>
+                            <b>as long as the test condition evaluates to true.</b></li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\while_loop_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <video controls>
+                                <source src="videos -javascriptHTMLpage\while_loop.mp4" type="video/mp4">
+                            </video>
+                            <img src="pictures - javascriptHtmlpage\while_loop.PNG" alt="">
+                    </ul>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break">BREAK:</a><br>
+                    <ul>
+                        <li>The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.</li>
+                        <h3>EXAMPLES:</h3>
+                            <video controls>
+                                <source src="videos -javascriptHTMLpage\while_loop_break.mp4" type="video/mp4">
+                            </video>
+                            <img src="pictures - javascriptHtmlpage\while_loop_break.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="guessing_game_practice">
+                <h1>Guessing game practice</h1>
+                <img src="pictures - javascriptHtmlpage\guessing_game_practice.PNG" alt="">
+            </div>
+
+            <div id="for...of_loop_iterating_objects/arrays">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of loop</a>
+                    <ul>
+                        <li>The for...of statement executes a loop that operates on a sequence of values sourced from an iterable object. <br>
+                            Iterable objects include instances of built-ins such as Array, String, TypedArray, Map, Set, NodeList (and other DOM collections), <br>
+                            as well as the arguments object, generators produced by generator functions, and user-defined iterables.</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\for...of_loop_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <h4>Iterating over arrays:</h4>
+                                <img src="pictures - javascriptHtmlpage\for...of_loop_ex1.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\for...of_loop.PNG" alt=""> 
+                                <img src="pictures - javascriptHtmlpage\for...of_loop_ex2.PNG" alt="">
+                            <h4>Iterating over objects:</h4>
+                                <img src="pictures - javascriptHtmlpage\object_properties.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\iterating_over_objects_practice.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="for..in_loop">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for..in loop</a>
+                    <ul>
+                        <li>The for...in statement <u><b>iterates over all enumerable string properties of an object</b></u> <br>
+                            (ignoring properties keyed by symbols), including inherited enumerable properties.</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\for...in_loop_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\for...in_loop.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="todolist_project">
+        <ul>
+            <div id="to_do_list_project">
+                <h1>Todo List Project</h1>
+                <ul>
+                    <li><b>Self:</b><br>
+                        <img src="pictures - javascriptHtmlpage\todo_project_self.PNG" alt="">
+                    </li>
+                    <li><b>Codealong:</b><br>
+                        <img src="pictures - javascriptHtmlpage\todo_project_codealong.PNG" alt="">
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="function*">
+        <ul>
+            <div id="function">
+                <h1>Functions*</h1>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">Functions:</a>
+                    <ul>
+                        <li>Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to <br>
+                            a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as <br>
+                            a function, it should take some input and return an output where there is some obvious relationship between the <br>
+                            input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\function_syntax.PNG" alt=""></li>
+                        <h3>Examples:</h3>
+                            <img src="pictures - javascriptHtmlpage\function_practice.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\function_ex1.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\function_ex2.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="arguments">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments">Arguments:</a>
+                    <ul>
+                        <li>Array-like object accessible inside functions that contains the values of the arguments passed to that function.</li>
+                        <li><u><b>A parameter is a named variable passed into a function. Parameter variables are used to import arguments into functions.</b></u></li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\arguemnt_syntax.PNG" alt=""></li>
+                        <h3>Functions With Multiple Arguments:</h3>
+                            <img src="pictures - javascriptHtmlpage\function.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\multiple_argument_function.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="return">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return">Return:</a>
+                    <ul>
+                        <li>The return statement <u>ends function execution</u> and specifies a value to be returned to the function caller.</li>
+                        <li>Captures </li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\return_syntax.PNG" alt=""></li>
+                        <h3>Examples:</h3>
+                            <img src="pictures - javascriptHtmlpage\return.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\return_ex1.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\return_ex2.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="exercises">
+        <ul>
+            <div id="exercises">
+                <h1>Exercises:</h1>
+                <img src="pictures - javascriptHtmlpage\exercises_1.PNG" alt="">
+                <img src="pictures - javascriptHtmlpage\exercises_2.PNG" alt="">
+                <img src="pictures - javascriptHtmlpage\exercises_3.PNG" alt="">
+                <img src="pictures - javascriptHtmlpage\exercises_4.PNG" alt="">
+                <img src="pictures - javascriptHtmlpage\exercises_5.PNG" alt="">
+            </div>
+        </ul>
+        
+    </section>
+<hr>
+    <section id="scope">
+        <ul>
+            <h1><a href="https://developer.mozilla.org/en-US/docs/Glossary/Scope">Scopes</a></h1>
+            <div id="function_scope">
+                <li><h2>Function Scope:</h2><br>
+                    <img src="pictures - javascriptHtmlpage\function_scope.PNG" alt="">
+                    <img src="pictures - javascriptHtmlpage\function_scope2.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="block_scope">
+                <li><h2>Block Scope:</h2><br>
+                    <img src="pictures - javascriptHtmlpage\block_scope.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="lexical_scope">
+                <li><h2>Lexical Scope:</h2><br>
+                    <img src="pictures - javascriptHtmlpage\lexical_scope.PNG" alt="">
+                </li>
+            </div>
+        </ul>
+
+    </section>
+<hr>
+    <section id="functions_lvl2*">
+        <ul>
+            <h1><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">Functions Lvl 2</a></h1>
+            <div id="function_expression">
+                <li><h2>Function Expression:</h2> <br>
+                    <h3>Defining a function and saving it as a variable:</h3>
+                    <img src="pictures - javascriptHtmlpage\function_expression_ex.PNG" alt="">
+                    <img src="pictures - javascriptHtmlpage\function_expression.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="functions_as_arguments">
+                <li><h2>Functions As Arguments</h2> <br>
+                    <h3>Passing a function within a function:</h3>
+                        <img src="pictures - javascriptHtmlpage\higher_order_functions_ex.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\higher_order_functions_ex2.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="returing_functions">
+               <li><h2>Returning a function:</h2> <br> 
+                    <h3>Capturing a function within a variable:</h3> 
+                        <img src="pictures - javascriptHtmlpage\capturing_a_function.PNG" alt="">
+                    <h3>Returning a function within a function:</h3>
+                        <img src="pictures - javascriptHtmlpage\return_function.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="methods">
+                <li><h2>Methods:</h2> <br>
+                    <h3>Defining Methods:</h3>
+                    <img src="pictures - javascriptHtmlpage\method.PNG" alt="">
+                    <img src="pictures - javascriptHtmlpage\method_ex.PNG" alt="">
+                    <img src="pictures - javascriptHtmlpage\method_ex2.PNG" alt="">
+                </li>
+            </div>
+            
+            <div id="this">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">This</a>
+                    <ul>
+                        <li>
+                            A function's this keyword behaves a little differently in JavaScript compared to other languages. <br>
+                            It also has some differences between strict mode and non-strict mode. In most cases, the value of this is determined <br>
+                            by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different <br>
+                            each time the function is called. The bind() method can set the value of a function's this regardless of how it's <br>
+                            called, and arrow functions don't provide their own this binding (it retains the this value of the enclosing lexical context). <br>
+                        <img src="pictures - javascriptHtmlpage\this.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\this_pt2.PNG" alt="">
+                        </li>
+                        <h3>Exmaples:</h3>
+                            <img src="pictures - javascriptHtmlpage\this_ex.PNG" alt="">
+                        <h3>Arrow Functions & "this"</h3>
+                            <img src="pictures - javascriptHtmlpage\arrow_functions_this_ex.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="try...catch">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">Try...Catch</a>
+                    <ul>
+                        <li>The try...catch statement is comprised of a try block and either a catch block, a finally block, or both. <br>
+                            The code in the try block is executed first, and if it throws an exception, the code in the catch block will be executed. <br>
+                            The code in the finally block will always be executed before control flow exits the entire construct. <br>
+                        </li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\try...catch_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\try...catch_ex2.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\try...catch_ex.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="forEach">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a>
+                    <ul>
+                        <li>Accepts a call backfunction. Calls the function once per element in the array.</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\forEach_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\forEach_ex3.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\forEach.PNG" alt=""> 
+                            <img src="pictures - javascriptHtmlpage\forEach_ex2.PNG" alt="">  
+                    </ul>
+                </li>
+            </div>
+
+            <div id="map">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>
+                    <ul>
+                        <li>Creates a new array with the results of calling a callback on every element in the array.</li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\map_ex3.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\map_ex.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\map_ex2.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\map_practice.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="arrow_functions">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Functions</a>
+                    <ul>
+                        <li>An arrow function expression is a compact alternative to a traditional function expression.</li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\arrow_ex.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\arrow_ex2.PNG" alt=""> <br>
+                            <img src="pictures - javascriptHtmlpage\arrow_practice.PNG" alt=""> <br>
+                            <img src="pictures - javascriptHtmlpage\arrow_function.PNG" alt="">
+                    </ul>
+                    <ul>
+                        <li><b>Implicit Returns</b></li>
+                        <img src="pictures - javascriptHtmlpage\implicit_return.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="setTimeout_setInterval">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setTimeout">setTimeout</a>
+                    <ul>
+                        <li>Sets a timer which executes a function or specified piece of code once the timer expires.</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\setTImeout_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\setTImeout_ex.PNG" alt="">
+                    </ul>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setInterval">setInterval</a>
+                    <ul>
+                        <li>Repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. <br>
+                            This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling clearInterval().</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\setInterval_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\setInterval_ex.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="find">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Find</a>
+                    <ul>
+                        <li>returns the first element in the provided array that satisfies the provided testing function. <br>
+                            If no values satisfy the testing function, undefined is returned.</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\find_syntax.PNG" alt=""></li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\find_ex.PNG" alt="">
+                    </ul>
+                </li> 
+            </div>
+
+            <div id="filter">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Filter</a>
+                    <ul>
+                        <li>Creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.</li>
+                    </ul>
+                    <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\filter_syntax.PNG" alt=""></li>
+                    <h3>EXAMPLES:</h3>
+                        <img src="pictures - javascriptHtmlpage\filter_ex.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\filter_ex2.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\filter_ex3.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\filter_ex3ext.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\filter_ex4.PNG" alt="">
+                    <h3>Filter & Map Shorthand:</h3>
+                        <img src="pictures - javascriptHtmlpage\filter_map_shorthand.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="some_and_every_methods">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every">Every</a>
+                    <ul>
+                        <li>Tests whether <u>all</u> elements in the array pass the test implemented by the provided function. It returns a Boolean value.</li>
+                    </ul>
+                    <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\every_syntax.PNG" alt=""></li>
+                    <h3>EXAMPLES:</h3>
+                        <img src="pictures - javascriptHtmlpage\every_ex.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\every_ex2.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\every_ex3.PNG" alt="">
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some">Some</a>
+                    <ul>
+                        <li>Similar to every, but returns true if <u>ANY</u> of the array elements pass the test funciton.</li>
+                    </ul>
+                    <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\some_syntax.PNG" alt=""></li>
+                    <h3>EXAMPLES:</h3>
+                        <img src="pictures - javascriptHtmlpage\some_ex.PNG" alt="">
+                        <img src="pictures - javascriptHtmlpage\some_ex2.PNG" alt="">
+                </li>
+            </div>
+
+            <div id="reduce">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">Reduce</a>
+                    <ul>
+                        <li>To return the sum of all the elements in an array.</li>
+                        <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\reduce_syntax.PNG" alt=""></li>
+                    <h3>EXAMPLES:</h3>
+                        <ul>
+                            <li>Finding Sum <br>
+                                <img src="pictures - javascriptHtmlpage\reduce_sum_ex.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\reduce_sum_ex2.PNG" alt="">
+                            </li>
+                            <li>Min & Max <br>
+                                <img src="pictures - javascriptHtmlpage\reduce_maxvalue_ex.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\reduce_minvalue_ex.PNG" alt="">
+                            </li>
+                            <li>Reduce in an Object (highest rated) <br>
+                                <img src="pictures - javascriptHtmlpage\reduce_ex4.PNG" alt="">
+                            </li>
+                            <li>Tallying <br>
+                                <img src="pictures - javascriptHtmlpage\reduce_tally_ex.PNG" alt="">
+                            </li>
+                        </ul>
+                    </ul>
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="javascript_features">
+        <ul>
+            <h1>Javascript Features</h1>
+            <div id="parameters">
+                <li><b>Parameters</b>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default Parameters</a>
+                            <ul>
+                                <li>Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed.</li>
+                                <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\default_param_syntax.PNG" alt=""></li>
+                                <h3>EXAMPLES:</h3>
+                                    <img src="pictures - javascriptHtmlpage\default_param.PNG" alt="">
+                            </ul>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Rest Parameters</a>
+                            <ul>
+                                <li>Collects all remaining arguments into an actual array.</li>
+                                <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\rest_param_syntax.PNG" alt=""></li>
+                                <h3>EXAMPLES:</h3>
+                                    <img src="pictures - javascriptHtmlpage\rest_param_ex.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\rest_param_ex2.PNG" alt="">
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="spread">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Spread</a>
+                    <ul>
+                        <li>Spread Syntax (...) allows an iterable such as an array to be expanded in places where zero <br>
+                            or more arguments (for function calls) or elements (for array literals) are expected, or an object <br>
+                            expression to be expanded in places where zero or more key-value pairs (for object literals) are expected. <br>
+                            <u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\spread_syntax.PNG" alt=""></li>
+                        <li><b>Spread in Function Calls</b> 
+                            <ul>
+                                <li>Expands an iterable (array, string, etc.) into a list of arguments</li>
+                                    <img src="pictures - javascriptHtmlpage\spread_function_ex3.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\spread_function_ex.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\spread_function_ex2.PNG" alt="">
+                            </ul>
+                        </li>
+                        <li><b>Spread with Array Literals</b> 
+                            <ul>
+                                <li>Create a new array using an existing array. Spreads the elements from one array into a new array.</li>
+                                    <img src="pictures - javascriptHtmlpage\spread_array_literals_ex.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\spread_array_literals_ex2.PNG" alt="">
+                            </ul>
+                        </li>
+                        <li><b>Spread with Objects</b> 
+                            <ul>
+                                <li>Copies properties form one object into another object literal.</li>
+                                    <img src="pictures - javascriptHtmlpage\spread_object_literals_ex.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\spread_object_literals_ex2.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\spread_object_literals_ex5.PNG" alt="">
+                                <li>Spreading an Array Within an Object</li>
+                                    <img src="pictures - javascriptHtmlpage\spread_object_literals_ex3.PNG" alt="">
+                                <li>Spreading a String Within an Object</li>
+                                    <img src="pictures - javascriptHtmlpage\spread_object_literals_ex4.PNG" alt="">
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="destructuring">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a>
+                    <ul>
+                        <li>A short, clean syntax to "unpack": VALUES FROM ARRAYS or PROPERTIES FROM OBJECTS into distinct variables.</li>
+                        <li><b>Destructuring Arrays</b> 
+                            <ul>
+                                <li><h3>EXAMPLES:</h3>
+                                    <img src="pictures - javascriptHtmlpage\array_destructuring_ex.PNG" alt="">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><b>Destructuring Objects</b> 
+                            <ul>
+                                <li><h3>EXAMPLES:</h3>
+                                    <img src="pictures - javascriptHtmlpage\object_destructuring_ex2.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\object_destructuring_ex.PNG" alt="">
+                                </li>
+                            </ul>
+                        </li>
+                        <li><b>Destructuring Params</b> 
+                            <ul>
+                                <li><h3>EXAMPLES:</h3>
+                                    <img src="pictures - javascriptHtmlpage\param_destructuring_ex3.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\param_destructuring_ex2.PNG" alt="">
+                                    <img src="pictures - javascriptHtmlpage\param_destructuring_ex.PNG" alt="">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+    </section>
+<hr>
+    <section id="dom">
+        <ul>
+            <h1><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOCUMENT OBJECT MODEL (DOM)</a></h1>
+            <div id="document">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document</a>
+                    <ul>
+                        <li>The document object is our entry point into the world of the DOM. It contains representations <br>
+                        of all the content on a page, plus tons of useful methods and properties.</li>
+                        <img src="pictures - javascriptHtmlpage\document_DOM.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="selectors">
+                <h1>SELECTORS</h1>
+                <div id="element">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element</a>
+                        <ul>
+                            <li>Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit.</li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\element.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="getElementById">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">getElementById</a>
+                        <ul>
+                            <li>Returns an Element object representing the element whose id property matches the specified string. <br>
+                            Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.</li>
+                            <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\getElementById_syntax.PNG" alt=""></li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\getElementById_ex2.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\getElementById.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="getElementsByTagName">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName">getElementsByTagName</a>
+                        <ul>
+                            <li>The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name.</li>
+                            <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\getElementsByTagName_syntax.PNG" alt=""></li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\getElementsByTagName.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="getElementsByClassName">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">getElementsByClassName</a>
+                        <ul>
+                            <li>The getElementsByClassName method of Document interface returns an array-like object of all child elements which have all of the given class name(s).</li>
+                            <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\getElementsByClassName_syntax.PNG" alt=""></li>
+                            <h3>EXAMPLES:</h3>
+                                <li class="getElementsByClassNameEx">EXAMPLE</li>
+                                <li class="getElementsByClassNameEx">EXAMPLE</li>
+                                <img src="pictures - javascriptHtmlpage\getElementsByClassName.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="querySelector">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a>
+                        <ul>
+                            <li>Returns the <b><u>first Element</u></b> within the document that matches the specified selector, or group of selectors. <br>
+                                If no matches are found, null is returned.</li>
+                            <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\querySelector_syntax.PNG" alt=""></li>
+                            <h3>EXAMPLES:</h3>
+                                <li id="querySelectorEX">id EXAMPLE</li>
+                                <li class="querySelectorEX">class EXAMPLE</li>
+                                <a href="#" style="font-weight: normal;" title="querySelectorEX">href title EXAMPLE</a> <br>
+                                <img src="pictures - javascriptHtmlpage\querySelector.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="querySelectorAll">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">querySelectorAll</a>
+                        <ul>
+                            <li>Returns a <b><u>collection of Element</u></b> within the document that matches the specified selector, or group of selectors.</li>
+                            <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\querySelectorAll_syntax.PNG" alt=""></li>
+                            <h3>EXAMPLES:</h3>
+                                <p>
+                                    PARAGRAPH: <br>
+                                    <a href="#querySelectorAllEX1"style="font-weight: normal;">querySelectorAllEX</a><br>
+                                    <a href="#querySelectorAllEX2"style="font-weight: normal;">querySelectorAllEX</a><br>
+                                    <a href="#querySelectorAllEX3"style="font-weight: normal;">querySelectorAllEX</a><br>
+                                    PARAGRAPH:
+                                </p>
+                                <img src="pictures - javascriptHtmlpage\querySelectorAll_ex2.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\querySelectorAll.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+            </div>
+
+            <div id="manipulate">
+                <h1>Manipulate</h1>
+                <div id="innerText">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText">innerText</a>
+                        <ul>
+                            <li>innerText only shows "human-readable" elements. <br>
+                                innerText is aware of styling and won't return the text of "hidden" elements.</li>
+                            <h3>EXAMPLES:</h3>
+                                <p id="paragraph"> 
+                                    PARAGRAPH: <br>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos itaque tenetur unde ad sequi, vitae <br>
+                                    aliquid eius autem facere nam deserunt fuga iure nostrum ratione soluta quae repellat ducimus cum?<br>
+                                    Rerum illo adipisci soluta molestiae nisi cumque, ea, voluptatibus odit itaque, architecto aperiam odio. <br>
+                                    Quia fuga tenetur ea perspiciatis rerum optio explicabo harum natus. Quibusdam aut velit consequatur facilis distinctio. <br>
+                                    PARAGRAPH:
+                                </p>
+                                <img src="pictures - javascriptHtmlpage\innerText.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\innerText_ex2.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="textContent">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">textContent</a>
+                        <ul>
+                            <li>textContent gets the content of all elements, including script and style elements. <br>
+                                In contrast, innerText only shows "human-readable" elements. <br>
+                                textContent returns every element in the node</li>
+                            <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\textContent.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="innerHtml">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a>
+                        <ul>
+                            <li>Retrieves the full contents including the tags names of everything insdie an element. </li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\innerHTML.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="practice">
+                    <li><h1>PRACTICE:</h1>
+                        <ul>
+                            <img src="pictures - javascriptHtmlpage\pickles_exercise.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+            </div>
+
+            <div id="properties_&_methods">
+                <h1>Properties & Methods</h1>
+                <div id="element.attributes">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes">Element.attributes</a>
+                        <ul> <br>
+                            <img src="pictures - javascriptHtmlpage\attribute.PNG" alt="" id="attribute_img"><br>
+                            <img src="pictures - javascriptHtmlpage\attribute_ex.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\attribute_ex2.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="htmlelement.style">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">HTMLElement.style</a>
+                        <ul>
+                            <li>The style read-only property returns the inline style of an element in the form of a CSSStyleDeclaration <br>
+                                 object that contains a list of all styles properties for that element with values assigned for the attributes <br>
+                                 that are defined in the element's inline style attribute.</li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\style_ex2.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\style_ex.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\style.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="classList">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">classList</a>
+                        <ul>
+                            <li>The Element.classList is a read-only property that returns a live DOMTokenList collection of <br>
+                                the class attributes of the element. This can then be used to manipulate the class list.</li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\classList_ex.PNG" alt="">
+                                <img src="pictures - javascriptHtmlpage\classList.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="transversing_parent/child/sibling">
+                    <li><b>Transversing Parent/Child/Sibling</b>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling">previousSibling</a> &
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling">nextSibling</a> &
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement">parentElement</a> &
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/children">children</a>
+                            </li>
+                            <li>previous</li>
+                                <img src="pictures - javascriptHtmlpage\parent_child_sibling.PNG" alt="" id="parent_child_sibling_img">
+                            <li>next</li>
+                            <h3>EXMAPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\parent_child_sibling_ex.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="createElement">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">createElement</a>
+                        <ul>
+                            <li>Creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.</li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\createElement.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="appendChild_prepend_append">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">appendChild</a> &
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend">prepend</a> &
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append">append</a> <br>
+                        <img src="pictures - javascriptHtmlpage\pre_append_child.PNG" alt="">
+                        <ul>
+                            <b>appendChild</b>
+                            <li>Adds a node to the end of the list of children of a specified parent node.</li>
+                            <h3>EXMAPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\appendChild.PNG" alt="">
+                        </ul>
+                        <ul>
+                            <b>prepend & append</b>
+                            <li>Inserts a set of Node objects or string objects before or after the first or last child of the Element.</li>
+                            <h3>EXMAPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\preappend_append.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="insertAdjacentElement">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement">insertAdjacentElement</a>
+                        <ul>
+                            <li>Inserts a given element node at a given position relative to the element it is invoked upon.</li>
+                            <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\insertAdjacentElement_syntax.PNG" alt=""></li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\insertAdjacentElement.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="after_before">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/after">after</a> &
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/before">before</a>
+                        <ul>
+                            <li>Inserts a set of Node or string objects in the Element's parent, before or after this Element.</li>
+                            <h3>EXMAPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\before_after.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="remove">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/remove">remove</a>
+                        <ul>
+                            <li>The Element.remove() method removes the element from the DOM.</li>
+                            <h3>EXAMPLES:</h3>
+                                <img src="pictures - javascriptHtmlpage\remove.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="100_button_exercise">
+                    <li><h3>100 Button Exercise:</h3>
+                        <ul>
+                            <img src="pictures - javascriptHtmlpage\100_button_exercise.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+
+                <div id="pokemonSpritesProject">
+                    <li><h3>Pokemon Sprites Project</h3>
+                        <ul>
+                            <img src="pictures - javascriptHtmlpage\pokemonSpritesProject.PNG" alt="">
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="dom_2.0">
+        <ul>
+            <h1>DOM 2.0</h1>
+            <div id="events">
+                <li><h1><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Events</a></h1>
+                    <ul>
+                        <div id="inline_events">
+                            <li><b>Inline event</b>
+                                <ul>
+                                    <li><button onclick="alert('you clicked me')">Click Me</button></li>
+                                    <img src="pictures - javascriptHtmlpage\inline_event.PNG" alt="">
+                                </ul>
+                            </li>
+                        </div>
+    
+                        <div id="onclick">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/onclick">onclick</a>
+                                <ul>
+                                    <li><button id="onclickButton">Click Me</button></li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\onclick_ex2.PNG" alt="">
+                                        <img src="pictures - javascriptHtmlpage\onclick.PNG" alt="">
+                                </ul>
+                            </li>
+                        </div>
+    
+                        <div id="addEventListener">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener()</a>
+                                <ul>
+                                    <li>The addEventListener() method of the EventTarget interface sets up a function that will be called whenever the specified event is delivered to the target.</li>
+                                    <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\addEventListener_syntax.PNG" alt=""></li>
+                                    
+                                    <h3>EXAMPLES:</h3>
+                                        <li><button id="addEventListenerButton">Click Me</button></li>
+                                        <img src="pictures - javascriptHtmlpage\addEventListener.PNG" alt="">
+                                        <li><button id="addEventListenerButton2">Shout and Whisper</button></li>
+                                        <img src="pictures - javascriptHtmlpage\addEventListener_ex2.PNG" alt=""> <br>
+                                        <img src="pictures - javascriptHtmlpage\addEventListener_ex3.PNG" alt="">
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="random_color_exercise">
+                <li><h1>Random Color Exercise</h1>
+                    <div id="randomColorDiv">
+                        <h1 id="randomColorExerciseH1">WELCOME</h1>
+                        <button id="randomColorButton">Click Me</button> <br>
+                        <img src="pictures - javascriptHtmlpage\randomColorExercise.PNG" alt="">
+                    </div>
+                </li>
+            </div>
+
+            <div id="this_&_events">
+                <li><h1>The Keyword This & Events</h1>
+                    <ul>
+                        <button id="thisButton">Click Me</button>
+                        <button id="thisButton">Click Me</button>
+                        <button id="thisButton">Click Me</button>
+                        <button id="thisButton">Click Me</button>
+                        <h1 id="thisH1">This H1</h1>
+                        <h1 id="thisH1">This H1</h1>
+                        <h1 id="thisH1">This H1</h1>
+                        <h1 id="thisH1">This H1</h1>
+                        <img src="pictures - javascriptHtmlpage\thisEvents.PNG" alt="">
+                    </ul>
+                </li>
+            </div>
+
+            <div id="keyboard_events">
+                <li><h1>Keyboard Events</h1>
+                    <ul>
+                        <div id="keyboard_event">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">Keyboard Events</a>
+                                <ul>
+                                    <li>KeyboardEvent objects describe a user interaction with the keyboard; each event describes a single interaction <br> 
+                                        between the  user and  a key (or combination of a key with modifier keys) on the keyboard.</li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\event.PNG" alt=""> <br>
+                                        <button id="event_object_btn">Event Object Button</button> <br>
+                                        <input type="text" placeholder="Type here (look in console)">
+                                </ul>
+                            </li>
+                        </div> 
+                            
+                        <div id="keyup_keydown">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keyup_event">keyup</a> &
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event">keydown</a>
+                                <ul>
+                                    <li>The keydown event is fired when a key is pressed. <br>
+                                        The keyup event is fired when a key is released.</li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\keyup_keydown.PNG" alt=""> <br>
+                                </ul>
+                            </li>
+                        </div>
+
+                        <div id="keyboardEvent.key">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key">KeyboardEvent.key</a>
+                                <ul>
+                                    <li>The KeyboardEvent interface's key read-only property returns the value of the key pressed by the user, taking <br> into consideration the state of modifier keys such as Shift as well as the keyboard locale and layout.</li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\key_code.PNG" alt="">
+                                </ul>
+                            </li>
+                        </div>
+
+                        <div id="keyboardEvent.code">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code">KeyboardEvent.code</a>
+                                <ul>
+                                    <li>The KeyboardEvent.code property represents a physical key on the keyboard (as opposed to the character <br> generated by pressing the key). In other words, this property returns a value that isn't altered by keyboard <br> layout or the state of the modifier keys.</li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\key_code.PNG" alt="">
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="form_events">
+                <li><h1>Form Events</h1>
+                    <ul>
+                        <div id="preventDefault">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault">Event.preventDefault()</a>
+                                <ul>
+                                    <li>The preventDefault() method of the Event interface tells the user agent that if the event does not get <br> explicitly handled, its default action should not be taken as it normally would be</li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\preventDefault_false.PNG" alt=""> <br>
+                                        <img src="pictures - javascriptHtmlpage\preventDefault_true.PNG" alt="">
+                                </ul>
+                            </li>
+                        </div>
+
+                        <div id="event_form_practice">
+                            <h1>Event Form Practice</h1>
+                            <form action="/formEvents" id="eventForm">
+                                <input type="text" id="eventName" placeholder="Enter Event">
+                                <button>Submit</button>
+                            </form>
+                            <h3>Event Form List:</h3>
+                            <ul id="eventList"></ul>
+                            <img src="pictures - javascriptHtmlpage\eventForm.PNG" alt="">
+                        </div>
+
+                        <div id="twitter_form_practice">
+                            <h1>Form Practice (Twitter)</h1>
+                            <form action="/practice" id="tweetForm">
+                                <input type="username" name="username" placeholder="Enter Username" id="userInput">
+                                <input type="text" name="tweet" placeholder="Tweet" id= tweetInput>
+                                <button>Post</button>
+                            </form>
+                            <h3>Tweets:</h3>
+                            <ul id="tweets"></ul>
+                            <img src="pictures - javascriptHtmlpage\twitterFormPractice.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\twitterFormPractice_ex2.PNG" alt="">
+                        </div>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="input_&_change">
+                <li><h1>Input & Change Events</h1>
+                    <ul>
+                        <div id="input">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event">Input Event</a>
+                                <ul>
+                                    <li>The input event fires when the value of an input, select, or textarea element has been changed.</li>
+                                    <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\input_event_syntax.PNG" alt=""></li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\inputEvent_ex.PNG" alt=""><br>
+                                        <img src="pictures - javascriptHtmlpage\inputEvent.PNG" alt="">
+                                        <h1 id="h1Input">Change</h1>
+                                        <input type="text" id="inputEx" placeholder="Enter h1 Heading">
+                                </ul>
+                            </li>
+                        </div>
+
+                        <div id="change">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event">Change Event</a>
+                                <ul>
+                                    <li>The change event is fired for input, select, and textarea elements when the user modifies the element's value. <br> Unlike the input event, the change event is not necessarily fired for each alteration to an element's value.</li>
+                                    <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\change_event_syntax.PNG" alt=""></li>
+                                    <h3>EXAMPLES:</h3>
+                                        <img src="pictures - javascriptHtmlpage\changeEvent.PNG" alt="">
+                                        <h1 id="h1Change">Change</h1>
+                                        <input type="text" id="changeEx" placeholder="Enter h1 Heading">
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="eventBubbling">
+                <li><h1>Event Bubbling</h1>
+                    <ul>
+                        <img src="https://www.tutorialrepublic.com/lib/images/event-propagation-illustration.png" width="30%">
+                        <div id="bubbleContainer">
+                            <style>
+                                .hide {
+                                    display: none;
+                                }
+                            </style>
+                                CLICK TO HIDE
+                                <button id="bubbleColorButton">Change Color</button>
+                        </div>
+
+                        <div id="stopPropagation">
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation">stopPropagation</a>
+                                <ul>
+                                    <li>The stopPropagation() method of the Event interface prevents further propagation of the current event in the <br> capturing and bubbling phases</li>
+                                    <li><u>SYNTAX:</u><br><img src="pictures - javascriptHtmlpage\stopPropagation_syntax.PNG" alt=""></li>
+                                </ul>
+                                <h3>EXAMPLES:</h3>
+                                    <img src="pictures - javascriptHtmlpage\bubbleEx.PNG" alt="">
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+
+            <div id="event_delegation">
+                <li><h1>Event Delegation</h1>
+                    <img src="pictures - javascriptHtmlpage\event_delegation.PNG" alt="">
+                </li>
+            </div>
+        </ul>
+    </section>
+<hr>
+    <section id="scorekeeper">
+        <ul>
+            <h1>SCORE KEEPER PRACTICE</h1>
+            <div id="scoreContainer">
+                <h2>SCORE</h2>
+                <h3><span id="p1Display">0</span> to <span id="p2Display">0</span></h3>
+                    <label for="winningScoreCount">Play To:</label>
+                    <select name="count" id="winningScoreCount">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select> <br>
+                <button id="p1Button">Player One +1</button>
+                <button id="p2Button">Player Two +1</button>
+                <button id="resetButton">Reset</button>
+            </div>
+
+            <div id="scorekeeperImg">
+                <img src="pictures - javascriptHtmlpage\scorekeeper.PNG" alt="">
+                <img src="pictures - javascriptHtmlpage\scorekeeper2.PNG" alt="">
+                <img src="pictures - javascriptHtmlpage\scorekeeper3.PNG" alt="">
+            </div>
+        </ul>
+    </section>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

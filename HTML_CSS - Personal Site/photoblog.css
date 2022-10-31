@@ -1,0 +1,15 @@
+img {
+    width: 15%;
+    margin:calc(50%/6);
+    border: 1px solid black;
+}
+nav {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+    padding: 1.2em 0;
+    text-transform: uppercase;
+    width: 15%;
+    margin-left:calc(50%/6);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+}

@@ -1,0 +1,36 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h4 {
+    color: crimson;
+    background-color: grey;
+}
+h1 {
+    color: #591070;
+    text-align: center;
+
+}
+button {
+    color: hotpink;
+    background-color: blue;
+}
+p {
+    color: rgb(13, 128, 236);
+    line-height: 1;
+}
+.heading {
+    text-align: center;
+    font-weight: normal;
+    text-decoration: blue underline wavy;
+    letter-spacing: 5px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a:hover {
+    border: 2px blue solid;
+    border-radius: .5em;
+    background-color: rgba(0, 0, 255, 0.233);
+}
+a {
+    color: #e63946;
+}

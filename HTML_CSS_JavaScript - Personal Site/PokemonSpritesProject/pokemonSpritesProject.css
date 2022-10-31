@@ -1,0 +1,7 @@
+div {
+    display: inline-block;
+}
+span {
+    display: flex;
+    justify-content: center;
+}

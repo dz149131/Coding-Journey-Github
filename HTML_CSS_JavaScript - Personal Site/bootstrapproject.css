@@ -1,0 +1,16 @@
+body {
+    background-color: #778da9;
+        font-family: 'open sans';
+}
+#mainNavbar .navbar-brand {
+    color: #5ea7d4;
+    font-size: 1.5rem;
+    font-family: 'open sans';
+}
+#mainNavbar .nav-link:hover {
+    color: white;
+}
+.navbar.scrolled {
+    background: #212529;
+    transition: background 700ms;
+}
