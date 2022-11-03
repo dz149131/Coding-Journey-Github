@@ -833,3 +833,57 @@ winningScoreSelect.addEventListener('change', function(){
     reset();
 })
 
+                                //CALL BACK V1
+// setTimeout(() => {
+//     document.body.style.backgroundColor = 'red';
+//     setTimeout(() => {
+//         document.body.style.backgroundColor = 'orange';
+//         setTimeout(() => {
+//             document.body.style.backgroundColor = 'yellow';
+//             setTimeout(() => {
+//                 document.body.style.backgroundColor = 'green';
+//                 setTimeout(() => {
+//                     document.body.style.backgroundColor = 'blue';
+//                     setTimeout(() => {
+//                         document.body.style.backgroundColor = 'indigo';
+//                         setTimeout(() => {
+//                             document.body.style.backgroundColor = 'violet';
+//                         }, 1000)
+//                     }, 1000)
+//                 }, 1000)
+//             }, 1000)
+//         }, 1000)
+//     }, 1000)
+// }, 1000)
+//                                 //CALL BACK V2
+// const bgColorChange = (newColor, delay, doNext) => {
+//     setTimeout(() => {
+//         document.body.style.backgroundColor = newColor;
+//         doNext && doNext();
+//     }, delay)
+// }
+// bgColorChange('red', 1000, () => {
+//     bgColorChange('orange', 1000, () => {
+//         bgColorChange('yellow', 1000, () => {
+//             bgColorChange('green', 1000, () => {
+//                 bgColorChange('blue', 1000, () => {
+//                     bgColorChange('indigo', 1000, () => {
+//                         bgColorChange('violet', 1000, () => {
+
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// });
+
+// searchMoviesApi('The Last of Us', () => {
+//     saveToDB(movies, () => {
+//         //if ot works, run this:
+//     }, () => {
+//         //if it doesn't work, run this:
+//     })
+// }, () => {
+//     //if API is down, or request failed
+// })
