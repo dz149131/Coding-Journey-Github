@@ -192,6 +192,21 @@
                 </ul>
             </li>
             <li><a href="#scorekeeper">ScoreKeeper</a></li>
+            <li><a href="#async_javascript">Async Javascript</a>
+                <ul>
+                    <li><a href="#the_call_stack">The Call Stack</a></li>
+                    <li><a href="#callbacks">Callbacks</a></li>
+                    <li><a href="#promises">Promises</a>
+                        <ul>
+                            <li><a href="#.then">.then</a></li>
+                            <li><a href="#.catch">.catch</a></li>
+                            <li><a href="#.resolve">.resolve</a></li>
+                            <li><a href="#.reject">.reject</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -1658,17 +1673,64 @@
                         <h3>EXAMPLES:</h3>
                             <img src="pictures - javascriptHtmlpage\callback_ex.PNG" alt="">
                             <img src="pictures - javascriptHtmlpage\callback_ex2.PNG" alt="">
+                        <h3>Callback DEMO:</h3>
+                            <img src="pictures - javascriptHtmlpage\callback_demo1.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\callback_demo2.PNG" alt="">
                     </ul>
                 </li>
             </div>
 
-            <div id="">
-                <li><a href=""></a>
+            <div id="promises">
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>
                     <ul>
-                        <li></li>
+                        <li>A Promise is an object representing the eventual completion or failure of an asynchronous operation.</li>
+                        <h3>EXAMPLES:</h3>
+                            <img src="pictures - javascriptHtmlpage\promise_demo1.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\promise.PNG" alt="">
+                        <h3>Promises DEMO:</h3>
+                            <img src="pictures - javascriptHtmlpage\promise_demo1.PNG" alt="">
+                            <img src="pictures - javascriptHtmlpage\promise_demo2.PNG" alt="">
                     </ul>
                 </li>
-            </div>
+
+                <div id=".then">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then</a>
+                        <ul>
+                            <li>The then() method returns a Promise. It takes up to two arguments: callback functions for the fulfilled <br>
+                                and rejected cases of the Promise</li>
+                        </ul>
+                    </li>
+                </div>
+
+                <div id=".catch">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">.catch</a>
+                        <ul>
+                            <li>The catch() method returns a Promise and deals with rejected cases only.</li>
+                        </ul>
+                    </li>  
+                </div>
+
+                <div id=".resolve">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">.resolve</a>
+                        <ul>
+                            <li>The Promise.resolve() method "resolves" a given value to a Promise. If the value is a promise, <br>
+                                that promise is returned; if the value is a thenable, Promise.resolve() will call the then() method <br>
+                                with two callbacks it prepared; otherwise the returned promise will be fulfilled with the value. <br>
+                                This function flattens nested layers of promise-like objects (e.g. a promise that fulfills to a promise <br>
+                                that fulfills to something) into a single layer — a promise that fulfills to a non-thenable value.
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+                <div id=".reject">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">.reject</a>
+                        <ul>
+                            <li>The Promise.reject() method returns a Promise object that is rejected with a given reason.</li>
+                        </ul>
+                    </li>
+                </div>
+            </div>          
         </ul>
     </section>
 

@@ -833,7 +833,7 @@ winningScoreSelect.addEventListener('change', function(){
     reset();
 })
 
-                                //CALL BACK V1
+                                                        //CALL BACK V1
 // setTimeout(() => {
 //     document.body.style.backgroundColor = 'red';
 //     setTimeout(() => {
@@ -855,7 +855,7 @@ winningScoreSelect.addEventListener('change', function(){
 //         }, 1000)
 //     }, 1000)
 // }, 1000)
-//                                 //CALL BACK V2
+//                                                       //CALL BACK V2
 // const bgColorChange = (newColor, delay, doNext) => {
 //     setTimeout(() => {
 //         document.body.style.backgroundColor = newColor;
@@ -887,3 +887,53 @@ winningScoreSelect.addEventListener('change', function(){
 // }, () => {
 //     //if API is down, or request failed
 // })
+
+                                                // THE CALLBACK VERSION DEMO
+// const fakeRequestCallback = (url, success, failure) => {
+//     const delay = Math.floor(Math.random() * 4500) + 500;
+//     setTimeout(() => {
+//         if (delay > 4000) {
+//             failure('Connection Timeout :(')
+//         } else {
+//             success(`Here is your fake data from ${url}`)
+//         }
+//     }, delay)
+// }
+
+// fakeRequestCallback('books.com/page1',
+//     function (response) {
+//         console.log("IT WORKED!!!!")
+//         console.log(response)
+//         fakeRequestCallback('books.com/page2',
+//             function (response) {
+//                 console.log("IT WORKED AGAIN!!!!")
+//                 console.log(response)
+//                 fakeRequestCallback('books.com/page3',
+//                     function (response) {
+//                         console.log("IT WORKED AGAIN (3rd req)!!!!")
+//                         console.log(response)
+//                     },
+//                     function (err) {
+//                         console.log("ERROR (3rd req)!!!", err)
+//                     })
+//             },
+//             function (err) {
+//                 console.log("ERROR (2nd req)!!!", err)
+//             })
+//     }, function (err) {
+//         console.log("ERROR!!!", err)
+//     })
+
+                                                // THE PROMISE VERSION 
+const fakeRequestPromise = (url) => {
+    return new Promise((resolve, reject) => {
+        const delay = Math.floor(Math.random() * (4500)) + 500;
+        setTimeout(() => {
+            if (delay > 4000) {
+                reject('Connection Timeout :(')
+            } else {
+                resolve(`Here is your fake data from ${url}`)
+            }
+        }, delay)
+    })
+}
