@@ -924,16 +924,118 @@ winningScoreSelect.addEventListener('change', function(){
 //         console.log("ERROR!!!", err)
 //     })
 
-                                                // THE PROMISE VERSION 
-const fakeRequestPromise = (url) => {
-    return new Promise((resolve, reject) => {
-        const delay = Math.floor(Math.random() * (4500)) + 500;
-        setTimeout(() => {
-            if (delay > 4000) {
-                reject('Connection Timeout :(')
-            } else {
-                resolve(`Here is your fake data from ${url}`)
-            }
-        }, delay)
-    })
-}
+                                                // THE PROMISE VERSION DEMO
+// const fakeRequestPromise = (url) => {
+//     return new Promise((resolve, reject) => {
+//         const delay = Math.floor(Math.random() * (4500)) + 500;
+//         setTimeout(() => {
+//             if (delay > 4000) {
+//                 reject('Connection Timeout :(')
+//             } else {
+//                 resolve(`Here is your fake data from ${url}`)
+//             }
+//         }, delay)
+//     })
+// }
+
+// fakeRequestPromise('yelp.com/api/coffee/page1')
+//     .then(() => {
+//         console.log("IT WORKED!!!!!! (page1)")
+//         fakeRequestPromise('yelp.com/api/coffee/page2')
+//             .then(() => {
+//                 console.log("IT WORKED!!!!!! (page2)")
+//                 fakeRequestPromise('yelp.com/api/coffee/page3')
+//                     .then(() => {
+//                         console.log("IT WORKED!!!!!! (page3)")
+//                     })
+//                     .catch(() => {
+//                         console.log("OH NO, ERROR!!! (page3)")
+//                     })
+//             })
+//             .catch(() => {
+//                 console.log("OH NO, ERROR!!! (page2)")
+//             })
+//     })
+//     .catch(() => {
+//         console.log("OH NO, ERROR!!! (page1)")
+//     })
+
+// THE CLEANEST OPTION WITH THEN/CATCH
+// RETURN A PROMISE FROM .THEN() CALLBACK SO WE CAN CHAIN!
+// fakeRequestPromise('yelp.com/api/coffee/page1')
+//     .then((data) => {
+//         console.log("IT WORKED!!!!!! (page1)")
+//         console.log(data)
+//         return fakeRequestPromise('yelp.com/api/coffee/page2')
+//     })
+//     .then((data) => {
+//         console.log("IT WORKED!!!!!! (page2)")
+//         console.log(data)
+//         return fakeRequestPromise('yelp.com/api/coffee/page3')
+//     })
+//     .then((data) => {
+//         console.log("IT WORKED!!!!!! (page3)")
+//         console.log(data)
+//     })
+//     .catch((err) => {
+//         console.log("OH NO, A REQUEST FAILED!!!")
+//         console.log(err)
+//     })
+                                        //CREATING PROMISES
+// const fakeRequest = (url) => {
+//     return new Promise((resolve, reject) => {
+//         const rand = Math.random();
+//         setTimeout(() => {
+//             if(rand < 0.7){
+//                 resolve('Success');
+//             }
+//             reject('Request Error');
+//         }, 1000)
+//     })
+// }
+// fakeRequest('/dog/1')
+// .then ((data) => {
+//     console.log("Done with request")
+//     console.log("Data is :", data)
+// })
+// .catch((err) => {
+//     console.log("Error", err)
+// })
+                                                //PROMISE bgColorChange
+// const bgColorChange = (color, delay) => {
+//     return new PromiseRejectionEvent((resolve, reject) => {
+//         setTimeout(() => {
+//             document.body.style.backgroundColor = color;
+//             resolve();
+//         }, delay)
+//     })
+// }
+// bgColorChange('red', 1000)
+//     .then(() => bgColorChange('orange', 1000))
+//     .then(() => bgColorChange('yellow', 1000))
+//     .then(() => bgColorChange('green', 1000))
+//     .then(() => bgColorChange('blue', 1000))
+//     .then(() => bgColorChange('indigo', 1000))
+//     .then(() => bgColorChange('violet', 1000))
+//                                                 //vs callback
+// const bgColorChange = (newColor, delay, doNext) => {
+//     setTimeout(() => {
+//         document.body.style.backgroundColor = newColor;
+//         doNext && doNext();
+//     }, delay)
+// }
+// bgColorChange('red', 1000, () => {
+//     bgColorChange('orange', 1000, () => {
+//         bgColorChange('yellow', 1000, () => {
+//             bgColorChange('green', 1000, () => {
+//                 bgColorChange('blue', 1000, () => {
+//                     bgColorChange('indigo', 1000, () => {
+//                         bgColorChange('violet', 1000, () => {
+
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// });
