@@ -1072,27 +1072,32 @@ winningScoreSelect.addEventListener('change', function(){
 //     console.log("End of rainbow")
 // }
 
-                                    //HANDLING ERRORS IN ASYNC FUNCTIONS
-const fakeRequest = (url) => {
-    return new Promise((resolve, reject) => {
-        const delay = Math.floor(Math.random() * (4500)) + 500;
-        setTimeout(() => {
-            if (delay > 4000) {
-                reject('Connection Timeout :(')
-            } else {
-                resolve(`Here is your fake data from ${url}`)
-            }
-        }, delay)
-    })
-}
-async function makeTwoRequests() {
-    try {
-        let data1 = await fakeRequest('/page1');
-        console.log(data1);
-        let data2 = await fakeRequest('/page2');
-        console.log(data2);
-    } catch (e) {
-        console.log("Caught an error")
-        console.log("error is:", e)
-    }
-}
+//                                     //HANDLING ERRORS IN ASYNC FUNCTIONS
+// const fakeRequest = (url) => {
+//     return new Promise((resolve, reject) => {
+//         const delay = Math.floor(Math.random() * (4500)) + 500;
+//         setTimeout(() => {
+//             if (delay > 4000) {
+//                 reject('Connection Timeout :(')
+//             } else {
+//                 resolve(`Here is your fake data from ${url}`)
+//             }
+//         }, delay)
+//     })
+// }
+// async function makeTwoRequests() {
+//     try {
+//         let data1 = await fakeRequest('/page1');
+//         console.log(data1);
+//         let data2 = await fakeRequest('/page2');
+//         console.log(data2);
+//     } catch (e) {
+//         console.log("Caught an error")
+//         console.log("error is:", e)
+//     }
+// }
+// //THIS IS A STRING OF JSON (NOT AN OBJECT)
+// const data = `{"ticker":{"base":"BTC","target":"USD","price":"11288.49813464","volume":"91769.69699773","change":"-46.29462447"},"timestamp":1596510482,"success":true,"error":""}`
+
+// // THIS IS A JS OBJECT
+// const parsedData = JSON.parse(data);
