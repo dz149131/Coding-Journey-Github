@@ -1102,3 +1102,37 @@ winningScoreSelect.addEventListener('change', function(){
 
 // // THIS IS A JS OBJECT
 // const parsedData = JSON.parse(data);
+//                                             //FETCH
+// fetch("https://swapi.dev/api/people/1/")                //send a request to url first then fetch returns a promise 
+// .then((res) => {                                        //.then accepts a resolved promise
+//     console.log("Resolved", res);                       //print this if resolved
+//     return res.json();                                  //similar to JSON.parse/ Returns a promise
+// })
+// .then((data) => {                                       //.then accepts a resolved promise
+//     console.log(data)                                   //print "data" if resolved
+//     return fetch ("https://swapi.dev/api/people/2/")    //2nd url request
+// })
+// .then((res) => {                                        //.then accepts a resolved promise
+//     console.log("Second request resolved");             //print this if resolved
+//     return res.json();                                  //similar to JSON.parse/ Returns a promise
+// })
+// .then((data) => {                                       //.then accepts a resolved promise
+//     console.log(data)                                   //print "data" if resolved
+// })
+// .catch(e => {                                           //.catch deals with rejected promises
+//     console.log("Error", e);                            //print this if promise is rejected
+// });
+
+//                                             //FETCH REFACTORED
+// const loadSWPeople = async () => {                                  //async function always returns a promise
+//     try {                                                           //The code in the try block is executed first
+//         const res = await fetch("https://swapi.dev/api/people/1/"); //The await operator is used to wait for a Promise and get its fulfillment value
+//         const data = await res.json()
+//         console.log(data);
+//         const res2 = await fetch("https://swapi.dev/api/people/2/");
+//         const data2 = await res2.json()
+//         console.log(data2);
+//     } catch (e) {                                                   //and if it throws an exception, catch will be executed.
+//         console.log("ERROR", e)
+//     }
+// };
