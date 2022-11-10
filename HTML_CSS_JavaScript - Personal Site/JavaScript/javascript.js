@@ -1136,3 +1136,22 @@ winningScoreSelect.addEventListener('change', function(){
 //         console.log("ERROR", e)
 //     }
 // };
+
+//                                                     //AXIOS
+// const loadSWPeople = async (id) => {
+//     try{
+//         const res = await axios.get(`https://swapi.dev/api/people/${id}/`);
+//         console.log(res.data);
+//     } catch(e) {
+//         console.log("ERROR", e);
+//     }
+// };
+
+// // loadSWPeople(1)
+// // loadSWPeople(5)
+                                                //SETTING HEADERS WITH AXIOS
+const getHeader = async () => {
+    const config = {headers: { Accept: 'application/json' } }
+    const res = await axios.get('https://icanhazdadjoke.com/', config)
+    console.log(res.data.joke)
+}
