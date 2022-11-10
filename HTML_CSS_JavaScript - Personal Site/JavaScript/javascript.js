@@ -1149,9 +1149,26 @@ winningScoreSelect.addEventListener('change', function(){
 
 // // loadSWPeople(1)
 // // loadSWPeople(5)
-                                                //SETTING HEADERS WITH AXIOS
-const getHeader = async () => {
-    const config = {headers: { Accept: 'application/json' } }
-    const res = await axios.get('https://icanhazdadjoke.com/', config)
-    console.log(res.data.joke)
+                                                //DAD JOKE BUTTON
+const jokes = document.querySelector('#jokes');         //selects UL '#jokes'
+const jokeBtn = document.querySelector('#jokeBtn')      //selects button '#jokeBtn'
+
+const addNewJoke = async () => {                        //async makes function into promise
+    const jokeText = await getDadJoke()                 //wait till getDadJoke() is resolved               
+    const newLI = document.createElement('LI');         //creates new Li 'shell'
+    newLI.append(jokeText);                             //append 'jokeText' from 'getDadJoke' function
+    jokes.append(newLI)                                 //appends to ul #jokes
 }
+
+const getDadJoke = async () => {                                            //get joke Text
+    try {                                                                   //run this code first
+        const config = {headers: { Accept: 'application/json' } }           //?
+        const res = await axios.get('https://icanhazdadjoke.com/', config)  //?
+        return res.data.joke;                                               //return res.data.joke
+    } catch (e) {                                                           //if 'try' is not resolved run this code
+        return "No Joke Found"                                              //return this
+    }
+    
+}
+
+jokeBtn.addEventListener('click', addNewJoke)           //when 'jokeBtn' is clicked run 'addNewJoke' function
