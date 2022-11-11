@@ -1149,6 +1149,7 @@ winningScoreSelect.addEventListener('change', function(){
 
 // // loadSWPeople(1)
 // // loadSWPeople(5)
+
                                                 //DAD JOKE BUTTON
 const jokes = document.querySelector('#jokes');         //selects UL '#jokes'
 const jokeBtn = document.querySelector('#jokeBtn')      //selects button '#jokeBtn'
@@ -1170,5 +1171,28 @@ const getDadJoke = async () => {                                            //ge
     }
     
 }
-
 jokeBtn.addEventListener('click', addNewJoke)           //when 'jokeBtn' is clicked run 'addNewJoke' function
+
+                                            //TV SHOW SEARCH
+const searchForm = document.querySelector('#searchForm');
+searchForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const userSearch = searchForm.elements.query.value;
+    // const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${userSearch}`)
+    const config = { params: { q: userSearch} }
+    const res = await axios.get(`https://api.tvmaze.com/search/shows`, config)
+    makeImgs(res.data)
+    searchForm.elements.query.value = '';
+})
+
+const imgContainer = document.querySelector('#imgContainer')
+const makeImgs = (shows) => {
+    for(let result of shows){
+        if (result.show.image) {
+            const img = document.createElement('IMG');
+            // img.src = res.data[0].show.image.medium;
+            img.src = result.show.image.medium;
+            imgContainer.append(img)
+        }
+    }
+}
