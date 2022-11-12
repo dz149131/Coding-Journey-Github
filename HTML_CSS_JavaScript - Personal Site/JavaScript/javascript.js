@@ -1201,3 +1201,33 @@ const makeImgs = (shows) => {
 String.prototype.yell = function () {
     console.log(this.toUpperCase());
 }
+
+                                    //OBJECT ORIENTED PROGRAMMING
+function hex(r, g, b) {
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+function rgb (r,g,b) {
+    return `rgb(${r}, ${g}, ${b})`
+}
+
+// hex(235, 18, 18);
+// "#eb1212"
+// "rgb(235, 18, 18)"
+
+                            //Factory Functions
+function makeColor (r, g, b) {          //this function makes an object   
+    const color = {};                   //empty object created
+    color.r = r;                        //properties added
+    color.g = g;                        //properties added
+    color.b = b;                        //properties added
+    color.rgb = function() {            //this is a method = functions in an object
+        const {r, g, b} = this;
+        return `rgb(${r}, ${g}, ${b})`;
+    };
+    color.hex = function() {            //this is a method = functions in an object
+        const {r, g, b} = this;
+        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+    return color;                       //return the object
+}
+const firstColor = makeColor(35, 255, 150);
