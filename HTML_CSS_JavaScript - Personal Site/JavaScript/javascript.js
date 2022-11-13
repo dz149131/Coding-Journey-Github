@@ -1231,3 +1231,45 @@ function makeColor (r, g, b) {          //this function makes an object
     return color;                       //return the object
 }
 const firstColor = makeColor(35, 255, 150);
+
+                            //Constructor Functions
+// // const black = makeColor(0, 0 ,0);
+// // black.rgb();//"rgb(0, 0, 0")"
+// // black.hex();//"#000000"
+
+// function Color(r, g, b) {
+//     const object = {}
+//     this.r = r;
+//     this.g = g;
+//     this.b = b;
+//     return object;
+// }
+// Color(35, 60, 190);
+// //returns 'undefined' as it reference  the 'windows object'
+
+// function Color(r, g, b) {
+//     this.r = r;
+//     this.g = g;
+//     this.b = b;
+// }
+// new Color(35, 60, 190);
+// // 1. Creates a blank, plain JavaScript object;
+// // 2. Links (sets the constructor of) this object to another object;
+// // 3. Passes the newly created object from Step 1 as the this context;
+// // 4. Returns this if the function doesn't return its own object.
+// Color.prototype.rgb = function() {
+//     const {r, g, b} = this;
+//     return `rgb(${r}, ${g}, ${b})`;
+// };
+// Color.prototype.hex = function() {
+//     const { r, g, b } = this;
+// 	return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+// }
+// Color.prototype.rgba = function(a = 1.0) {
+//     const {r, g, b} = this;
+//     return `rgb(${r}, ${g}, ${b}, ${a})`;
+// };
+
+// const color1 = new Color(35, 60, 190);
+// //rgb() & hex() defined on 'Prototype' object
+// const color2 = new Color(0, 0, 50);
