@@ -1239,9 +1239,7 @@ const firstColor = makeColor(35, 255, 150);
 
 // function Color(r, g, b) {
 //     const object = {}
-//     this.r = r;
-//     this.g = g;
-//     this.b = b;
+//     
 //     return object;
 // }
 // Color(35, 60, 190);
@@ -1273,3 +1271,29 @@ const firstColor = makeColor(35, 255, 150);
 // const color1 = new Color(35, 60, 190);
 // //rgb() & hex() defined on 'Prototype' object
 // const color2 = new Color(0, 0, 50);
+
+                                //Javascript Classes
+class Color {                                   //this function will run whenever you instantiate a 'new' instance of the class
+    constructor(r, g, b, name) {
+        this.r = r;                             //'this' refers to the individual object
+        this.g = g;                             //assigning properties to each color
+        this.b = b;                             //not the 'prototype' but the color
+        this.name = name;
+    }
+    innerRGB() {                                //method added to prototype
+        const {r, g, b} = this;
+        return `${r}, ${g}, ${b}`;
+    }
+    rgb(){                                      //method added to prototype
+        return `rgb(${this.innerRGB()})`;
+    }
+    rgba(a = 1.0) {                             //method added to prototype
+        return `rgba(${this.innerRGB()}, ${a})`;
+    }
+    hex() {                                     //method added to prototype
+        const {r, g, b} = this;
+        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+}
+const blue = new Color(35, 60, 190, 'blue');
+const white = new Color(255, 255, 255, 'white');
