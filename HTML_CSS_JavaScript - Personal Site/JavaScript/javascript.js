@@ -1,3 +1,7 @@
+search.addEventListener("input", e => { //WORKON LATER
+    const value = e.target.value
+    console.log(value)
+})
 // document.addEventListener('mousemove', (e) => {
 //     console.log(e)
 
@@ -675,10 +679,10 @@ const input = document.querySelector('input');
 // input.addEventListener('keyup', function(){
 //     console.log("keyup")
 // })
-input.addEventListener('keydown', function(e){
-    console.log(e.key)
-    console.log(e.code)
-})
+// input.addEventListener('keydown', function(e){
+//     console.log(e.key)
+//     console.log(e.code)
+// })
 
 // window.addEventListener('keydown', function(e){
 //     switch (e.code) {
@@ -1297,3 +1301,7 @@ class Color {                                   //this function will run wheneve
 }
 const blue = new Color(35, 60, 190, 'blue');
 const white = new Color(255, 255, 255, 'white');
+
+//SEARCH BAR
+const search = document.querySelector("#search")
+
