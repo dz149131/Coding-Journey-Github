@@ -1,3 +1,5 @@
+//SEARCH BAR
+const search = document.querySelector("#search")
 search.addEventListener("input", e => { //WORKON LATER
     const value = e.target.value
     console.log(value)
@@ -1302,6 +1304,5 @@ class Color {                                   //this function will run wheneve
 const blue = new Color(35, 60, 190, 'blue');
 const white = new Color(255, 255, 255, 'white');
 
-//SEARCH BAR
-const search = document.querySelector("#search")
+
 
