@@ -1304,5 +1304,32 @@ class Color {                                   //this function will run wheneve
 const blue = new Color(35, 60, 190, 'blue');
 const white = new Color(255, 255, 255, 'white');
 
+//EXTENDS and SUPER KEYWORDS
+class Pet {
+    constructor(name, age) {
+        console.log('in Pet constructor')
+        this.name = name;
+        this.age = age;
+    }
+    wants() {
+        return `${this.name} wants to be pet`
+    }
+}
+class Cat extends Pet{
+    constructor(name, age, livesLeft = 9){
+        console.log('in Cat constructor')
+        super(name, age);
+        this.livesLeft = livesLeft;
+    }
+    meow() {
+        return 'meow';
+    }
+}
+class Dog extends Pet{
+    barks() {
+        return 'woof!';
+    }
+
+}
 
 
