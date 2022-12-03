@@ -26,7 +26,9 @@ app.get('/dogs', (req, res) => {
     res.send('WOOF!')
 })
 
-
+app.get('*', (req, res) => {        //'*' references all other requests 
+    res.send('UNKNOWN PATH')        //put at the end
+})
 
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000")
