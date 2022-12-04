@@ -13,6 +13,19 @@ const app = express();
 app.get('/', (req, res) => {
     res.send("This is the home page")
 })
+
+app.get('/r/:subreddit', (req, res) => {
+    const {subreddit} = req.params;
+    res.send(`<h1>Browsing the ${subreddit} subreddit</h1>`)
+    // console.log(req.params)
+    res.send('This is a subreddit')
+})
+
+app.get('/r/:subreddit/:postId', (req, res) => {
+    const {subreddit, postId} = req.params;
+    res.send(`<h1>Viewing the Post ID: ${postId} on the ${subreddit} subreddit</h1>`)
+})
+
 app.get('/cats', (req, res) => { 
     console.log("CAT REQUEST")
     res.send('MEOW!')
