@@ -39,6 +39,12 @@ app.get('/dogs', (req, res) => {
     res.send('WOOF!')
 })
 
+app.get('/search', (req, res) => {
+    console.log(req.query);
+    const {q} = req.query;
+    res.send(`<h1>Search results for : ${q}</h1>`)
+})
+
 app.get('*', (req, res) => {        //'*' references all other requests 
     res.send('UNKNOWN PATH')        //put at the end
 })
