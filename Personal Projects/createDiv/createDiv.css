@@ -1,0 +1,11 @@
+#container {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+#createDiv {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    margin: 10px;
+}
