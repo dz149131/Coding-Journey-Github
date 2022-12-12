@@ -1,4 +1,4 @@
-#container {
+#divContainer {
     width: 500px;
     height: 500px;
     border: 1px solid black;
@@ -9,3 +9,5 @@
     font-size: 16px;
     margin: 10px;
 }
+
+
