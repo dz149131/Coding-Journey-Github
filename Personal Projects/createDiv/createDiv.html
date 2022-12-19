@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<h1>Visual Div Creator</h1>
-		<form>
+		<!-- <form>
 			<label for="colorPicker">Choose a color:</label>
 			<input type="color" id="colorPicker" />
 			<br />
@@ -21,8 +21,21 @@
 			<br />
 			<button type="button" id="createBtn">Create Divs</button>
 			<button type="button" id="resetBtn">Reset</button>
+		</form> -->
+		<!-- <div id="divContainer"></div> -->
+		<form id="div-form">
+			<label for="width">Width:</label>
+			<input type="text" id="width" name="width" />
+			<br />
+			<label for="heigh">Height:</label>
+			<input type="text" id="height" name="height" />
+			<br />
+			<label for="color">Color:</label>
+			<input type="color" name="color" id="color" />
+			<br />
+			<button type="button" id="createDiv">Create Div</button>
 		</form>
-		<div id="divContainer"></div>
+
 		<script src="createDiv.js"></script>
 	</body>
 </html>
