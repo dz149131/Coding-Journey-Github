@@ -23,9 +23,9 @@
 const createDiv = document.querySelector('#createDiv');
 createDiv.addEventListener('click', function() {
     //Gets user inputed values from form
-    let width = document.getElementById('#width').value;
-    let height = document.getElementById('#height').value;
-    let color = document.getElementById('#color').value;
+    let width = document.getElementById('width').value;
+    let height = document.getElementById('height').value;
+    let color = document.getElementById('color').value;
     
     //creates new div 
     let div = document.createElement('div');
