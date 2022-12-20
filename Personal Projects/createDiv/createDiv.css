@@ -15,7 +15,7 @@
 }
 
 #createDiv {
-    background-color: blue;
+    background-color: rgb(72, 72, 196);
     color: white;
     border: 1px ;
     padding: 10px 10px;
@@ -32,4 +32,16 @@
     height: 100px;
     background-color: black;
     margin: 10px;
+}
+
+body {
+    background-color: rgb(170, 199, 157);
+}
+
+#color {
+    height: 30px;
+}
+
+#border-color {
+    height: 30px;
 }
