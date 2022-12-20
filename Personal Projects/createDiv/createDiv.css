@@ -11,19 +11,20 @@
 }
 
 #controls label {
-    margin-right: 10px;
+    margin: 10px 10px;
 }
 
-#create {
-    background-color: rgb(73, 182, 224);
-    color: white;
-    border: 1px black solid;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-#create:hover {
+#createDiv {
     background-color: blue;
+    color: white;
+    border: 1px ;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#createDiv:hover {
+    background-color: rgb(73, 182, 224);
 }
 
 .div {
