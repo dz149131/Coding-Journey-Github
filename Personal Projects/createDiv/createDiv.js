@@ -7,7 +7,6 @@ const borderColorInput = document.getElementById('border-color');
 const createDivBtn = document.getElementById('createDiv');
 const container = document.getElementById('container');
 const preview = document.getElementById('preview');
-const bgColorInput = document.getElementById('bgColor');
 
 createDivBtn.addEventListener('click', () => {
     const width = widthInput.value;
@@ -33,13 +32,22 @@ createDivBtn.addEventListener('click', () => {
 function updatePreview() {
     const width = widthInput.value;
     const height = heightInput.value;
-    const bgColor = bgColorInput.value;
+    const color = colorInput.value;
+    const borderRadius = borderRadiusInput.value;
+    const borderWidth = borderWidthInput.value;
+    const borderColor = borderColorInput.value;
 
     preview.style.width = width + "px";
     preview.style.height = height + "px";
-    preview.style.backgroundColor = bgColor;
+    preview.style.backgroundColor = color;
+    preview.style.borderRadius = borderRadius + "px";
+    preview.style.borderWidth = borderWidth + "px";
+    preview.style.borderColor = borderColor;
 }
 
 widthInput.addEventListener('input', updatePreview);
 heightInput.addEventListener('input', updatePreview);
 colorInput.addEventListener('input', updatePreview);
+borderRadiusInput.addEventListener('input', updatePreview);
+borderWidthInput.addEventListener('input', updatePreview);
+borderColorInput.addEventListener('input', updatePreview);
