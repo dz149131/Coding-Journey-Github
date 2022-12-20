@@ -1,13 +1,34 @@
-/* #divContainer {
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#createDiv {
+
+#controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#controls label {
+    margin-right: 10px;
+}
+
+#create {
+    background-color: rgb(73, 182, 224);
+    color: white;
+    border: 1px black solid;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#create:hover {
+    background-color: blue;
+}
+
+.div {
     width: 100px;
-    height: 30px;
-    font-size: 16px;
+    height: 100px;
+    background-color: black;
     margin: 10px;
 }
- */
-

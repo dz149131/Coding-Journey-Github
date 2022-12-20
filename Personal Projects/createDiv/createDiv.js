@@ -1,40 +1,19 @@
-// const createDivBtn = document.getElementById('#createDivBtn');
-// createDivBtn.addEventListener('click', function() {
-//     let newDiv = document.createElement('div');
-//     newDiv.style.width = '100px';
-//     newDiv.style.height = '100px';
-//     newDiv.style.backgroundColor = 'blue';
-//     newDiv.style.border = '1px solid black';
-// });
+const widthInput = document.getElementById('width');
+const heightInput = document.getElementById('height');
+const colorInput = document.getElementById('color');
+const createDivBtn = document.getElementById('createDiv');
+const container = document.getElementById('container');
 
-// const container = document.getElementById('#container');
-// container.appendChild(newDiv);
-// let colorPicker = document.getElementById('#colorPicker')
-// let widthInput = document.getElementById('#widthInput')
-// let heightInput = document.getElementById('#heightInput')
-// let resetBtn = document.getElementById('#resetBtn')
-// let createBtn = document.getElementById('#createBtn')
-// let divContainer = document.getElementById('#divContainer')
+createDivBtn.addEventListener('click', () => {
+    const width = widthInput.value;
+    const height = heightInput.value;
+    const color = colorInput.value;
 
-// createBtn.addEventListener('click', function() {
-//     divContainer.innerHTML = '';
-// })
-
-const createDiv = document.querySelector('#createDiv');
-createDiv.addEventListener('click', function() {
-    //Gets user inputed values from form
-    let width = document.getElementById('width').value;
-    let height = document.getElementById('height').value;
-    let color = document.getElementById('color').value;
-    
-    //creates new div 
-    let div = document.createElement('div');
-
-    //set the div's style properties
-    div.style.width = width;
-    div.style.height = height;
+    const div = document.createElement('div');
+    div.classList.add('div');
+    div.style.width = `${width}px`;
+    div.style.height = `${height}px`;
     div.style.backgroundColor = color;
 
-    //append new div to page
-    document.body.appendChild(div);
-})
+    container.appendChild(div);
+});
