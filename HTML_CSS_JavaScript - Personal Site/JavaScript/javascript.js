@@ -1,4 +1,10 @@
 //SEARCH BAR
+let formSearch = document.getElementById('search-form');
+formSearch.addEventListener('submit', function(e) {
+    e.preventDefault();
+})
+let searchTerm = document.getElementById('search').value;
+
 const search = document.querySelector("#search")
 search.addEventListener("input", e => { //WORKON LATER
     const value = e.target.value
