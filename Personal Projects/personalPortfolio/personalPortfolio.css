@@ -2,12 +2,14 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     background-color: #778da9;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -17,18 +19,23 @@ body {
     align-items: center;
     background-color: rgba(51, 51, 51, 0);
     color: white;
-    border-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
+
 .navOpacity {
     background-color: #333;
     transition: 1s ease;
-    background-color: rgb(51, 51, 51);
+    background-color: #212529ec;
 }
+
 .brand-title a {
     font-size: 1.5rem;
     margin: .5rem;
     text-decoration: none;
     color: #e0fbfc;
+    margin: 0;
+    padding: 8px 16px;
 }
 .navbar-links ul {
     margin: 0;
@@ -106,11 +113,62 @@ body {
     }
 }
 /* BODY */
-section div {
-    background-color: rgba(0, 0, 0, 0.288);
+
+#main section {
     display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+
+#header {
+    padding: 7em 5em 4em 5em;
+    text-align: center;
+}
+
+#header h1 {
+    font-size: 3.25em;
+    margin: 0 0 0.25em 0;
+    font-weight: 400;
+    letter-spacing: .05em;
+    color: #ffffff;
+}
+
+#header p {
+    font-size: 1.1em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+    font-weight: 400;
+    letter-spacing: -.05em;
+    color: #d9d9d9;
+}
+/* Main Content 1 */
+#main section h2 {
+    color: white;
+    letter-spacing: .5rem;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+#main section {
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-color: rgba(71, 71, 71, 0.9);
+    display: flex;
+    border-radius: 15px;
+}
+/* Project Card */
+section div {
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgba(255, 255, 255, 0.37);
     height: 500px;
     width: 500px;
-    color: grey;
-    border: 1px black solid;
+    padding: 1rem;
+    margin: 3rem 3rem;
+    color: rgb(255, 255, 255);
+    border: 1px rgba(255, 255, 255, 0.452) solid;
+    border-radius: 6px;
+    box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
 }
+
