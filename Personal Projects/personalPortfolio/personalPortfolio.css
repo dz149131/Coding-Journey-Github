@@ -1,4 +1,4 @@
-/* NAVBAR */
+/* ___________NAVBAR___________ */
 * {
     box-sizing: border-box;
 }
@@ -109,7 +109,8 @@ body {
         display: flex;
     }
 }
-/* BODY */
+
+/* ___________BODY___________ */
 
 #main section {
     display: flex;
@@ -138,34 +139,52 @@ body {
     letter-spacing: -.05em;
     color: #d9d9d9;
 }
-/* Main Content 1 */
+
+/*___________Main Content 1___________ */
+
 #main section h2 {
     color: white;
-    letter-spacing: .5rem;
-    font-size: 2em;
+    letter-spacing: .5em;
+    font-size: 1.25em;
     font-weight: 400;
+    display: inline-block;
+    text-decoration: underline;
 }
 
 #main section {
     margin-right: 10rem;
     margin-left: 10rem;
     background-color: rgba(71, 71, 71, 0.9);
-    display: flex;
+    display: block;
     border-radius: 15px;
 }
-/* Project Card */
-section div {
-    display: flex;
-    flex-direction: row;
+/* PROJECTS */
+header .projects-header h2 {
+    display: block;
+}
+/*___________ CONTENT CARD ___________*/
 
-    background-color: rgba(255, 255, 255, 0.37);
-    height: 500px;
-    width: 500px;
-    padding: 1rem;
-    margin: 3rem 3rem;
+.content {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 400px;
+    width: 800px;
+    padding: 1em;
+    margin: 1em;
     color: rgb(255, 255, 255);
-    border: 1px rgba(255, 255, 255, 0.452) solid;
+    border: 1px rgba(255, 255, 255, 0.5) solid;
     border-radius: 6px;
     box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
 }
 
+/* ___________ABOUT ME___________ */
+.about-title {
+
+}
+
+/* ___________CONTACT___________ */
+.contact-title {
+
+}
+
+/* ___________FOOTER___________ */
