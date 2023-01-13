@@ -171,19 +171,89 @@ header .projects-header h2 {
     display: flex;
     background-color: rgba(255, 255, 255, 0.10);
     height: 30em;
-    padding: 4em;
+    padding: 3em;
     margin: 1em 1em 3em 1em;
     color: rgb(255, 255, 255);
     border: 1px rgba(255, 255, 255, 0.5) solid;
     border-radius: 6px;
     box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
+    block-size: fit-content;
 }
 
 /* ___________ABOUT ME___________ */
-.about-title {
-
+.content-container {
+    display: flex;
+    flex-direction: column;
 }
 
+.about-paragraph {
+    color: #e2dfdf;
+    margin: 1em 1em;
+    text-align: start;
+    letter-spacing: .15em;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    display: block;
+}
+.resume-button {
+    background: none;
+    color: #7ef1c5;
+    border: 1px solid #c4c4c4;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    font-family: Montserrat;
+    margin: 1em .5em;
+}
+.resume-button:hover {
+    border-color: #7ef1c5;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em #7ef1c5;
+    transform: translateY(-5px);
+    transition: .25s;
+    cursor: pointer;
+}
+
+.spotlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5em;
+    border: rgb(19, 47, 170) 1px solid;
+}
+
+.skills-item-container {
+    padding: 1em;
+}
+
+.skills-column {
+    padding: .5em;
+    margin: 0 0.5em;
+    border: 1px red solid;
+}
+
+.skills-item {
+    padding: .5em;
+    background: #1a1a1a96;
+    border-radius: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills-item img {
+    transform: scale(0.35);
+}
 /* ___________CONTACT___________ */
 .contact-title {
 
