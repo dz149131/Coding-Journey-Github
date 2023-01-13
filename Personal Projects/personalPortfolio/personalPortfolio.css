@@ -14,6 +14,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0%;
+    padding: 0px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,12 +31,13 @@ body {
 }
 
 .brand-title a {
-    font-size: 1.5rem;
-    margin: .5rem;
+    font-size: 1.5em;
+    margin: .5em;
     text-decoration: none;
     color: #e0fbfc;
-    margin: 0;
+    margin: 0px;
     padding: 8px 16px;
+    letter-spacing: .15em;
 }
 .navbar-links ul {
     margin: 0;
@@ -54,15 +56,15 @@ body {
 .navbar-links li a {
     text-decoration: none;
     color: #dee2e6;
-    padding: 1rem;
+    padding: 1em;
     display: block;
     text-decoration: none;
 }
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
-    right: 1rem;
+    top: .75em;
+    right: 1em;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -102,7 +104,7 @@ body {
     }
 
     .navbar-links li a {
-        padding: .5rem 1rem;
+        padding: .5em 1em;
     }
 
     .navbar-links.active {
@@ -115,7 +117,7 @@ body {
 #main section {
     display: flex;
     justify-content: center;
-    padding: 5rem;
+    padding: 5em;
 }
 
 #header {
@@ -148,12 +150,13 @@ body {
     font-size: 1.25em;
     font-weight: 400;
     display: inline-block;
-    text-decoration: underline;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 15px;
 }
 
 #main section {
-    margin-right: 10rem;
-    margin-left: 10rem;
+    margin-right: 10em;
+    margin-left: 10em;
     background-color: rgba(71, 71, 71, 0.9);
     display: block;
     border-radius: 15px;
@@ -166,11 +169,10 @@ header .projects-header h2 {
 
 .content {
     display: flex;
-    background-color: rgba(255, 255, 255, 0.15);
-    height: 400px;
-    width: 800px;
-    padding: 1em;
-    margin: 1em;
+    background-color: rgba(255, 255, 255, 0.10);
+    height: 30em;
+    padding: 4em;
+    margin: 1em 1em 3em 1em;
     color: rgb(255, 255, 255);
     border: 1px rgba(255, 255, 255, 0.5) solid;
     border-radius: 6px;
