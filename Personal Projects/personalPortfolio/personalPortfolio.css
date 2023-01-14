@@ -232,7 +232,7 @@ header .projects-header h2 {
 }
 
 .skills-item-container {
-    padding: 1em;
+    padding: .5em;
 }
 
 .skills-column {
@@ -242,13 +242,13 @@ header .projects-header h2 {
 }
 
 .skills-item {
-    padding: .5em;
     background: #1a1a1a96;
     border-radius: .5em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: Montserrat;
 }
 
 .skills-item img {
