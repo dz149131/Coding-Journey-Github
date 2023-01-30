@@ -61,6 +61,7 @@ nav a {
 }
 .navbar ul li:hover > ul {
     display: block;
+    z-index: 1;
 }
 .navbar ul ul li:hover a {
     background: #82b38c;
