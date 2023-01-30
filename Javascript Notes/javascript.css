@@ -82,6 +82,7 @@ nav a {
 h2 , h3 , h4 {
     margin: 0;
     padding: 0;
+    color: #003cff;
 }
 h1 {
     margin: 10px;
@@ -90,7 +91,8 @@ h1 {
     border: #386342 solid 1px;
 }
 p {
-    background-color: #4ab35f52;;
+    background-color: #eff5f096;;
+    color: red;
 }
 #thisButton {
     width: 100px;
