@@ -80,9 +80,10 @@ nav a {
     padding-top: 40px;
 }
 h2 , h3 , h4 {
-    margin: 0;
     padding: 0;
-    color: #003cff;
+    color: #0400ff;
+    border-bottom: 1px blue solid;
+    width: 50%;
 }
 h1 {
     margin: 10px;

@@ -7,6 +7,14 @@
 		<title>Random</title>
 	</head>
 	<body>
+		<!------OPTION 1 ------>
 		<h1>Random Number: <%= rand %></h1>
+		<% if (rand % 2 === 0) { %>
+		<h2>Even Number</h2>
+		<% } else { %>
+		<h2>ODD Number</h2>
+		<% } %>
+		<!------ OPTION 2 ------>
+		<h3>The Number is <%= rand%2===0 ? 'EVEN' : 'ODD'%></h3>
 	</body>
 </html>
