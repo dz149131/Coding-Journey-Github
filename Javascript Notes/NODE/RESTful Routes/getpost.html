@@ -7,7 +7,14 @@
 		<title>Get and Post</title>
 	</head>
 	<body>
-		<form action="/tacos" method="get">
+		<h1>GET</h1>
+		<form action="http://localhost:3000/tacos" method="get">
+			<input type="text" name="meats" />
+			<input type="number" name="qty" />
+			<button>Submit</button>
+		</form>
+		<h1>Post</h1>
+		<form action="http://localhost:3000/tacos" method="post">
 			<input type="text" name="meats" />
 			<input type="number" name="qty" />
 			<button>Submit</button>
