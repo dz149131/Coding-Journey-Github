@@ -114,3 +114,9 @@ p {
 #jokeBtn {
     padding: 10px;
 }
+
+section li {
+    width: 75%;
+    padding: 2px;
+    background-color: #83e49a;
+}
