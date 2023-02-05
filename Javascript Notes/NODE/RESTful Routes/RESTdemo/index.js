@@ -52,6 +52,14 @@ app.get('/comments/:id', (req, res) => {
     res.render('comments/show', {comment})
 })
 
+app.patch('/comments/:id', (req, res) => {
+    const { id } = req.params;                              //finding the id
+    const newCommentText = req.body.comment;                //selects w/e sent in req.body
+    const foundComment = comments.find(c => c.id === id);   //finding a comment with the same id
+    foundComment.comment = newCommentText;                  //update that comment with new
+    res.redirect('/comments')                               //redirect
+})
+
 app.get('/tacos', (req, res) => {
     res.send("GET /taco response")
 })
