@@ -25,7 +25,7 @@
             </li>
             <li><a href="#string">String</a></li>
             <li><a href="#java_decision_making">Java Decision Making</a></li>
-            <li><a href="#conditional_statements">Conditional Statements</a>
+            <li><a href="#conditional_statements" class="highlight">Conditional Statements</a>
                 <ul>
                     <li><a href="#if">If</a></li>
                     <li><a href="#else_if">Else if</a></li>
@@ -73,7 +73,7 @@
                 </ul>
             </li>
             <li><a href="#todolist_project">Todolist Project</a></li>
-            <li><a href="#function*">Functions*</a>
+            <li><a href="#function*" class="highlight">Functions*</a>
                 <ul>
                     <li><a href="#function">Function</a></li>
                     <li><a href="#arguments">Arguments</a></li>
@@ -88,7 +88,7 @@
                     <li><a href="#lexical_scope">Lexical Scope</a></li>
                 </ul>
             </li>
-            <li><a href="#functions_lvl2*">Functions Lvl2*</a>
+            <li><a href="#functions_lvl2*" class="highlight">Functions Lvl2*</a>
                 <ul>
                     <li><a href="#function_expression">Function Expression</a></li>
                     <li><a href="#functions_as_arguments">Functions As Arguments</a></li>
@@ -113,7 +113,7 @@
                     <li><a href="#destructuring">Destructuring</a></li>
                 </ul>
             </li>
-            <li><a href="#dom">DOM</a>
+            <li><a href="#dom" class="highlight">DOM</a>
                 <ul>
                     <li><a href="#document">Document</a></li>
                     <li><a href="#selectors">Selectors</a>
@@ -150,7 +150,7 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="#dom_2.0">DOM 2.0</a>
+            <li><a href="#dom_2.0" class="highlight">DOM 2.0</a>
                 <ul>
                     <li><a href="#events">Events</a>
                         <ul>
@@ -266,7 +266,7 @@
                     <li><a href="#rm">rm</a></li>
                 </ul>
             </li>
-            <li><a href="#node">Node</a>
+            <li><a href="#node" class="highlight">Node</a>
                 <ul>
                     <li><a href="#node">Node</a></li>
                     <li><a href="#module.exports">module.exports</a></li>
@@ -277,10 +277,14 @@
                     <li><a href="#language_guesser_project">Language Guesser Project</a></li>
                 </ul>
             </li>
-            <li><a href="#express">Express</a>
+            <li><a href="#express" class="highlight">Express</a>
                 <ul>
                     <li><a href="#express">Express</a></li>
-                    <li><a href="#req_res_object">Request Response Object</a></li>
+                    <li><a href="#req_res_object">Request Response Object</a>
+                        <ul>
+                            <li><a href="#res.send">res.send</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#express_routing_basics">Express Routing Basics</a>
                         <ul>
                             <li><a href="#app.get">app.get</a>
@@ -319,9 +323,17 @@
                     <li><a href="#get-vs-post-requests">Get Vs Post</a>
                         <ul>
                             <li><a href="#parsing-the-request-body">Parsing the Request Body</a></li>
+                            <li><a href="#parsingJson">Parsing w/ Json</a></li>
                         </ul>
                     </li>
-                    <li><a href="#REST">REST</a></li>
+                    <li><a href="#REST">REST</a>
+                        <ul>
+                            <li><a href="#commentsIndex">Comments Index</a></li>
+                            <li><a href="#commentsNew">Comments New</a></li>
+                            <li><a href="#expressRedirects">Express Redirects</a></li>
+                            <li><a href="#commentsShow">Comments Show</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -2384,7 +2396,7 @@
                         <li><a href="https://expressjs.com/en/4x/api.html#res">Response</a> <br>
                             Response is an object made by express both which are passed into the callback
                             <ul>
-                                <li><a href="https://expressjs.com/en/4x/api.html#res.send">res.send</a>
+                                <li id="res.send"><a href="https://expressjs.com/en/4x/api.html#res.send">res.send</a>
                                     <ul>
                                         <li>Sends the HTTP response.</li>
                                     </ul>
@@ -2517,7 +2529,7 @@
                 <h2 id="parsing-the-request-body">Parsing The Request Body</h2>
                     <img src="NODE\NODE - pictures\RESTful1.PNG" alt="">
                     <img src="NODE\NODE - pictures\RESTful2.PNG" alt="">
-                    <h3>Parsing with JSON</h3>
+                <h2 id="parsingJson">Parsing with JSON</h2>
                     <img src="NODE\NODE - pictures\RESTful3.PNG" alt="">
             </div>
 
@@ -2532,14 +2544,16 @@
                         <li>The most common way of approaching REST is in formatting the URLs and HTTP verbs in your applications</li>
                     </ul>
                 </li>
-                <h2>EXAMPLE:</h2>
+                <h2>Guideline:</h2>
                     <img src="NODE\NODE - pictures\RESTful4.PNG" alt="">
-                <h2>Comments Index</h2>
+                <h2 id="commentsIndex">Comments Index</h2>
                     <img src="NODE\NODE - pictures\RESTful5.PNG" alt="">
-                <h2>Comments New</h2>
+                <h2 id="commentsNew">Comments New</h2>
                     <img src="NODE\NODE - pictures\RESTful6.PNG" alt="">
-                <h2>Express Redirects</h2>
+                <h2 id="expressRedirects"><a href="https://expressjs.com/en/api.html#res.redirect">Express (res.redirect)</a></h2>
                     <img src="NODE\NODE - pictures\RESTful7.PNG" alt="">
+                <h2 id="commentsShow">Comments Show</h2>
+                    <img src="NODE\NODE - pictures\RESTful8.PNG" alt="">
             </div>
         </ul>
         

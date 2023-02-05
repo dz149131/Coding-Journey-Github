@@ -26,7 +26,7 @@ section {
     background-color: #344e4141;
 }
 .navbar {
-    background: #354f5285;
+    background: #476a6e85;
     position: fixed;
 }
 nav a {
@@ -114,9 +114,11 @@ p {
 #jokeBtn {
     padding: 10px;
 }
-
 section li {
     width: 75%;
     padding: 2px;
     background-color: #c1dfc8;
+}
+.highlight {
+    color: #ff172a;
 }
