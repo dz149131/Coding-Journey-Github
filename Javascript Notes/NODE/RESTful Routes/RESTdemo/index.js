@@ -10,7 +10,7 @@ app.use(methodOverride('_method'))
 app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'ejs')
 
-const comments = [
+let comments = [
     {
         id: uuid(),
         username: 'Todd',
@@ -66,6 +66,12 @@ app.patch('/comments/:id', (req, res) => {
     const foundComment = comments.find(c => c.id === id);   //finding a comment with the same id
     foundComment.comment = newCommentText;                  //update that comment with new
     res.redirect('/comments')                               //redirect
+})
+
+app.delete('/comments/:id', (req, res) => {
+    const { id } = req.params;                      //finding the id
+    comments = comments.filter(c => c.id !== id);   //creates a shallow copy of a portion of a given array
+    res.redirect('/comments');
 })
 
 app.get('/tacos', (req, res) => {
