@@ -85,10 +85,10 @@ h2 , h3 , h4 {
     width: 50%;
 }
 h2{
-    border-bottom: 2px black solid;
+    border-bottom: 1.5px black solid;
 }
 h3 {
-    border-bottom: 1px black solid;
+    border-bottom: .75px black solid;
 }
 h4 {
     border-bottom: .5px black solid;
@@ -125,7 +125,7 @@ p {
 section li {
     width: 75%;
     padding: 2px;
-    background-color: #c1dfc8;
+    background-color: #c1dfc8b9;
 }
 .highlight {
     color: #ff172a;
