@@ -349,10 +349,10 @@
                     </li>
                     <li><a href="#mongoDB">MongoDB</a>
                         <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="#inserting">Inserting w/ Mongo</a></li>
+                            <li><a href="#finding">Finding w/ Mongo</a></li>
+                            <li><a href="#updating">Updating w/ Mongo</a></li>
+                            <li><a href="#deleting">Deleting w/ Mongo</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -2612,9 +2612,8 @@
 
             <div id="mongoDB">
                 <h2><a href="https://www.mongodb.com/docs/manual/">MongoDB Docs</a></h2>
-                
-                <li><b>use</b> variableName = creates a database</li>
-                <li><b><u>mongosh</u></b> - starts the shell</li>
+                    <li><b>use</b> variableName = creates a database</li>
+                    <li><b><u>mongosh</u></b> - starts the shell</li>
                 <div id="inserting">
                     <li><a href="https://www.mongodb.com/docs/manual/tutorial/insert-documents/">Inserting With Mongo</a>
                         <ul>
@@ -2637,9 +2636,20 @@
                 </div>
 
                 <div id="finding">
-                    <li><a href="">Finding With Mongo</a>
+                    <li><a href="https://www.mongodb.com/docs/v6.0/reference/method/db.collection.find/">Finding With Mongo</a>
                         <ul>
-                            <li></li>
+                            <li><a href="https://www.mongodb.com/docs/v6.0/reference/method/db.collection.find/">db.collection.find</a>
+                                <ul>
+                                    <li>Selects documents in a collection or view and returns a cursor to the selected documents.</li>
+                                    <img src="NODE\NODE - pictures\mongo2.1.PNG" alt="">
+                                </ul>
+                            </li>
+                            <li><a href="https://www.mongodb.com/docs/v6.0/reference/method/db.collection.findOne/">b.collection.findOne</a>
+                                <ul>
+                                    <li>Returns one document that satisfies the specified query criteria on the collection or view. If multiple documents satisfy the query, this method returns the first document according to the natural order which reflects the order of documents on the disk.</li>
+                                    <img src="NODE\NODE - pictures\mongo2.2.PNG" alt="">
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </div>
