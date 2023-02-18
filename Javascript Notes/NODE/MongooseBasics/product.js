@@ -12,17 +12,34 @@ mongoose.connect('mongodb://127.0.0.1:27017/shopApp', { useNewUrlParser: true, u
     const productSchema = new mongoose.Schema({
         name: {
             type: String,
-            required: true
+            required: true,
+            maxLength: 20
         },
         price: {
             type: Number,
-            required: true
+            required: true,
+            min: 0 
+        },
+        onSale: {
+            type: Boolean,
+            default: false
+        },
+        categories: [String],
+        qty: {
+            online: {
+                type: Number,
+                default: 0
+            },
+            inStore: {
+                type: Number,
+                default: 0
+            }
         }
     });
 
     const Product = mongoose.model('Product', productSchema);
 
-    const bike = new Product({name: 'Mountain Bike', price: 599})
+    const bike = new Product({name: 'Bike Helmet', price: 29.99, categories: ['Cycling', 'Safety']})
     bike.save()
     .then(data => {
         console.log('It Worked')
