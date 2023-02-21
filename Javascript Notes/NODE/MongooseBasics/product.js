@@ -9,43 +9,70 @@ mongoose.connect('mongodb://127.0.0.1:27017/shopApp', { useNewUrlParser: true, u
         console.log(err)
     })
 
-    const productSchema = new mongoose.Schema({
-        name: {
-            type: String,
-            required: true,
-            maxLength: 20
-        },
-        price: {
+const productSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+        maxLength: 20
+    },
+    price: {
+        type: Number,
+        required: true,
+        min: 0 
+    },
+    onSale: {
+        type: Boolean,
+        default: false
+    },
+    categories: [String],
+    qty: {
+        online: {
             type: Number,
-            required: true,
-            min: 0 
+            default: 0
         },
-        onSale: {
-            type: Boolean,
-            default: false
-        },
-        categories: [String],
-        qty: {
-            online: {
-                type: Number,
-                default: 0
-            },
-            inStore: {
-                type: Number,
-                default: 0
-            }
+        inStore: {
+            type: Number,
+            default: 0
         }
-    });
+    },
+    size: {
+        type: String,
+        enum: ['S', 'M', 'L' ]
+    }
+});
 
-    const Product = mongoose.model('Product', productSchema);
+productSchema.methods.greet = function () {
+    console.log("Hello! HI!")
+    // console.log(`- from ${this.name}`)
+}
 
-    const bike = new Product({name: 'Bike Helmet', price: 29.99, categories: ['Cycling', 'Safety']})
-    bike.save()
-    .then(data => {
-        console.log('It Worked')
-        console.log(data);
-    })
-    .catch (err => {
-        console.log("Oh No Error")
-        console.log(err)
-    })
+const Product = mongoose.model('Product', productSchema);
+
+const findProduct = async () => {
+    const foundProduct = await Product.findOne({name: 'Bike Helmet'});
+    foundProduct.greet();
+}
+
+
+
+
+// const bike = new Product({name: 'Cycling Jersy', price: 20.99, categories: ['Cycling'], size: 'XS'})
+// bike.save()
+// .then(data => {
+//     console.log('It Worked')
+//     console.log(data);
+// })
+// .catch (err => {
+//     console.log("Oh No Error")
+//     console.log(err)
+// })
+
+// Product.findOneAndUpdate({name: 'Tire Pump'}, {price: 10.99}, {new: true, runValidators: true})
+//     .then(data => {
+//         console.log('It Worked')
+//         console.log(data);
+//     })
+//     .catch (err => {
+//         console.log("Oh No Error")
+//         console.log(err)
+//     })
