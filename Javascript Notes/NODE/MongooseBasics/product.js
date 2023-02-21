@@ -41,18 +41,36 @@ const productSchema = new mongoose.Schema({
     }
 });
 
-productSchema.methods.greet = function () {
-    console.log("Hello! HI!")
-    // console.log(`- from ${this.name}`)
+// productSchema.methods.greet = function() {
+//     console.log("Hello! HI!")
+//     console.log(`- from ${this.name}`)
+// }
+
+productSchema.methods.toggleOnSale = function() {  //A method that toggles onSale property for the specified product 
+    this.onSale = !this.onSale;
+    return this.save();
+}
+
+productSchema.methods.addCategory = function (newCat) { //A method that adds a new category for the specified product
+    this.categories.push(newCat);
+    return this.save();
 }
 
 const Product = mongoose.model('Product', productSchema);
 
 const findProduct = async () => {
-    const foundProduct = await Product.findOne({name: 'Bike Helmet'});
-    foundProduct.greet();
+    const foundProduct = await Product.findOne({name: 'Mountain Bike'});
+    console.log(foundProduct)
+    await foundProduct.toggleOnSale();
+    console.log(foundProduct)
+    await foundProduct.addCategory('Outdoors')
+    console.log(foundProduct)
+    // foundProduct.greet();
+    // foundProduct.onSale = !foundProduct.onSale
+    // foundProduct.save()
 }
 
+findProduct();
 
 
 
