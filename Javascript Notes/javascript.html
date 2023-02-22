@@ -358,7 +358,7 @@
                     <li><a href="#additional-mongo-operators">Additional Mongo Operators</a></li>
                 </ul>
             </li>
-            <li><a href="#mongoose-mongo">Mongoose + Mongo</a>
+            <li><a href="#mongoose-mongo" class="highlight">Mongoose + Mongo</a>
                 <ul>
                     <li><a href="#mongoose">Mongoose</a>
                         <ul>
@@ -374,6 +374,8 @@
                             <li><a href="#validation-errors">Mongoose Validation Errors</a></li>
                             <li><a href="#model-instance-methods">Model Instance Methods</a></li>
                             <li><a href="#model-static-methods">Model Static Methods</a></li>
+                            <li><a href="#mongoose-virtuals">Mongoose Virtuals</a></li>
+                            <li><a href="#mongoose-middleware">Mongoose Middleware</a></li>
                         </ul>
                     </li>
                     <li><a href="#ODM">ODM (Object Data Mapper)</a>
@@ -2745,76 +2747,112 @@
         <ul>
             <h1>Connecting To Mongo With Mongoose</h1>
             <div id="mongoose">
-                <h2>Mongoose</h2>
-                    <li><a href="https://mongoosejs.com/">Mongoose Website</a></li>
-                    <li id="ODM"><b>ODM (Object Data Mapper)</b>
-                        <ul>
-                            <li>ODMs like Mongoose map documents coming from a database into usable JavaScripts objects</li>
-                            <li>Mongoose provides ways for us to model out our application data and define a schema. It offers east ways to validata data and build complex queries from the comfort of JS</li>
-                        </ul>
-                    </li>
-                    <li><a href="https://mongoosejs.com/docs/guide.html#definition">Mongoose Docs CRUD</a>
-                        <ul>
-                            <h3 id="define-schema">Define a Schema</h3>
-                                <img src="NODE\NODE - pictures\mongoose1.1.PNG" alt="">
-                            <h3 id="creating-model">Creating a Model</h3id>
-                                <img src="NODE\NODE - pictures\mongoose1.2.PNG" alt="">
-                            <h3 id=".insertMany"><a href="https://mongoosejs.com/docs/api/model.html#model_Model-insertMany"></a>.insertMany()</h3>
-                                <img src="NODE\NODE - pictures\mongoose1.3.PNG" alt="">
-                            <h3 id="finding-mongoose">Finding w/ Mongoose</h3>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-find">Model.find()</a>
-                                </li>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findById">Model.findById()</a>
-                                    <br>
-                                    <img src="NODE\NODE - pictures\mongoose1.4.PNG" alt="">
-                                </li>
-                            <h3 id="updating-mongoose">Updating w/ Mongoose</h3>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-update">Model.update()</a>
-                                    <br>
-                                    <img src="NODE\NODE - pictures\mongoose1.5.PNG" alt="">
-                                </li>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findOneAndUpdate">Model.findOneAndUpdate()</a>
-                                    <img src="NODE\NODE - pictures\mongoose1.6.PNG" alt="">
-                                </li>
-                            <h3 id="deleting-mongoose">Deleting w/ Mongoose</h3>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-remove">Model.prototype.remove()</a>
-                                    <br>
-                                    <img src="NODE\NODE - pictures\mongoose1.7.PNG" alt="">
-                                </li>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-deleteMany">Model.deleteMany()</a>
-                                    <br>
-                                    <img src="NODE\NODE - pictures\mongoose1.8.PNG" alt="">
-                                </li>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findOneAndDelete">Model.findOneAndDelete()</a>
-                                    <br>
-                                    <img src="NODE\NODE - pictures\mongoose1.9.PNG" alt="">
-                                </li>
-                            <h3 id="schema-validations">Mongoose Schema Validations/ Constraints</h3>
-                                <li><a href="#https://mongoosejs.com/docs/validation.html">Validations Mongoosejs</a></li>
-                                <img src="NODE\NODE - pictures\mongoose2.PNG" alt="">
-                            <h3 id="schema-constraints">Schema Constraints</h3>
-                                <img src="NODE\NODE - pictures\mongoose2.1.PNG" alt="">
-                            <h3 id="validating-updates">Validating Mongoose Updates</h3>
-                                <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findOneAndUpdate">Model.findOneAndUpdate()</a>
-                                    <br>
-                                    <img src="NODE\NODE - pictures\mongoose2.2.PNG" alt="">
-                                </li>
-                            <h3 id="validation-errors">Mongoose Validation Errors</h3>
-                                <li><a href="https://mongoosejs.com/docs/schematypes.html">Mongoose enum</a>
-                                    <img src="NODE\NODE - pictures\mongoose2.3.PNG" alt="">
-                                </li>
-                            <h3 id="model-instance-methods">Model Instance Methods</h3>
-                                <li>
-                                    <a href="https://mongoosejs.com/docs/guide.html#methods">Mongoose Instance Methods</a>
-                                    <img src="NODE\NODE - pictures\mongoose2.4.PNG" alt="">
-                                </li>
-                            <h3 id="model-static-methods">Model Static Methods</h3>
-                                <li>
-                                    <a href="https://mongoosejs.com/docs/guide.html#statics">Mongoose Static Methods</a>
-                                    <img src="NODE\NODE - pictures\mongoose2.5.PNG" alt="">
-                                </li>
-                        </ul>
-                    </li>
+                <h2><a href="https://mongoosejs.com/">Mongoose Website</a></h2>
+
+                    <div id="ODM">
+                        <li><b>ODM (Object Data Mapper)</b>
+                            <ul>
+                                <li>ODMs like Mongoose map documents coming from a database into usable JavaScripts objects</li>
+                                <li>Mongoose provides ways for us to model out our application data and define a schema. It offers east ways to validata data and build complex queries from the comfort of JS</li>
+                            </ul>
+                        </li>
+                    </div>
+                    
+                    <div id="mongoose-CRUD">
+                        <h2><a href="https://mongoosejs.com/docs/guide.html#definition">Mongoose Docs CRUD</a></h2>
+                            <ul>
+                                <div id="define-schema">
+                                    <h3>Define a Schema</h3>
+                                        <img src="NODE\NODE - pictures\mongoose1.1.PNG" alt="">
+                                </div>
+
+                                <div id="creating-model">
+                                    <h3>Creating a Model</h3id>
+                                        <img src="NODE\NODE - pictures\mongoose1.2.PNG" alt="">
+                                </div>
+
+                                <div id=".insertMany">
+                                    <h3><a href="https://mongoosejs.com/docs/api/model.html#model_Model-insertMany"></a>.insertMany()</h3>
+                                        <img src="NODE\NODE - pictures\mongoose1.3.PNG" alt="">
+                                </div>
+
+                                <div id="finding-mongoose">
+                                    <h3>Finding w/ Mongoose</h3>
+                                        <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-find">Model.find()</a></li>
+                                        <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findById">Model.findById()</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose1.4.PNG" alt="">                                       
+                                </div>
+                                
+                                <div id="updating-mongoose">
+                                    <h3>Updating w/ Mongoose</h3>
+                                        <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-update">Model.update()</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose1.5.PNG" alt="">
+                                        <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findOneAndUpdate">Model.findOneAndUpdate()</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose1.6.PNG" alt="">                                      
+                                </div>
+                                
+                                <div id="deleting-mongoose">
+                                    <h3>Deleting w/ Mongoose</h3>
+                                        <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-remove">Model.prototype.remove()</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose1.7.PNG" alt="">
+                                        <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-deleteMany">Model.deleteMany()</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose1.8.PNG" alt="">
+                                        <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findOneAndDelete">Model.findOneAndDelete()</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose1.9.PNG" alt="">                                       
+                                </div>
+                                
+                                <div id="schema-validations">
+                                    <h3>Mongoose Schema Validations/ Constraints</h3>
+                                        <li><a href="#https://mongoosejs.com/docs/validation.html">Validations Mongoosejs</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose2.PNG" alt="">
+                                </div>
+
+                                <div id="schema-constraints">
+                                    <h3>Schema Constraints</h3>
+                                        <img src="NODE\NODE - pictures\mongoose2.1.PNG" alt="">
+                                </div>
+
+                                <div id="validating-updates">
+                                    <h3>Validating Mongoose Updates</h3>
+                                    <li><a href="https://mongoosejs.com/docs/api/model.html#model_Model-findOneAndUpdate">Model.findOneAndUpdate()</a></li>
+                                        <img src="NODE\NODE - pictures\mongoose2.2.PNG" alt="">
+                                </div>
+
+                                <div id="validation-errors">
+                                    <h3>Mongoose Validation Errors</h3>
+                                        <li><a href="https://mongoosejs.com/docs/schematypes.html">Mongoose enum</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose2.3.PNG" alt="">                                      
+                                </div>
+                                
+                                <div id="model-instance-methods">
+                                    <h3>Model Instance Methods</h3>
+                                        <li><a href="https://mongoosejs.com/docs/guide.html#methods">Mongoose Instance Methods</a>
+                                            <img src="NODE\NODE - pictures\mongoose2.4.PNG" alt="">
+                                        </li>
+                                </div>
+
+                                <div id="model-static-methods">
+                                    <h3>Model Static Methods</h3>
+                                        <li><a href="https://mongoosejs.com/docs/guide.html#statics">Mongoose Static Methods</a>
+                                            <img src="NODE\NODE - pictures\mongoose2.5.PNG" alt="">
+                                        </li>
+                                </div>
+                                
+                                <div id="mongoose-virtuals">
+                                    <h3>Mongoose Virtuals</h3>
+                                        <li><a href="https://mongoosejs.com/docs/tutorials/virtuals.html">Mongoose Virtuals</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose2.6.PNG" alt="">
+                                </div>
+                                
+                                <div id="mongoose-middleware">
+                                    <h3>Mongoose Middleware</h3>
+                                        <li><a href="https://mongoosejs.com/docs/middleware.html">Mongoose Middleware</a></li>
+                                            <img src="NODE\NODE - pictures\mongoose2.7.PNG" alt="">
+                                </div>
+                                
+                            </ul>
+                    </div>
+
             </div>
         </ul>
     </section>
