@@ -9,13 +9,13 @@ const Campground = require('./models/campground');
 mongoose.set("strictQuery", false);
 mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        console.log("MONGO CONNECTION SUCCESSFUL")
+        console.log("MONGO Database CONNECTION SUCCESSFUL")
     })
     .catch(err => {
-        console.log("MONGO ERROR")
+        console.log("MONGO Database ERROR")
         console.log(err)
     })
-    
+
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
