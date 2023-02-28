@@ -2991,7 +2991,20 @@
     <section id="middleware-express">
         <ul>
             <h1>Middleware: The Key To Express</h1>
-            <div id=""></div>
+            <div id="middleware">
+                <h3>Middleware</h3>
+                    <li>Middleware are just functions</li>
+                    <li>Each middleware has access to the request and response objects</li>
+                    <li>Middleware can end the HTTP request by sending back a response with methods like res.send()</li>
+                    <li>OR middleware can be chained together, one after another by calling next()</li>
+            </div>
+
+            <div id="morgan-middlware">
+                <h3>Using Morgan - Logger middleware</h3>
+                    <li><a href="https://expressjs.com/en/resources/middleware/morgan.html">Morgan ExpressJs</a></li>
+                    <li><a href="https://github.com/expressjs/morgan">Morgan Github</a></li>
+                        <img src="Middleware\middleware photos\middleware1.PNG" alt="">
+            </div>
         </ul>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
