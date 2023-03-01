@@ -16,6 +16,14 @@ app.use('/dogs', (req, res ,next) => {
     next();
 })
 
+const verifyPassword = (req, res , next) => {
+    const {password} = req.query;
+    if (password === 'unlock') {
+        next();
+    }
+    res.send('You Need To Enter A Password')
+}
+
 // app.use((req, res, next) => {
 //     console.log("This is my first middleware")
 //     return next();
@@ -40,7 +48,11 @@ app.get('/dogs', (req, res) => {
     res.send('Woof Woof')
 })
 
-app.use((req,res) => {
+app.get('/secret', verifyPassword, (req, res) => {
+    res.send('You found the secret!')
+})
+
+app.use((req, res) => {
     res.status(404).send('NOT FOUND!')
 })
 
