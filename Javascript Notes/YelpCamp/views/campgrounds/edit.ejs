@@ -62,8 +62,7 @@
 					id="description"
 					name="campground[description]"
 				>
-<%= campground.description %>
-					</textarea
+<%= campground.description %></textarea
 				>
 			</div>
 
@@ -71,6 +70,8 @@
 				<button class="btn btn-primary">Update Campground</button>
 			</div>
 		</form>
-		<a href="/campgrounds/<%= campground._id %>">Back to Campgrounds</a>
+		<a class="btn btn-success" href="/campgrounds/<%= campground._id %>"
+			>Back to Current Campground</a
+		>
 	</div>
 </div>
