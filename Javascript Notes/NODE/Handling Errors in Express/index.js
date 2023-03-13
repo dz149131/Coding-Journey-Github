@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/error', (req, res) => {
-    chicken.fly()
+    chicken.fly() //does not exist
 })
 
 app.get('/dogs', (req, res) => {
@@ -45,6 +45,13 @@ app.get('/secret', verifyPassword, (req, res) => {
 
 app.use((req, res) => {
     res.status(404).send('NOT FOUND!')
+})
+
+app.use((err, req, res, next) => {
+    console.log("*********************")
+    console.log("********ERROR********")
+    console.log("*********************")
+    next(err)
 })
 
 app.listen(3000, () => {
