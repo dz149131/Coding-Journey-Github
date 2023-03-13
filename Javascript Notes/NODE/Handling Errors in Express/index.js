@@ -21,26 +21,17 @@ const verifyPassword = (req, res , next) => {
     if (password === 'unlock') {
         next();
     }
-    res.send('You Need To Enter A Password')
+    // res.send('You Need To Enter A Password')
+    throw new Error('Password Required')
 }
-
-// app.use((req, res, next) => {
-//     console.log("This is my first middleware")
-//     return next();
-//     console.log("First middleware after calling next()")
-// })
-// app.use((req, res, next) => {
-//     console.log("This is my second middleware")
-//     return next();
-// })c
-// app.use((req, res, next) => {
-//     console.log("This is my third middleware")
-//     return next();
-// })
 
 app.get('/', (req, res) => {
     console.log(`Request Date: ${req.requestTime}`)
     res.send('Home Page')
+})
+
+app.get('/error', (req, res) => {
+    chicken.fly()
 })
 
 app.get('/dogs', (req, res) => {
