@@ -34,13 +34,13 @@ const Farm = mongoose.model('Farm', farmSchema);
 //     {name: 'Winter Melon', price: 12.25, season: 'Winter'},
 // ])
 
-// const makeFarm = async () => {
-//     const farm = new Farm({name: 'Fully Belly Farms', city: 'Alpine, NY'});
-//     const melon = await Product.findOne({name: 'Goddess Melon'});
-//     farm.products.push(melon)
-//     await farm.save()
-//     console.log(farm);
-// }
+const makeFarm = async () => {
+    const farm = new Farm({name: 'Fully Belly Farms', city: 'Alpine, NY'});
+    const melon = await Product.findOne({name: 'Goddess Melon'});
+    farm.products.push(melon)
+    await farm.save()
+    console.log(farm);
+}
 
 // makeFarm();
 
@@ -52,4 +52,6 @@ const addProduct = async () => {
     console.log(farm);
 }
 
-addProduct();
+Farm.findOne({name: 'Fully Belly Farms'})
+.populate('products')
+.then(farm => console.log(farm))
