@@ -13,7 +13,7 @@ const farmSchema = new Schema ({
         type: String,
         required: [true, 'Email Required']
     },
-    product: [
+    products: [
         {
             type: Schema.Types.ObjectId,
             ref: 'Product'
