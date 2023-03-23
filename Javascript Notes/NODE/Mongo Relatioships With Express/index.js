@@ -26,6 +26,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 
 // FARM ROUTES
+
 app.get('/farms', async (req, res) => {
     const farms = await Farm.find({});
     res.render('farms/index', {farms})
@@ -89,7 +90,7 @@ app.post('/products', async (req, res) => {
 
 app.get('/products/:id', async (req, res) => {
     const {id} = req.params;
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).populate('farm', 'name');
     console.log(product);
     res.render('products/show', {product})
 })
