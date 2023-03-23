@@ -7,7 +7,8 @@
 		<title>New Product</title>
 	</head>
 	<body>
-		<h1>Add A Product</h1>
+		<h1><%=farm.name%></h1>
+		<h2>Add a Product</h2>
 		<form action="/farms/<%=farm._id%>/products" method="POST">
 			<label for="name">Product Name:</label>
 			<input type="text" name="name" id="name" placeholder="Product Name" />
@@ -23,13 +24,9 @@
 				<% for(let category of categories){ %>
 				<option value="<%= category %>"><%= category %></option>
 				<% } %>
-				<!-- <option value="fruit">Fruit</option>
-				<option value="vegetable">Vegetable</option>
-				<option value="dairy">Dairy</option> -->
 			</select>
 			<button>Submit</button>
-			<br />
-			<a href="/farms/<%=farms._id%>">Back To Farm</a>
 		</form>
+		<a href="/farms/<%=farm._id%>">Back To Farm</a>
 	</body>
 </html>
