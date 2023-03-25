@@ -13,7 +13,7 @@ const CampgroundSchema = new Schema({
             ref: 'Review'
         }
     ]
-})
+});
 
 const Campground = mongoose.model('Campground', CampgroundSchema);
 
