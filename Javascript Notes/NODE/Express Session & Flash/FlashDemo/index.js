@@ -7,6 +7,7 @@ const flash = require('connect-flash');
 
 const sessionOptions = {secret: 'sessionsecret', resave: false, saveUninitialized: false};
 app.use(session(sessionOptions));
+app.use(flash());
 
 const Farm = require('./models/farm');
 
@@ -28,6 +29,11 @@ app.use(express.urlencoded({extended:true}))
 
 // FARM ROUTES
 
+app.use((req, res, next) => {
+    res.locals.messages = req.flash('success');
+    next();
+})
+
 app.get('/farms', async (req, res) => {
     const farms = await Farm.find({});
     res.render('farms/index', {farms})
@@ -45,6 +51,7 @@ app.get('/farms/:id', async(req, res) => {
 app.post('/farms', async (req, res) => {
     const  farm = new Farm (req.body);
     await farm.save();
+    req.flash('success', 'Successfully made a new farm!')
     res.redirect('/farms')
 })
 
