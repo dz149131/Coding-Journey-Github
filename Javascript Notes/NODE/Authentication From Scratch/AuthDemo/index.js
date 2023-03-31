@@ -27,6 +27,21 @@ app.get('/register', (req, res) => {
     res.render('register')
 })
 
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
+app.post('/login', async (req, res) => {
+    const {username, password} = req.body;
+    const user = await User.findOne({username});
+    const validPassword = await bcrypt.compare(password, user.password);
+    if(validPassword){
+        res.send("Successfully Logged In!")
+    } else {
+        res.send("Wrong Username Or Password")
+    }
+})
+
 app.post('/register', async (req, res) => {
     const {password, username} = req.body;
     // await bcrypt.hash(req.body.password)
