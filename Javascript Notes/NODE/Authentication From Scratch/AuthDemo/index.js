@@ -21,6 +21,13 @@ app.set('views', 'views');
 app.use(express.urlencoded({extended: true}));
 app.use(session({secret: 'sessionsecret', resave: false, saveUninitialized: false}));
 
+const requireLogin = (req, res, next) => {
+    if (!req.session.user_id) {
+        return res.redirect('/login')
+    }
+    next();
+}
+
 app.get('/', (req, res) => {
     res.send('Home Page')
 })
@@ -80,11 +87,12 @@ app.post('/logout', (req, res) => {
 //checks whether a user is logged in and either redirects 
 //them to the login page or allows them to access the secret page 
 //with a message that can only be seen by logged-in users.
-app.get('/secret', (req, res) => {
-    if(!req.session.user_id){
-        return res.redirect('/login')
-    }
+app.get('/secret', requireLogin, (req, res) => {
     res.render('secret')
+})
+
+app.get('/topsecret', requireLogin, (req, res) => {
+    res.send("Top Secret")
 })
 
 app.listen(3000, () => {
