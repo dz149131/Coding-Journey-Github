@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(express.urlencoded({extended: true}));
-app.use(session({secret: 'sessionsecret'}))
+app.use(session({secret: 'sessionsecret', resave: false, saveUninitialized: false}));
 
 app.get('/', (req, res) => {
     res.send('Home Page')
@@ -32,6 +32,7 @@ app.get('/register', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login')
 })
+
 //handles a login request by finding a user in the database, 
 //comparing the submitted password with the hashed password stored in the database, 
 //and either logging the user in and redirecting them to the /secret page 
@@ -66,15 +67,24 @@ app.post('/register', async (req, res) => {
     res.redirect('/');
 })
 
+app.post('/logout', (req, res) => {
+    //When the user clicks the logout button, the code sets the user_id 
+    //property of the req.session object to null. This means that the user 
+    //is no longer considered logged in, and their session information is removed.
+    req.session.user_id = null;
+    //completely removes all session data
+    // req.session.destroy();
+    res.redirect('/login')
+})
+
 //checks whether a user is logged in and either redirects 
 //them to the login page or allows them to access the secret page 
 //with a message that can only be seen by logged-in users.
 app.get('/secret', (req, res) => {
     if(!req.session.user_id){
-        res.redirect('/login')
-    } else {
-        res.send("You can only see me if logged in")
+        return res.redirect('/login')
     }
+    res.render('secret')
 })
 
 app.listen(3000, () => {
