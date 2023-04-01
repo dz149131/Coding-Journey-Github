@@ -21,6 +21,10 @@ app.set('views', 'views');
 app.use(express.urlencoded({extended: true}));
 app.use(session({secret: 'sessionsecret', resave: false, saveUninitialized: false}));
 
+//uses a middleware function to check whether a user is logged in 
+//before allowing them to access the /topsecret page. If the user 
+//is not logged in, they are redirected to the login page. If the 
+//user is logged in, they are allowed to access the /topsecret page and see the "Top Secret" message.
 const requireLogin = (req, res, next) => {
     if (!req.session.user_id) {
         return res.redirect('/login')
@@ -40,18 +44,17 @@ app.get('/login', (req, res) => {
     res.render('login')
 })
 
-//handles a login request by finding a user in the database, 
-//comparing the submitted password with the hashed password stored in the database, 
-//and either logging the user in and redirecting them to the /secret page 
-//or redirecting them back to the /login page if the login attempt was unsuccessful.
+// This code calls the findAndValidate static method on the User model with two arguments: username and password.
+
+// The findAndValidate method is a custom method that was defined on the userSchema and added to the User model. It returns a User document if the specified username and password match a user in the database. Otherwise, it returns false.
+
+// The await keyword is used to wait for the findAndValidate method to complete before continuing with the execution of the code. If a User document is returned from the method, it is assigned to the foundUser constant. The foundUser object can then be used to check the user's credentials and, if they are valid, log the user in.
 app.post('/login', async (req, res) => {
     const {username, password} = req.body;
-    const user = await User.findOne({username});
-    const validPassword = await bcrypt.compare(password, user.password);
-    if(validPassword){
-        //if successfully logged in store user._id in session user_id
-        req.session.user_id = user._id;
-        res.redirect('/secret')
+    const foundUser = await User.findAndValidate(username, password);
+    if(foundUser){
+        req.session.user_id = foundUser._id;
+        res.redirect('/secret');
     } else {
         res.redirect('/login')
     }
@@ -64,11 +67,7 @@ app.post('/login', async (req, res) => {
 app.post('/register', async (req, res) => {
     const {password, username} = req.body;
     // await bcrypt.hash(req.body.password)
-    const hash = await bcrypt.hash(password, 12);
-    const user = new User ({
-        username,
-        password: hash
-    })
+    const user = new User ({username, password})
     await user.save();
     req.session.user_id = user._id;
     res.redirect('/');
