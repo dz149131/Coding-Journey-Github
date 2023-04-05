@@ -38,4 +38,15 @@ router.post(
 	}
 );
 
+router.get('/logout', (req, res) => {
+	req.logout(function (err) {
+		if (err) {
+			req.flash('error', 'e.message');
+		} else {
+			req.flash('success', 'Successfully Logged Out!');
+			res.redirect('/campgrounds');
+		}
+	});
+});
+
 module.exports = router;
