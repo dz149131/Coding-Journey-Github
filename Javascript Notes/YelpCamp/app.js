@@ -63,10 +63,11 @@ passport.deserializeUser(User.deserializeUser());
 //deserializeUser() Generates a function that is used by Passport to deserialize users into the session
 
 app.use((req, res, next) => {
+	//The middleware function first checks if the URL requested by the client is not /login or / (home page). If the requested URL is not one of these two URLs, it sets the returnTo property of the req.session object to the requested URL.
 	if (!['/login', '/'].includes(req.originalUrl)) {
 		req.session.returnTo = req.originalUrl;
 	}
-	console.log(req.session);
+	// console.log(req.session);
 	res.locals.currentUser = req.user;
 	res.locals.success = req.flash('success');
 	res.locals.error = req.flash('error');

@@ -37,6 +37,7 @@ router.post(
 	passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }),
 	(req, res) => {
 		req.flash('success', 'Welcome Back!');
+		// sets the redirectUrl variable to the value of req.session.returnTo or /campgrounds. req.session.returnTo is a property set by a previous middleware function that saves the URL that the user was trying to access before being redirected to the login page.
 		const redirectUrl = req.session.returnTo || '/campgrounds';
 		delete req.session.returnTo;
 		res.redirect(redirectUrl);

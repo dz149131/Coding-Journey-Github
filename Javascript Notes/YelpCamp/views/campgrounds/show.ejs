@@ -10,14 +10,11 @@
 			</div>
 			<ul class="list-group list-group-flush">
 				<li class="list-group-item text-muted"><%= campground.location %></li>
+				<li class="list-group-item">Submitted by: <%= campground.author.username %></li>
 				<li class="list-group-item">$<%= campground.price %>/night</li>
 			</ul>
 			<div class="card-body">
-				<a
-					href="/campgrounds/<%= campground._id %>/edit"
-					class="card-link btn btn-info"
-					>Edit</a
-				>
+				<a href="/campgrounds/<%= campground._id %>/edit" class="card-link btn btn-info">Edit</a>
 				<form
 					class="d-inline"
 					action="/campgrounds/<%= campground._id %>?_method=DELETE"
@@ -42,14 +39,7 @@
 		>
 			<div class="mb-3">
 				<label class="form-label" for="rating">Rating</label>
-				<input
-					class="form-range"
-					type="range"
-					min="1"
-					max="5"
-					name="review[rating]"
-					id="rating"
-				/>
+				<input class="form-range" type="range" min="1" max="5" name="review[rating]" id="rating" />
 			</div>
 			<div class="mb-3">
 				<label class="form-label" for="body">Review</label>
