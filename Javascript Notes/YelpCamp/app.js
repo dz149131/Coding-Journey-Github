@@ -63,6 +63,7 @@ passport.deserializeUser(User.deserializeUser());
 //deserializeUser() Generates a function that is used by Passport to deserialize users into the session
 
 app.use((req, res, next) => {
+	res.locals.currentUser = req.user;
 	res.locals.success = req.flash('success');
 	res.locals.error = req.flash('error');
 	next();
