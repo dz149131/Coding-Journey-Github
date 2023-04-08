@@ -3,6 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const catchAsync = require('../utility/catchAsync');
 const User = require('../models/user');
+const { checkReturnTo } = require('../middleware');
 
 router.get('/register', (req, res) => {
 	res.render('users/register');
@@ -29,17 +30,20 @@ router.post(
 );
 
 router.get('/login', (req, res) => {
+	if (req.query.returnTo) {
+		req.session.returnTo = req.query.returnTo;
+	}
 	res.render('users/login');
 });
 
 router.post(
 	'/login',
+	checkReturnTo,
 	passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }),
 	(req, res) => {
 		req.flash('success', 'Welcome Back!');
 		// sets the redirectUrl variable to the value of req.session.returnTo or /campgrounds. req.session.returnTo is a property set by a previous middleware function that saves the URL that the user was trying to access before being redirected to the login page.
-		const redirectUrl = req.session.returnTo || '/campgrounds';
-		delete req.session.returnTo;
+		const redirectUrl = res.locals.returnTo || '/campgrounds';
 		res.redirect(redirectUrl);
 	}
 );
