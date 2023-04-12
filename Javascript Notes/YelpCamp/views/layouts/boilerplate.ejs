@@ -14,9 +14,7 @@
 	</head>
 	<body class="d-flex flex-column vh-100">
 		<%- include('../partials/navbar')%>
-		<main class="container mt-5">
-			<%- include('../partials/flash')%> <%- body %>
-		</main>
+		<main class="container mt-5"><%- include('../partials/flash')%> <%- body %></main>
 		<%- include('../partials/footer')%>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -28,6 +26,7 @@
 			integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
 			crossorigin="anonymous"
 		></script>
+		<script src="/javascripts/fileList.js"></script>
 		<script src="/javascripts/validateForms.js"></script>
 	</body>
 </html>
