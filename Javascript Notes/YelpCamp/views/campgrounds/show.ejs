@@ -32,7 +32,8 @@
 				<li class="list-group-item">Submitted by: <%= campground.author.username %></li>
 				<li class="list-group-item">$<%= campground.price %>/night</li>
 			</ul>
-			<% if (currentUser && campground.author.equals(currentUser._id)) {%> <%# The code is checking if there is a currently logged in user and if the logged-in user is the author of a particular campground. If both conditions are true, then the code inside the if block will be executed. %>
+			<% if (currentUser && campground.author.equals(currentUser._id)) {%> <%# The code is checking if there is a currently logged in user and if the
+			logged-in user is the author of a particular campground. If both conditions are true, then the code inside the if block will be executed. %>
 			<div class="card-body">
 				<a href="/campgrounds/<%= campground._id %>/edit" class="card-link btn btn-info">Edit</a>
 				<form class="d-inline" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
