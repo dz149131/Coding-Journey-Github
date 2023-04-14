@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
     <link rel="stylesheet" href="javascript.css">
-    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
 </head>
 <body>
     <nav class="navbar">
@@ -395,7 +395,7 @@
                     <li><a href="#filter-product">Filtering Products</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-CRUD">YelpCamp CRUD</a>
+            <li><a href="#yelpcamp-CRUD" class="yelpcamp">YelpCamp CRUD</a>
                 <ul>
                     <li><a href="#create-yelpcamp">Creating YelpCamp</a></li>
                     <li><a href="#model-basics">Campground Model Basics</a></li>
@@ -416,7 +416,7 @@
                     <li><a href="#protecting-routes">Protecting Specific Routes</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-styling">YelpCamp Styling</a>
+            <li><a href="#yelpcamp-styling" class="yelpcamp">YelpCamp Styling</a>
                 <ul>
                     <li><a href="#ejs-mate">EJS Mate</a></li>
                     <li><a href="#boilerplate-nav-footer">Boilerplate & Navbar & Footer</a></li>
@@ -437,7 +437,7 @@
                     <li><a href="#differentiating-mongoose-errors">Differentiating Mongoose Errors</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-errors-and-validating-data">YelpCamp Errors & Validating Data</a>
+            <li><a href="#yelpcamp-errors-and-validating-data" class="yelpcamp">YelpCamp Errors & Validating Data</a>
                 <ul>
                     <li><a href="#client-side-form-validations">Client-Side Form Validations</a></li>
                     <li><a href="#basic-error-handler">Basic Error Handler</a></li>
@@ -463,7 +463,7 @@
                     <li><a href="#deletion-mongoose-middleware"></a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-reviews-model">YelpCamp Reviews Model</a>
+            <li><a href="#yelpcamp-reviews-model" class="yelpcamp">YelpCamp Reviews Model</a>
                 <ul>
                     <li><a href="#defining-review-model">Defining The Review Model</a></li>
                     <li><a href="#adding-review-form">Adding Review Form</a></li>
@@ -492,7 +492,7 @@
                     <li><a href="#res.locals-and-flash">Res.locals & Flash</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-restructuring-&-flash">YelpCamp Restructuring & Flash</a>
+            <li><a href="#yelpcamp-restructuring-&-flash" class="yelpcamp">YelpCamp Restructuring & Flash</a>
                 <ul>
                     <li><a href="#campground-routes">Campground Routes</a></li>
                     <li><a href="#reviews-routes">Reviews Routes</a></li>
@@ -519,7 +519,7 @@
                     <li><a href="#refactoring-to-model-methods">Refactoring To Model Methods</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-authentication">YelpCamp Adding Authentication</a>
+            <li><a href="#yelpcamp-authentication" class="yelpcamp">YelpCamp Adding Authentication</a>
                 <ul>
                     <li><a href="#passport">Passport</a></li>
                     <li><a href="#creating-our-user-model">Creating Our User Model</a></li>
@@ -534,7 +534,7 @@
                     <li><a href="#returnTo-fix">ReturnTo Fix</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-basic-authorization">YelpCamp Basic Authorization</a>
+            <li><a href="#yelpcamp-basic-authorization" class="yelpcamp">YelpCamp Basic Authorization</a>
                 <ul>
                     <li><a href="#adding-author">Adding An Author</a></li>
                     <li><a href="#show-and-hide-edit-delete">Show and Hide Edit/Delete</a></li>
@@ -544,7 +544,7 @@
                     <li><a href="#reviews-authorization">Reviews Authorization</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-controllers-and-star-ratings">YelpCamp Controllers & Star Ratings</a>
+            <li><a href="#yelpcamp-controllers-and-star-ratings" class="yelpcamp">YelpCamp Controllers & Star Ratings</a>
                 <ul>
                     <li><a href="#refactoring-campgrounds-controller">Refactoring Campgrounds Controller</a></li>
                     <li><a href="#reviews-controller">Reviews Controller</a></li>
@@ -554,7 +554,7 @@
                     <li><a href="#star-rating-form">Star Rating Form</a></li>
                 </ul>
             </li>
-            <li><a href="#yelpcamp-image-upload">YelpCamp Image Upload</a>
+            <li><a href="#yelpcamp-image-upload" class="yelpcamp">YelpCamp Image Upload</a>
                 <ul>
                     <li><a href="#multer-middleware">Multer Middleware</a></li>
                     <li><a href="#uploading-to-cloudinary">Uploading To Cloudinary</a></li>
@@ -566,6 +566,14 @@
                     <li><a href="#deleting-images-form">Deleting Images Form</a></li>
                     <li><a href="#delete-images-backend">Delete Images Backend</a></li>
                     <li><a href="#adding-thumbnail-virtual-property">Adding Thumbnail Virtual Property</a></li>
+                </ul>
+            </li>
+            <li><a href="#yelpcamp-adding-maps" class="yelpcamp">YelpCamp Adding Maps</a>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                 </ul>
             </li>
         </ul>
@@ -3876,19 +3884,45 @@
         </ul>
     </section>
 <hr>
-    <section id="">
+    <section id="yelpcamp-adding-maps">
         <ul>
-            <h1></h1>
+            <h1>Adding Maps</h1>
+            <div id="mapbox">
+                <h3>MapBox</h3>
+                    <li><a href="https://docs.mapbox.com/">MapBox Docs</a></li>
+                    <li><a href="https://github.com/mapbox/mapbox-sdk-js">Github MapBoxSDK</a></li>
+                    <li><a href="https://github.com/mapbox/mapbox-sdk-js/blob/main/docs/services.md">Github MapBoxSDK Services Docs</a></li>
+                        <img src="YelpCamp\yelpcamp photos\adding-maps1.PNG" alt="">
+            </div>
+
             <div id="">
                 <h3></h3>
                     <li><a href=""></a></li>
-                        <img src="" alt="">
+                        <img src="YelpCamp\yelpcamp photos\adding-maps2.PNG" alt="">
+            </div>
+
+            <div id="">
+                <h3></h3>
+                    <li><a href=""></a></li>
+                        <img src="YelpCamp\yelpcamp photos\adding-maps3.PNG" alt="">
+            </div>
+
+            <div id="">
+                <h3></h3>
+                    <li><a href=""></a></li>
+                        <img src="YelpCamp\yelpcamp photos\adding-maps4.PNG" alt="">
+            </div>
+
+            <div id="">
+                <h3></h3>
+                    <li><a href=""></a></li>
+                        <img src="YelpCamp\yelpcamp photos\adding-maps5.PNG" alt="">
             </div>
         </ul>
     </section>
     
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
     <script src="javascript.js"></script>
 </body>
 </html>

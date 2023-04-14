@@ -1,132 +1,137 @@
 a {
-    color: #ff001e;
-    text-decoration: none;
-    font-weight: bold;
+	color: #ff001e;
+	text-decoration: none;
+	font-weight: bold;
 }
 a:hover {
-    border: 1px black solid;
-    background-color: rgba(0, 0, 255, 0.199);
-    text-decoration: none;
+	border: 1px black solid;
+	background-color: rgba(0, 0, 255, 0.199);
+	text-decoration: none;
 }
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    height: 100%;
-    margin: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 15px;
+	height: 100%;
+	margin: 0;
 }
 img {
-    border: black solid 1px;
-    margin: 5px;
+	border: black solid 1px;
+	margin: 5px;
 }
 div {
-    background-color: #0230472c;
-    border: 1px solid #023047;
+	background-color: #0230472c;
+	border: 1px solid #023047;
 }
 section {
-    background-color: #344e4141;
+	background-color: #344e4141;
 }
 .navbar {
-    background: #476a6e85;
-    position: fixed;
+	background: #476a6e85;
+	position: fixed;
 }
 nav a {
-    color: #f1eded;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 12px;
+	color: #f1eded;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
 }
 .navbar ul {
-    background-color: transparent;
-    list-style: none;
-    margin: 0;
+	background-color: transparent;
+	list-style: none;
+	margin: 0;
 }
-.navbar > ul > li{
-    float: left;
-    position: relative;
+.navbar > ul > li {
+	float: left;
+	position: relative;
 }
 .navbar ul li a {
-    padding: 10px 15px;
-    display: block;
+	padding: 10px 15px;
+	display: block;
 }
-.navbar ul li:hover a{
-    background: #6f8f76;
+.navbar ul li:hover a {
+	background: #6f8f76;
 }
 .navbar ul ul {
-    position: absolute;
-    padding: 0;
-    min-width: 160px;
-    display: none;
-    top: 100%;
-    left: 0;
+	position: absolute;
+	padding: 0;
+	min-width: 160px;
+	display: none;
+	top: 100%;
+	left: 0;
 }
 .navbar ul li:hover > ul {
-    display: block;
-    z-index: 1;
+	display: block;
+	z-index: 1;
 }
 .navbar ul ul li:hover a {
-    background: #82b38c;
+	background: #82b38c;
 }
 .navbar ul ul li {
-    position: relative;
+	position: relative;
 }
 .navbar ul ul ul {
-    top: 0;
-    left: 100%;
+	top: 0;
+	left: 100%;
 }
 .navbar ul ul ul li:hover a {
-    background-color: #ef233c;
+	background-color: #ef233c;
 }
 #basic_building_blocks {
-    padding-top: 40px;
+	padding-top: 40px;
 }
-h2 , h3 , h4 {
-    padding: 0;
-    color: #0400ff;
-    width: 50%;
+h2,
+h3,
+h4 {
+	padding: 0;
+	color: #0400ff;
+	width: 50%;
 }
-h2{
-    border-bottom: 1.5px black solid;
+h2 {
+	border-bottom: 1.5px black solid;
 }
 h3 {
-    border-bottom: .75px black solid;
+	border-bottom: 0.75px black solid;
 }
 h4 {
-    border-bottom: .5px black solid;
+	border-bottom: 0.5px black solid;
 }
 h1 {
-    margin: 10px;
+	margin: 10px;
 }
 .navbar ul li ul li {
-    border: #386342 solid 1px;
+	border: #386342 solid 1px;
 }
 p {
-    background-color: #eff5f096;;
-    color: red;
+	background-color: #eff5f096;
+	color: red;
 }
 #thisButton {
-    width: 100px;
-    height: 100px;
-    margin: 20px;
+	width: 100px;
+	height: 100px;
+	margin: 20px;
 }
 #randomColorButton {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
 }
 .winner {
-    color: green;
+	color: green;
 }
 .loser {
-    color: red;
+	color: red;
 }
 #jokeBtn {
-    padding: 10px;
+	padding: 10px;
 }
 section li {
-    width: 75%;
-    padding: 2px;
-    background-color: #c1dfc8b9;
+	width: 75%;
+	padding: 2px;
+	background-color: #c1dfc8b9;
 }
 .highlight {
-    color: #eeff00;
+	color: #eeff00;
+}
+.yelpcamp {
+	color: rgb(255, 0, 0);
 }
