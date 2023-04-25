@@ -130,8 +130,8 @@ section li {
 	background-color: #c1dfc8b9;
 }
 .highlight {
-	color: #eeff00;
+	color: rgb(255, 0, 0);
 }
 .yelpcamp {
-	color: rgb(255, 0, 0);
+	color: #eeff00;
 }
