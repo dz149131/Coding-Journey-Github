@@ -1349,20 +1349,17 @@ class Dog extends Pet {
 	}
 }
 
-var twoSum = function (nums, target) {
-	for (let i = 0; i < nums.length; i++) {
-		let number1 = nums[i];
-		for (let j = 0; j < nums.length; j++) {
-			if (i == j) {
-				continue;
-			}
-			let number2 = nums[j];
-			if (number1 + number2 == target) {
-				return true;
-			}
-		}
-	}
-};
-
-nums = [2, 7, 11, 15];
-target = 9;
+// var twoSum = function (nums, target) {
+// 	for (let i = 0; i < nums.length; i++) {
+// 		let number1 = nums[i];
+// 		for (let j = 0; j < nums.length; j++) {
+// 			if (i == j) {
+// 				continue;
+// 			}
+// 			let number2 = nums[j];
+// 			if (number1 + number2 == target) {
+// 				return true;
+// 			}
+// 		}
+// 	}
+// };
