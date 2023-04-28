@@ -23,16 +23,16 @@ const mongoSanitize = require('express-mongo-sanitize');
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
-// const dbUrl = process.env.DB_URL;
-// mongodb://127.0.0.1:27017/yelp-camp
+
+const MongoDBStore = require('connect-mongo');
+
+const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp';
+
+// process.env.DB_URL
 
 mongoose.set('strictQuery', false);
 mongoose
-	// .connect(dbUrl, {
-	// 	useNewUrlParser: true,
-	// 	useUnifiedTopology: true,
-	// })
-	.connect('mongodb://127.0.0.1:27017/yelp-camp', {
+	.connect(dbUrl, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
@@ -55,7 +55,18 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize());
 
+const store = new MongoDBStore({
+	mongoUrl: dbUrl,
+	secret: 'sessionsecret',
+	touchAfter: 24 * 60 * 60,
+});
+
+store.on('error', function (e) {
+	console.log('Session Store Error', e);
+});
+
 const sessionConfig = {
+	store,
 	name: 'session',
 	secret: 'sessionsecret',
 	resave: false,
