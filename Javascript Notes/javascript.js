@@ -1,15 +1,16 @@
 //SEARCH BAR
 let formSearch = document.getElementById('search-form');
-formSearch.addEventListener('submit', function(e) {
-    e.preventDefault();
-})
+formSearch.addEventListener('submit', function (e) {
+	e.preventDefault();
+});
 let searchTerm = document.getElementById('search').value;
 
-const search = document.querySelector("#search")
-search.addEventListener("input", e => { //WORKON LATER
-    const value = e.target.value
-    console.log(value)
-})
+const search = document.querySelector('#search');
+search.addEventListener('input', (e) => {
+	//WORKON LATER
+	const value = e.target.value;
+	console.log(value);
+});
 // document.addEventListener('mousemove', (e) => {
 //     console.log(e)
 
@@ -56,7 +57,7 @@ search.addEventListener("input", e => { //WORKON LATER
 // const dayOfWeek = "Holiday";
 // if(dayOfWeek === "Monday") {
 //     console.log("I Hate MONDAYS")
-// } 
+// }
 // else if (dayOfWeek === "Saturday") {
 //     console.log("YAY I LOVE SATURDAY")
 // }
@@ -99,7 +100,7 @@ search.addEventListener("input", e => { //WORKON LATER
 // }
 //                 //pasword cannot include spaces
 
-                // //using && (logical AND)
+// //using && (logical AND)
 // const password = prompt("Enter your password");
 // if (password.length >= 6 && password.indexOf(" ") === -1){
 //     console.log("valid password")
@@ -107,7 +108,7 @@ search.addEventListener("input", e => { //WORKON LATER
 //     console.log("incorrect format for password")
 // }
 
-                // //using || (logical OR)
+// //using || (logical OR)
 // 0 - 5 - FREE
 // 5 - 18 - CHILD $10
 // 18 - 65 - ADULT $20
@@ -160,7 +161,7 @@ search.addEventListener("input", e => { //WORKON LATER
 //     default:
 //         console.log("ERROR");
 // }
-// 
+//
 
 // // //                      //Guessing game practice
 // let maximum = parseInt(prompt("Enter the maximum number")); //parseInt return a string into a number if it is NaN it returns falsy
@@ -189,7 +190,6 @@ search.addEventListener("input", e => { //WORKON LATER
 //     console.log("YOU GOT IT RIGHT")                         //print this out
 // }
 
-
 // // //                      //Guessing game practice (REVISED)
 // let maximum = parseInt(prompt("Enter the maximum number")); //parseInt return a string into a number if it is NaN it returns falsy
 // while (!maximum) {                                          //if maximum is not truthy
@@ -198,7 +198,7 @@ search.addEventListener("input", e => { //WORKON LATER
 // const targetNum = Math.floor(Math.random() * maximum) + 1   //"targetNum" = math.floor math.random * maximum + 1
 // console.log(targetNum);                                     //print out "targetNum"
 
-// let guess = prompt("Enter your first guess");               //"guess" = user inputed 
+// let guess = prompt("Enter your first guess");               //"guess" = user inputed
 // let attempts = 1;                                           //"attempts" equals 1
 
 // while (parseInt(guess) !== targetNum) {                     //if "guess" does not equal "targetNum" return false
@@ -245,8 +245,8 @@ search.addEventListener("input", e => { //WORKON LATER
 //                                 //To_do_project
 // // tips: while loop while its not = to quit keep looping
 // // todos done with array have empty array with variable name "todolist"
-// // if it is equal to new list delete or quit prompt them to enter a to do 
-// // "new" - ADD A TO DO 
+// // if it is equal to new list delete or quit prompt them to enter a to do
+// // "new" - ADD A TO DO
 // // "list" - LIST ALL TODOS
 // // "delete" - REMOVE SPECIFIC TODO
 // // "quit" - QUIT APP
@@ -254,7 +254,7 @@ search.addEventListener("input", e => { //WORKON LATER
 // const list = ["Milk cows", "Take out trash"];                   //defined array named "list"
 // while (userInput !== "quit") {                                  //keep looping if "userInput" does not = "quit"
 //     if(userInput === "list") {                                  //              if "userInput" = list
-//         console.log("**************")                           //print this 
+//         console.log("**************")                           //print this
 //         for (let i = 0; i <= list.length; i++) {                //iterating over arrays
 //             console.log(`${i}: ${list[i]}`)                     //print string template literal of the index and list
 //         }
@@ -266,7 +266,7 @@ search.addEventListener("input", e => { //WORKON LATER
 //     } else if (userInput === "delete") {                        //              if "userInput" = "delete"
 //         const index = parseInt(prompt("Enter index to delete"));//new variable named "index" = retrieves the integer of user inputed string
 //         if (!Number.isNaN(index)) {                             //if "index" is a number
-//             const deletedIndex = list.splice(index, 1);         //new variable named "deletedIndex" = list.splice(start(index), deleteCount(1)) 
+//             const deletedIndex = list.splice(index, 1);         //new variable named "deletedIndex" = list.splice(start(index), deleteCount(1))
 //             console.log(`${deletedIndex[0]} has been deleted`);    //print string template literal of "deletedIndex" has been deleted
 //         } else {                                                //
 //             console.log("Unknown index")                        // if "index" is NaN print this
@@ -276,7 +276,7 @@ search.addEventListener("input", e => { //WORKON LATER
 // }
 // console.log("You have quit")                                    //print this if "userInput" = "quit"
 
-                                            //Return practice
+//Return practice
 // function add (x,y) {                                                //
 //     if (typeof x !== "number" || typeof y !== "number") {           //if "x" or "y" does not equal number
 //         return false;                                               //return stops execution of function if NaN
@@ -313,7 +313,6 @@ search.addEventListener("input", e => { //WORKON LATER
 // callTenTimes(rollDie)
 // //executes rollDie 10 times
 
-
 // function makeMysteryFunc() {
 //     const rand = Math.random();
 //     if(rand > 0.5) {
@@ -329,13 +328,12 @@ search.addEventListener("input", e => { //WORKON LATER
 //     }
 // }
 
-
 //                         //RETURNING FUNCTIONS
 // //make function that defines something between min# - max#
 // //assign variable to the returned function
 // //test
-// function makeBetweenFunc (min, max) {       //Defining a function 
-//     return function(num){                   //Returns a new function 
+// function makeBetweenFunc (min, max) {       //Defining a function
+//     return function(num){                   //Returns a new function
 //         return num >= min && num <= max;    //Num >= min && num <= max
 //     }
 // }
@@ -354,7 +352,7 @@ search.addEventListener("input", e => { //WORKON LATER
 //     return num >= 18 && num <= 100;
 // }
 // //                          Defining Methods:
-// const myMath = {                    //Assinging a variable to a method 
+// const myMath = {                    //Assinging a variable to a method
 //     PI: 3.14159,                    //myMath.PI = "3.14159"
 //     square: function(num){          //myMath.square = (number to run function on)
 //         return num * num;           //return (number to run function on) = number * number
@@ -370,13 +368,13 @@ search.addEventListener("input", e => { //WORKON LATER
 //     console.log("Are you still there?") //Print this after
 // }, 3000);                                //3000ms
 //                     //setInterval
-// const id = setInterval(() => {          //Assigned variable name 
+// const id = setInterval(() => {          //Assigned variable name
 //     console.log(Math.random())          //Print random number
 // }, 2000);                               //Every 2000ms
 // //clearInterval(id)                     //Stops the function
 
-                        //FILTER EXERCSIE
-            //practice(wrong)
+//FILTER EXERCSIE
+//practice(wrong)
 // const validUserNames = function (name) {
 //     if (name.length < 10) {
 //         return name;
@@ -433,7 +431,7 @@ search.addEventListener("input", e => { //WORKON LATER
 // //number 1-20
 
 // function greet(person, msg = "Hello there", punc = "!!") {
-//     console.log(`${msg}, ${person}${punc}`) 
+//     console.log(`${msg}, ${person}${punc}`)
 // }
 // //greet("Danny")
 // //Hello there, Danny!!
@@ -589,16 +587,16 @@ search.addEventListener("input", e => { //WORKON LATER
 //     container.appendChild(pokemon);
 // }
 
-const btn = document.querySelector('#onclickButton')
-btn.onclick = function(){
-    console.log('you clicked me')
-    console.log('it works')
-}
-
-function scream(){
-    console.log('aaaaaaaaa')
-    console.log('stop pressing me')
+const btn = document.querySelector('#onclickButton');
+btn.onclick = function () {
+	console.log('you clicked me');
+	console.log('it works');
 };
+
+function scream() {
+	console.log('aaaaaaaaa');
+	console.log('stop pressing me');
+}
 btn.onmouseenter = scream;
 
 // document.querySelector('h1').onclick = function(){
@@ -610,15 +608,15 @@ btn.onmouseenter = scream;
 // }
 
 const btn3 = document.querySelector('#addEventListenerButton');
-btn3.addEventListener('click', function() {
-    alert('CLICKED')
-})
+btn3.addEventListener('click', function () {
+	alert('CLICKED');
+});
 
 function shout() {
-    console.log("shout")
+	console.log('shout');
 }
 function whisper() {
-    console.log("whisper")
+	console.log('whisper');
 }
 const swButton = document.querySelector('#addEventListenerButton2');
 
@@ -627,58 +625,58 @@ const swButton = document.querySelector('#addEventListenerButton2');
 // swButton.onclick = whisper;
 
 //Runs both callback functions
-swButton.addEventListener('click', whisper)
-swButton.addEventListener('click', shout)
+swButton.addEventListener('click', whisper);
+swButton.addEventListener('click', shout);
 
-                                //Random Color Exercise
-const colorButton = document.querySelector('#randomColorButton')
-colorButton.addEventListener('click', function() {
-    const randomColorDiv = document.querySelector('#randomColorDiv')
-    const h1 = document.querySelector('#randomColorExerciseH1')
-    // const r = Math.floor(Math.random() * 255)
-    // const g = Math.floor(Math.random() * 255)
-    // const b = Math.floor(Math.random() * 255)
-    // const newColor= `rgb(${r}, ${g}, ${b})`
-    const newColor = makeRandomColor()
-    randomColorDiv.style.backgroundColor = newColor
-    h1.innerText = newColor;
-})
+//Random Color Exercise
+const colorButton = document.querySelector('#randomColorButton');
+colorButton.addEventListener('click', function () {
+	const randomColorDiv = document.querySelector('#randomColorDiv');
+	const h1 = document.querySelector('#randomColorExerciseH1');
+	// const r = Math.floor(Math.random() * 255)
+	// const g = Math.floor(Math.random() * 255)
+	// const b = Math.floor(Math.random() * 255)
+	// const newColor= `rgb(${r}, ${g}, ${b})`
+	const newColor = makeRandomColor();
+	randomColorDiv.style.backgroundColor = newColor;
+	h1.innerText = newColor;
+});
 const makeRandomColor = () => {
-    const r = Math.floor(Math.random() * 255)
-    const g = Math.floor(Math.random() * 255)
-    const b = Math.floor(Math.random() * 255)
-    return newColor= `rgb(${r}, ${g}, ${b})`
-}
-                                //The Keyword This & Events
-const buttons = document.querySelectorAll('#thisButton')
+	const r = Math.floor(Math.random() * 255);
+	const g = Math.floor(Math.random() * 255);
+	const b = Math.floor(Math.random() * 255);
+	return (newColor = `rgb(${r}, ${g}, ${b})`);
+};
+//The Keyword This & Events
+const buttons = document.querySelectorAll('#thisButton');
 
-for(let button of buttons) {
-    // button.addEventListener('click', function() {
-    //     button.style.backgroundColor = makeRandomColor()
-    //     button.style.color = makeRandomColor()
-    // })
-    button.addEventListener('click', colorize)
-}
-
-const h1s = document.querySelectorAll('#thisH1')
-
-for(let h1 of h1s) {
-    // h1.addEventListener('click', function(){
-    //     h1.style.backgroundColor = makeRandomColor()
-    //     h1.style.color = makeRandomColor()
-    // })
-    h1.addEventListener('click', colorize)
+for (let button of buttons) {
+	// button.addEventListener('click', function() {
+	//     button.style.backgroundColor = makeRandomColor()
+	//     button.style.color = makeRandomColor()
+	// })
+	button.addEventListener('click', colorize);
 }
 
-function colorize(){
-    this.style.backgroundColor = makeRandomColor()
-    this.style.color= makeRandomColor()
+const h1s = document.querySelectorAll('#thisH1');
+
+for (let h1 of h1s) {
+	// h1.addEventListener('click', function(){
+	//     h1.style.backgroundColor = makeRandomColor()
+	//     h1.style.color = makeRandomColor()
+	// })
+	h1.addEventListener('click', colorize);
+}
+
+function colorize() {
+	this.style.backgroundColor = makeRandomColor();
+	this.style.color = makeRandomColor();
 }
 
 document.querySelector('#event_object_btn').addEventListener('click', function (evt) {
-    console.log(evt)
-})
-                                    //KEYBOARD EVENTS
+	console.log(evt);
+});
+//KEYBOARD EVENTS
 const input = document.querySelector('input');
 
 // input.addEventListener('keydown', function(){
@@ -710,74 +708,77 @@ const input = document.querySelector('input');
 //             console.log('Ignored')
 //     }
 // })
-                                        //FORM EVENTS
-const form = document.querySelector("#eventForm");      //Setting var to selected form
-const eventInput = document.querySelector('#eventName') //Setting var to selected input
-const eventList = document.querySelector('#eventList')  //Setting var to selected ul
-form.addEventListener("submit", function (e) {          //What happens when you submit form
-    e.preventDefault();                                 //Stop default submission of form
-    const eventName = eventInput.value;                 //Setting var to the input (user inputted) value
-    const newLI = document.createElement("li");         //Setting var to an element to create new LI "shell"
-    newLI.innerText = eventName;                        //Changing innerText of empty "shell" to (user inputted) value
-    eventList.append(newLI);                            //Appending filled "shell" of newLI to ul of eventList
-    eventInput.value = "";                              //Make input an empty string
+//FORM EVENTS
+const form = document.querySelector('#eventForm'); //Setting var to selected form
+const eventInput = document.querySelector('#eventName'); //Setting var to selected input
+const eventList = document.querySelector('#eventList'); //Setting var to selected ul
+form.addEventListener('submit', function (e) {
+	//What happens when you submit form
+	e.preventDefault(); //Stop default submission of form
+	const eventName = eventInput.value; //Setting var to the input (user inputted) value
+	const newLI = document.createElement('li'); //Setting var to an element to create new LI "shell"
+	newLI.innerText = eventName; //Changing innerText of empty "shell" to (user inputted) value
+	eventList.append(newLI); //Appending filled "shell" of newLI to ul of eventList
+	eventInput.value = ''; //Make input an empty string
 });
 
-                                        //TWITTER FORM PRACTICE
-const tweetForm = document.querySelector('#tweetForm');             //Setting var to selected form
-const tweetInput = document.querySelector('#tweetInput');           //Setting var to selected input
-const tweetsContainer = document.querySelector('#tweets');          //Setting var to selected ul container
-tweetForm.addEventListener('submit' , function (e) {                //What happens when you submit form
-    e.preventDefault();                                             //Stop default submission of form
-    // const usernameInput = document.querySelector('#userInput')   //Setting var to the input (user inputted) user value
-    // const tweetInput = document.querySelector('#tweetInput')     //Setting var to the input (user inputted) tweet value
-    const usernameInput = tweetForm.elements.username;              //Ordered collection accessing individual input by name (username)
-    const tweetInput = tweetForm.elements.tweet;                    //Ordered collection accessing individual input by name (tweet)
-    addTweet(usernameInput.value, tweetInput.value);                //FUNCTION()
-    usernameInput.value = '';                                       //Make input an empty string
-    tweetInput.value = '';                                          //Make input an empty string
+//TWITTER FORM PRACTICE
+const tweetForm = document.querySelector('#tweetForm'); //Setting var to selected form
+const tweetInput = document.querySelector('#tweetInput'); //Setting var to selected input
+const tweetsContainer = document.querySelector('#tweets'); //Setting var to selected ul container
+tweetForm.addEventListener('submit', function (e) {
+	//What happens when you submit form
+	e.preventDefault(); //Stop default submission of form
+	// const usernameInput = document.querySelector('#userInput')   //Setting var to the input (user inputted) user value
+	// const tweetInput = document.querySelector('#tweetInput')     //Setting var to the input (user inputted) tweet value
+	const usernameInput = tweetForm.elements.username; //Ordered collection accessing individual input by name (username)
+	const tweetInput = tweetForm.elements.tweet; //Ordered collection accessing individual input by name (tweet)
+	addTweet(usernameInput.value, tweetInput.value); //FUNCTION()
+	usernameInput.value = ''; //Make input an empty string
+	tweetInput.value = ''; //Make input an empty string
 });
 
-const addTweet = (username, tweet) => {                             //
-    const newTweet = document.createElement('li');                  //Setting var to an element to create new LI "shell"
-    const boldTag = document.createElement('b');                    //Setting var to an element to create new b(bold) "shell" | <b> </b>
-    boldTag.append(username);                                       //<b>(username)</b>
-    newTweet.append(boldTag);                                       //<li><b> </b></li>
-    newTweet.append(`- ${tweet}`);                                  //<li><b> (username) </b> -(tweet) </li>
-    tweetsContainer.append(newTweet);                               //Appending filled "shell" of newTweet to ul of tweetsContainer
-}
-                                            //EVENT DELEGATION
-tweetsContainer.addEventListener('click' , function (e){
-    e.target.nodeName ==='LI' && e.target.remove();
-})
-                                            //INPUT EVENT
+const addTweet = (username, tweet) => {
+	//
+	const newTweet = document.createElement('li'); //Setting var to an element to create new LI "shell"
+	const boldTag = document.createElement('b'); //Setting var to an element to create new b(bold) "shell" | <b> </b>
+	boldTag.append(username); //<b>(username)</b>
+	newTweet.append(boldTag); //<li><b> </b></li>
+	newTweet.append(`- ${tweet}`); //<li><b> (username) </b> -(tweet) </li>
+	tweetsContainer.append(newTweet); //Appending filled "shell" of newTweet to ul of tweetsContainer
+};
+//EVENT DELEGATION
+tweetsContainer.addEventListener('click', function (e) {
+	e.target.nodeName === 'LI' && e.target.remove();
+});
+//INPUT EVENT
 const inputEx = document.querySelector('#inputEx');
-const h1Input = document.querySelector('#h1Input')
+const h1Input = document.querySelector('#h1Input');
 
-inputEx.addEventListener('input', function (e){
-    console.log('input event')
-    h1Input.innerText = inputEx.value
-})
-                                            //CHANGE EVENT
+inputEx.addEventListener('input', function (e) {
+	console.log('input event');
+	h1Input.innerText = inputEx.value;
+});
+//CHANGE EVENT
 const changeEx = document.querySelector('#changeEx');
-const h1Change = document.querySelector('#h1Change')
+const h1Change = document.querySelector('#h1Change');
 
-changeEx.addEventListener('change', function (e){
-    console.log('change event')
-    h1Change.innerText = changeEx.value
-})
+changeEx.addEventListener('change', function (e) {
+	console.log('change event');
+	h1Change.innerText = changeEx.value;
+});
 
-                                            //EVENT BUBBLING
-const bubble = document.querySelector('#bubbleColorButton')
-const container = document.querySelector('#bubbleContainer')
+//EVENT BUBBLING
+const bubble = document.querySelector('#bubbleColorButton');
+const container = document.querySelector('#bubbleContainer');
 
-bubble.addEventListener('click', function (e){
-    container.style.backgroundColor = makeRandomColor();
-    e.stopPropagation();
-})
-container.addEventListener('click', function() {
-    container.classList.toggle('hide');
-})
+bubble.addEventListener('click', function (e) {
+	container.style.backgroundColor = makeRandomColor();
+	e.stopPropagation();
+});
+container.addEventListener('click', function () {
+	container.classList.toggle('hide');
+});
 
 // const makeRandomColor = () => {
 //     const r = Math.floor(Math.random() * 255)
@@ -786,13 +787,13 @@ container.addEventListener('click', function() {
 //     return newColor= `rgb(${r}, ${g}, ${b})`
 // }
 
-                                                        //SCORE KEEPER PRACTICE
-const p1Button = document.querySelector('#p1Button')
-const p2Button = document.querySelector('#p2Button')
-const p1Display = document.querySelector('#p1Display')
-const p2Display = document.querySelector('#p2Display')
-const resetButton = document.querySelector('#resetButton')
-const winningScoreSelect = document.querySelector('#winningScoreCount')
+//SCORE KEEPER PRACTICE
+const p1Button = document.querySelector('#p1Button');
+const p2Button = document.querySelector('#p2Button');
+const p1Display = document.querySelector('#p1Display');
+const p2Display = document.querySelector('#p2Display');
+const resetButton = document.querySelector('#resetButton');
+const winningScoreSelect = document.querySelector('#winningScoreCount');
 
 let p1Score = 0;
 let p2Score = 0;
@@ -800,52 +801,52 @@ let winningScore = 3;
 let isGameOver = false;
 
 p1Button.addEventListener('click', function () {
-    if (!isGameOver) {
-        p1Score += 1;
-        if (p1Score === winningScore) {
-            isGameOver = true;
-            p1Display.classList.add('winner')
-            p2Display.classList.add('loser')
-            p1Button.disabled = true;
-            p2Button.disabled = true;
-        }
-        p1Display.textContent = p1Score;
-    }
-})
+	if (!isGameOver) {
+		p1Score += 1;
+		if (p1Score === winningScore) {
+			isGameOver = true;
+			p1Display.classList.add('winner');
+			p2Display.classList.add('loser');
+			p1Button.disabled = true;
+			p2Button.disabled = true;
+		}
+		p1Display.textContent = p1Score;
+	}
+});
 
 p2Button.addEventListener('click', function () {
-    if (!isGameOver) {
-        p2Score += 1;
-        if (p2Score === winningScore) {
-            isGameOver = true;
-            p1Display.classList.add('loser')
-            p2Display.classList.add('winner')
-            p1Button.disabled = true;
-            p2Button.disabled = true;
-        }
-        p2Display.textContent = p2Score;
-    }
-})
+	if (!isGameOver) {
+		p2Score += 1;
+		if (p2Score === winningScore) {
+			isGameOver = true;
+			p1Display.classList.add('loser');
+			p2Display.classList.add('winner');
+			p1Button.disabled = true;
+			p2Button.disabled = true;
+		}
+		p2Display.textContent = p2Score;
+	}
+});
 
-resetButton.addEventListener('click', reset)
-function reset (){
-    isGameOver = false;
-    p1Score = 0;
-    p2Score = 0;
-    p1Display.textContent = 0;
-    p2Display.textContent = 0;
-    p1Display.classList.remove('loser', 'winner')
-    p2Display.classList.remove('loser', 'winner')
-    p1Button.disabled = false;
-    p2Button.disabled = false;
+resetButton.addEventListener('click', reset);
+function reset() {
+	isGameOver = false;
+	p1Score = 0;
+	p2Score = 0;
+	p1Display.textContent = 0;
+	p2Display.textContent = 0;
+	p1Display.classList.remove('loser', 'winner');
+	p2Display.classList.remove('loser', 'winner');
+	p1Button.disabled = false;
+	p2Button.disabled = false;
 }
 
-winningScoreSelect.addEventListener('change', function(){
-    winningScore = parseInt(this.value);
-    reset();
-})
+winningScoreSelect.addEventListener('change', function () {
+	winningScore = parseInt(this.value);
+	reset();
+});
 
-                                                        //CALL BACK V1
+//CALL BACK V1
 // setTimeout(() => {
 //     document.body.style.backgroundColor = 'red';
 //     setTimeout(() => {
@@ -900,7 +901,7 @@ winningScoreSelect.addEventListener('change', function(){
 //     //if API is down, or request failed
 // })
 
-                                                // THE CALLBACK VERSION DEMO
+// THE CALLBACK VERSION DEMO
 // const fakeRequestCallback = (url, success, failure) => {
 //     const delay = Math.floor(Math.random() * 4500) + 500;
 //     setTimeout(() => {
@@ -936,7 +937,7 @@ winningScoreSelect.addEventListener('change', function(){
 //         console.log("ERROR!!!", err)
 //     })
 
-                                                // THE PROMISE VERSION DEMO
+// THE PROMISE VERSION DEMO
 // const fakeRequestPromise = (url) => {
 //     return new Promise((resolve, reject) => {
 //         const delay = Math.floor(Math.random() * (4500)) + 500;
@@ -993,7 +994,7 @@ winningScoreSelect.addEventListener('change', function(){
 //         console.log("OH NO, A REQUEST FAILED!!!")
 //         console.log(err)
 //     })
-                                        //CREATING PROMISES
+//CREATING PROMISES
 // const fakeRequest = (url) => {
 //     return new Promise((resolve, reject) => {
 //         const rand = Math.random();
@@ -1013,7 +1014,7 @@ winningScoreSelect.addEventListener('change', function(){
 // .catch((err) => {
 //     console.log("Error", err)
 // })
-                                                //PROMISE bgColorChange
+//PROMISE bgColorChange
 // const bgColorChange = (color, delay) => {
 //     return new PromiseRejectionEvent((resolve, reject) => {
 //         setTimeout(() => {
@@ -1068,7 +1069,7 @@ winningScoreSelect.addEventListener('change', function(){
 // })
 // // return = promise resolved
 // // throw = promise rejected
-                                    //AWAIT
+//AWAIT
 // async function rainbow () {
 //     await bgColorChange('red', 1000)
 //     await bgColorChange('orange', 1000)
@@ -1077,7 +1078,7 @@ winningScoreSelect.addEventListener('change', function(){
 //     await bgColorChange('blue', 1000)
 //     await bgColorChange('indigo', 1000)
 //     await bgColorChange('violet', 1000)
-// }   
+// }
 
 // async function printRainbow() {
 //     await rainbow()
@@ -1115,7 +1116,7 @@ winningScoreSelect.addEventListener('change', function(){
 // // THIS IS A JS OBJECT
 // const parsedData = JSON.parse(data);
 //                                             //FETCH
-// fetch("https://swapi.dev/api/people/1/")                //send a request to url first then fetch returns a promise 
+// fetch("https://swapi.dev/api/people/1/")                //send a request to url first then fetch returns a promise
 // .then((res) => {                                        //.then accepts a resolved promise
 //     console.log("Resolved", res);                       //print this if resolved
 //     return res.json();                                  //similar to JSON.parse/ Returns a promise
@@ -1162,96 +1163,102 @@ winningScoreSelect.addEventListener('change', function(){
 // // loadSWPeople(1)
 // // loadSWPeople(5)
 
-                                                //DAD JOKE BUTTON
-const jokes = document.querySelector('#jokes');         //selects UL '#jokes'
-const jokeBtn = document.querySelector('#jokeBtn')      //selects button '#jokeBtn'
+//DAD JOKE BUTTON
+const jokes = document.querySelector('#jokes'); //selects UL '#jokes'
+const jokeBtn = document.querySelector('#jokeBtn'); //selects button '#jokeBtn'
 
-const addNewJoke = async () => {                        //async makes function into promise
-    const jokeText = await getDadJoke()                 //wait till getDadJoke() is resolved               
-    const newLI = document.createElement('LI');         //creates new Li 'shell'
-    newLI.append(jokeText);                             //append 'jokeText' from 'getDadJoke' function
-    jokes.append(newLI)                                 //appends to ul #jokes
-}
+const addNewJoke = async () => {
+	//async makes function into promise
+	const jokeText = await getDadJoke(); //wait till getDadJoke() is resolved
+	const newLI = document.createElement('LI'); //creates new Li 'shell'
+	newLI.append(jokeText); //append 'jokeText' from 'getDadJoke' function
+	jokes.append(newLI); //appends to ul #jokes
+};
 
-const getDadJoke = async () => {                                            //get joke Text
-    try {                                                                   //run this code first
-        const config = {headers: { Accept: 'application/json' } }           //?
-        const res = await axios.get('https://icanhazdadjoke.com/', config)  //?
-        return res.data.joke;                                               //return res.data.joke
-    } catch (e) {                                                           //if 'try' is not resolved run this code
-        return "No Joke Found"                                              //return this
-    }
-    
-}
-jokeBtn.addEventListener('click', addNewJoke)           //when 'jokeBtn' is clicked run 'addNewJoke' function
+const getDadJoke = async () => {
+	//get joke Text
+	try {
+		//run this code first
+		const config = { headers: { Accept: 'application/json' } }; //?
+		const res = await axios.get('https://icanhazdadjoke.com/', config); //?
+		return res.data.joke; //return res.data.joke
+	} catch (e) {
+		//if 'try' is not resolved run this code
+		return 'No Joke Found'; //return this
+	}
+};
+jokeBtn.addEventListener('click', addNewJoke); //when 'jokeBtn' is clicked run 'addNewJoke' function
 
-                                            //TV SHOW SEARCH
+//TV SHOW SEARCH
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const userSearch = searchForm.elements.query.value;
-    // const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${userSearch}`)
-    const config = { params: { q: userSearch} }
-    const res = await axios.get(`https://api.tvmaze.com/search/shows`, config)
-    makeImgs(res.data)
-    searchForm.elements.query.value = '';
-})
+	e.preventDefault();
+	const userSearch = searchForm.elements.query.value;
+	// const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${userSearch}`)
+	const config = { params: { q: userSearch } };
+	const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
+	makeImgs(res.data);
+	searchForm.elements.query.value = '';
+});
 
-const imgContainer = document.querySelector('#imgContainer')
+const imgContainer = document.querySelector('#imgContainer');
 const makeImgs = (shows) => {
-    for(let result of shows){
-        if (result.show.image) {
-            const img = document.createElement('IMG');
-            // img.src = res.data[0].show.image.medium;
-            img.src = result.show.image.medium;
-            imgContainer.append(img)
-        }
-    }
-}
+	for (let result of shows) {
+		if (result.show.image) {
+			const img = document.createElement('IMG');
+			// img.src = res.data[0].show.image.medium;
+			img.src = result.show.image.medium;
+			imgContainer.append(img);
+		}
+	}
+};
 
-                                    //PROTOTYPES
+//PROTOTYPES
 String.prototype.yell = function () {
-    console.log(this.toUpperCase());
-}
+	console.log(this.toUpperCase());
+};
 
-                                    //OBJECT ORIENTED PROGRAMMING
+//OBJECT ORIENTED PROGRAMMING
 function hex(r, g, b) {
-    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+	return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
-function rgb (r,g,b) {
-    return `rgb(${r}, ${g}, ${b})`
+function rgb(r, g, b) {
+	return `rgb(${r}, ${g}, ${b})`;
 }
 
 // hex(235, 18, 18);
 // "#eb1212"
 // "rgb(235, 18, 18)"
 
-                            //Factory Functions
-function makeColor (r, g, b) {          //this function makes an object   
-    const color = {};                   //empty object created
-    color.r = r;                        //properties added
-    color.g = g;                        //properties added
-    color.b = b;                        //properties added
-    color.rgb = function() {            //this is a method = functions in an object
-        const {r, g, b} = this;
-        return `rgb(${r}, ${g}, ${b})`;
-    };
-    color.hex = function() {            //this is a method = functions in an object
-        const {r, g, b} = this;
-        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    }
-    return color;                       //return the object
+//Factory Functions
+function makeColor(r, g, b) {
+	//this function makes an object
+	const color = {}; //empty object created
+	color.r = r; //properties added
+	color.g = g; //properties added
+	color.b = b; //properties added
+	color.rgb = function () {
+		//this is a method = functions in an object
+		const { r, g, b } = this;
+		return `rgb(${r}, ${g}, ${b})`;
+	};
+	color.hex = function () {
+		//this is a method = functions in an object
+		const { r, g, b } = this;
+		return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+	};
+	return color; //return the object
 }
 const firstColor = makeColor(35, 255, 150);
 
-                            //Constructor Functions
+//Constructor Functions
 // // const black = makeColor(0, 0 ,0);
 // // black.rgb();//"rgb(0, 0, 0")"
 // // black.hex();//"#000000"
 
 // function Color(r, g, b) {
 //     const object = {}
-//     
+//
 //     return object;
 // }
 // Color(35, 60, 190);
@@ -1284,58 +1291,78 @@ const firstColor = makeColor(35, 255, 150);
 // //rgb() & hex() defined on 'Prototype' object
 // const color2 = new Color(0, 0, 50);
 
-                                //Javascript Classes
-class Color {                                   //this function will run whenever you instantiate a 'new' instance of the class
-    constructor(r, g, b, name) {
-        this.r = r;                             //'this' refers to the individual object
-        this.g = g;                             //assigning properties to each color
-        this.b = b;                             //not the 'prototype' but the color
-        this.name = name;
-    }
-    innerRGB() {                                //method added to prototype
-        const {r, g, b} = this;
-        return `${r}, ${g}, ${b}`;
-    }
-    rgb(){                                      //method added to prototype
-        return `rgb(${this.innerRGB()})`;
-    }
-    rgba(a = 1.0) {                             //method added to prototype
-        return `rgba(${this.innerRGB()}, ${a})`;
-    }
-    hex() {                                     //method added to prototype
-        const {r, g, b} = this;
-        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    }
+//Javascript Classes
+class Color {
+	//this function will run whenever you instantiate a 'new' instance of the class
+	constructor(r, g, b, name) {
+		this.r = r; //'this' refers to the individual object
+		this.g = g; //assigning properties to each color
+		this.b = b; //not the 'prototype' but the color
+		this.name = name;
+	}
+	innerRGB() {
+		//method added to prototype
+		const { r, g, b } = this;
+		return `${r}, ${g}, ${b}`;
+	}
+	rgb() {
+		//method added to prototype
+		return `rgb(${this.innerRGB()})`;
+	}
+	rgba(a = 1.0) {
+		//method added to prototype
+		return `rgba(${this.innerRGB()}, ${a})`;
+	}
+	hex() {
+		//method added to prototype
+		const { r, g, b } = this;
+		return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+	}
 }
 const blue = new Color(35, 60, 190, 'blue');
 const white = new Color(255, 255, 255, 'white');
 
 //EXTENDS and SUPER KEYWORDS
 class Pet {
-    constructor(name, age) {
-        console.log('in Pet constructor')
-        this.name = name;
-        this.age = age;
-    }
-    wants() {
-        return `${this.name} wants to be pet`
-    }
+	constructor(name, age) {
+		console.log('in Pet constructor');
+		this.name = name;
+		this.age = age;
+	}
+	wants() {
+		return `${this.name} wants to be pet`;
+	}
 }
-class Cat extends Pet{
-    constructor(name, age, livesLeft = 9){
-        console.log('in Cat constructor')
-        super(name, age);
-        this.livesLeft = livesLeft;
-    }
-    meow() {
-        return 'meow';
-    }
+class Cat extends Pet {
+	constructor(name, age, livesLeft = 9) {
+		console.log('in Cat constructor');
+		super(name, age);
+		this.livesLeft = livesLeft;
+	}
+	meow() {
+		return 'meow';
+	}
 }
-class Dog extends Pet{
-    barks() {
-        return 'woof!';
-    }
-
+class Dog extends Pet {
+	barks() {
+		return 'woof!';
+	}
 }
 
+var twoSum = function (nums, target) {
+	for (let i = 0; i < nums.length; i++) {
+		let number1 = nums[i];
+		for (let j = 0; j < nums.length; j++) {
+			if (i == j) {
+				continue;
+			}
+			let number2 = nums[j];
+			if (number1 + number2 == target) {
+				return true;
+			}
+		}
+	}
+};
 
+nums = [2, 7, 11, 15];
+target = 9;
