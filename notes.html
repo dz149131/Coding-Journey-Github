@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="flex-shrink-0 p-3 bg-white" style="width: 280px">
+			<a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+				<span class="fs-5 fw-semibold">Home</span>
+			</a>
+			<ul class="list-unstyled ps-0">
+				<li class="mb-1" id="projects">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#projects-collapse"
+						aria-expanded="false"
+					>
+						Projects
+					</button>
+					<div class="collapse" id="projects-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#todolist-project">ToDoList Project</a></li>
+							<li><a href="#scorekeeper">ScoreKeeper</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="basic-building-blocks">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#basic-building-blocks-collapse"
+						aria-expanded="false"
+					>
+						Basic Building Blocks
+					</button>
+					<div class="collapse" id="basic-building-blocks-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#declaring_variables">Declaring Variables</a></li>
+							<li><a href="#math">Math</a></li>
+							<li><a href="#number">Number</a></li>
+							<li><a href="#boolean_comparasion_operators">Boolean/Comparasion Operators</a></li>
+							<li><a href="#null">Null</a></li>
+							<li><a href="#undefined">Undefined</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="strings">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#strings-collapse"
+						aria-expanded="false"
+					>
+						Strings
+					</button>
+					<div class="collapse" id="strings-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#string">String</a></li>
+							<li><a href="#string-template-literals">String Template Literals</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="conditional-statements">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#conditional_statements-collapse"
+						aria-expanded="false"
+					>
+						Conditional Statements
+					</button>
+					<div class="collapse" id="conditional_statements-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#if">If</a></li>
+							<li><a href="#else_if">Else if</a></li>
+							<li><a href="#else">Else</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="combining-expressions">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#combining-expressions-collapse"
+						aria-expanded="false"
+					>
+						Combining Expressions
+					</button>
+					<div class="collapse" id="combining-expressions-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#&&_logical_and">Logical And (&&)</a></li>
+							<li><a href="#||_logical_or">Logical Or (||)</a></li>
+							<li><a href="#logical&&_+_logical ||">Logical (&&) and Logical (||)</a></li>
+							<li><a href="#!_logical_not">Logical Not (!)</a></li>
+							<li><a href="#switch">Switch</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="arrays">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#arrays-collapse"
+						aria-expanded="false"
+					>
+						Arrays
+					</button>
+					<div class="collapse" id="arrays-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#push">Push</a></li>
+							<li><a href="#pop">Pop</a></li>
+							<li><a href="#shift">Shift</a></li>
+							<li><a href="#unshift">Unshift</a></li>
+							<li><a href="#concat">Concat</a></li>
+							<li><a href="#indexOf">IndexOf</a></li>
+							<li><a href="#includes">Includes</a></li>
+							<li><a href="#reverse">Reverse</a></li>
+							<li><a href="#slice">Slice</a></li>
+							<li><a href="#splice">Splice</a></li>
+							<li><a href="#sort">Sort</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="objects">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#objects-collapse"
+						aria-expanded="false"
+					>
+						Objects
+					</button>
+					<div class="collapse" id="objects-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#accessing_objects">Accessing Objects</a></li>
+							<li><a href="#modifying_objects">Modifying Objects</a></li>
+							<li><a href="#nesting_array_and_objects">Nesting Arrays and Objects</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="loops">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#loops-collapse"
+						aria-expanded="false"
+					>
+						Loops
+					</button>
+					<div class="collapse" id="loops-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#for_loop">for loop</a></li>
+							<li><a href="#while_loop_and_break">while loop and break</a></li>
+							<li><a href="#guessing_game_practice">guessing game project</a></li>
+							<li><a href="#for...of_loop_iterating_objects/arrays">for...of loop iterating objects/arrays</a></li>
+							<li><a href="#for..in_loop">for...in loop</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="functions">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#functions-collapse"
+						aria-expanded="false"
+					>
+						Functions
+					</button>
+					<div class="collapse" id="functions-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#function">Function</a></li>
+							<li><a href="#arguments">Arguments</a></li>
+							<li><a href="#return">Return</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="exercises">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#exercises-collapse"
+						aria-expanded="false"
+					>
+						Exercises
+					</button>
+					<div class="collapse" id="exercises-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="scopes">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#scopes-collapse"
+						aria-expanded="false"
+					>
+						Scopes
+					</button>
+					<div class="collapse" id="scopes-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#function_scope">Function Scope</a></li>
+							<li><a href="#block_scope">Block Scope</a></li>
+							<li><a href="#lexical_scope">Lexical Scope</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="functions-lvl-2">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#functions-lvl-2-collapse"
+						aria-expanded="false"
+					>
+						Functions Lvl 2
+					</button>
+					<div class="collapse" id="functions-lvl-2-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#function_expression">Function Expression</a></li>
+							<li><a href="#functions_as_arguments">Functions As Arguments</a></li>
+							<li><a href="#returing_functions">Returning Functions</a></li>
+							<li><a href="#methods">Methods</a></li>
+							<li><a href="#this">This</a></li>
+							<li><a href="#try...catch">Try...Catch</a></li>
+							<li><a href="#forEach">forEach</a></li>
+							<li><a href="#map">Map</a></li>
+							<li><a href="#arrow_functions">Arrow Functions</a></li>
+							<li><a href="#setTimeout_setInterval">setTimeout/setInterval</a></li>
+							<li><a href="#find">Find</a></li>
+							<li><a href="#filter">Filter</a></li>
+							<li><a href="#some_and_every_methods">Some / Every</a></li>
+							<li><a href="#reduce">Reduce</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="javascript-features">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#javascript-features-collapse"
+						aria-expanded="false"
+					>
+						Javascript Features
+					</button>
+					<div class="collapse" id="javascript-features-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#parameters">Parameters</a></li>
+							<li><a href="#spread">Spread</a></li>
+							<li><a href="#destructuring">Destructuring</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="dom">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#dom-collapse"
+						aria-expanded="false"
+					>
+						DOM
+					</button>
+					<div class="collapse" id="dom-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#element">Element</a></li>
+							<li><a href="#getElementById">getElementById</a></li>
+							<li><a href="#getElementsByTagName">getElementsByTagName</a></li>
+							<li><a href="#getElementsByClassName">getElementsByClassName</a></li>
+							<li><a href="#querySelector">querySelector</a></li>
+							<li><a href="#querySelectorAll">querySelectorAll</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="dom-lvl-2">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#dom-lvl-2-collapse"
+						aria-expanded="false"
+					>
+						Dom Lvl 2
+					</button>
+					<div class="collapse" id="dom-lvl-2-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li>
+								<a href="#events">Events</a>
+								<ul>
+									<li><a href="#inline_events">inline events</a></li>
+									<li><a href="#onclick">onclick</a></li>
+									<li><a href="#addEventListener">addEventListener</a></li>
+								</ul>
+							</li>
+							<li><a href="#random_color_exercise">Random Color Exercise</a></li>
+							<li><a href="#this_&_events">This & Events</a></li>
+							<li>
+								<a href="#keyboard_events">Keyboard Events</a>
+								<ul>
+									<li><a href="#keyboard_event">Keyboard Event</a></li>
+									<li><a href="#keyup_keydown">keyup & keydown</a></li>
+									<li><a href="#keyboardEvent.key">keyboardEvent.key</a></li>
+									<li><a href="#keyboardEvent.code">keyboardEvent.code</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="async-javascript">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#async-javascript-collapse"
+						aria-expanded="false"
+					>
+						Async Javascript
+					</button>
+					<div class="collapse" id="async-javascript-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#the_call_stack">The Call Stack</a></li>
+							<li><a href="#callbacks">Callbacks</a></li>
+							<li>
+								<a href="#promises">Promises</a>
+								<ul>
+									<li><a href="#.then">.then</a></li>
+									<li><a href="#.catch">.catch</a></li>
+									<li><a href="#.resolve">.resolve</a></li>
+									<li><a href="#.reject">.reject</a></li>
+									<li><a href="#aynsc">async</a></li>
+									<li><a href="#await">await</a></li>
+									<li><a href="#error_async_functions">Errors in Async Functions</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="ajax-and-apis">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#ajax-and-apis-collapse"
+						aria-expanded="false"
+					>
+						Ajax and Apis
+					</button>
+					<div class="collapse" id="ajax-and-apis-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#Ajax">Ajax</a></li>
+							<li><a href="#APIs">APIs</a></li>
+							<li>
+								<a href="#JSON">JSON</a>
+								<ul>
+									<li><a href="#json.parse">json.parse</a></li>
+									<li><a href="#json.stringify">json.stringify</a></li>
+								</ul>
+							</li>
+							<li><a href="#http_verbs">HTTP Verbs</a></li>
+							<li><a href="#status_code">Status Codes</a></li>
+							<li><a href="#fetchAPI">Fetch API</a></li>
+							<li>
+								<a href="#axios">Axios</a>
+								<ul>
+									<li><a href="#dadJoke">Dad Joke Button</a></li>
+								</ul>
+							</li>
+							<li><a href="#tv_show_search">TV Show Search</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="mb-1" id="prototypes-classes-and-oop">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#prototypes-classes-and-oop-collapse"
+						aria-expanded="false"
+					>
+						Prototypes Classes and OOP
+					</button>
+					<div class="collapse" id="prototypes-classes-and-oop-collapse" style="">
+						<ul class="btn-toggle-nav fw-normal pb-1 ps-5 small">
+							<li><a href="#prototypes">Prototypes</a></li>
+							<li>
+								<a href="#object_oriented_programming">Object Oriented Programming(OOP)</a>
+								<ul>
+									<li><a href="OOP">OOP</a></li>
+									<li><a href="#factory_function">Factory Functions</a></li>
+									<li>
+										<a href="#constructor_functions">Constructor Functions</a>
+										<ul>
+											<li><a href="#new">New</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#javascript_classes">Javascript Classes</a>
+								<ul>
+									<li><a href="#constructor">Constructor</a></li>
+									<li><a href="#extends">Extends</a></li>
+									<li><a href="#super">Super</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="border-top my-3"></li>
+				<li class="mb-1">
+					<button
+						class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse"
+						data-bs-target="#account-collapse"
+						aria-expanded="false"
+					>
+						Account
+					</button>
+					<div class="collapse" id="account-collapse">
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><a href="#" class="link-dark rounded">New...</a></li>
+							<li><a href="#" class="link-dark rounded">Profile</a></li>
+							<li><a href="#" class="link-dark rounded">Settings</a></li>
+							<li><a href="#" class="link-dark rounded">Sign out</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+			integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+			integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
