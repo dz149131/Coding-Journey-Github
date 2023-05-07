@@ -57,5 +57,9 @@
 		"velit",
 		"voluptatibus"
 	],
-	"cSpell.ignoreWords": ["CLOUDINATY", "cloudinary"]
+	"cSpell.ignoreWords": ["CLOUDINATY", "cloudinary"],
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8"
+	},
+	"python.formatting.provider": "none"
 }
