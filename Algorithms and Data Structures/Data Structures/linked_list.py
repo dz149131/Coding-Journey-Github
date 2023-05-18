@@ -26,8 +26,8 @@ class LinkedList:
 
     def size(self):
         """
-        Returns the number of nodes in t he list
-        Takes 0(m) time
+        Returns the number of nodes in the list
+        Takes 0(n) time
         """
 
         current = self.head
