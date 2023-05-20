@@ -14,6 +14,16 @@
   - [Static array usage example:](#static-array-usage-example)
   - [Dynamic Array implementation details:](#dynamic-array-implementation-details)
   - [Code Implementation:](#code-implementation)
+- [Singly and Doubly Linked Lists](#singly-and-doubly-linked-lists)
+  - [What is a linked list?:](#what-is-a-linked-list)
+  - [Where are linked lists used:](#where-are-linked-lists-used)
+  - [Terminology:](#terminology)
+  - [Singly Linked vs. Doubly Linked:](#singly-linked-vs-doubly-linked)
+  - [Implementation Details:](#implementation-details)
+    - [How to insert new elements:](#how-to-insert-new-elements)
+    - [How to remove elements:](#how-to-remove-elements)
+  - [Complexity analysis:](#complexity-analysis)
+  - [Code Implementation (Double linked list):](#code-implementation-double-linked-list)
 
 # Big-O Notation
 
@@ -405,4 +415,71 @@ class DynamicArray {
 
 ---
 
-[Link to more info in this readme.md](readme.md)
+# Singly and Doubly Linked Lists
+
+## What is a linked list?:
+
+- A linked list is a sequential list of nodes that hold data which point to other nodes also containing data
+
+```js
+Head -> Node1 -> Node2 -> Node3 -> ... -> Tail -> null
+//In a linked list, each node contains two components: data and a pointer to the next node in the list.
+//The Head represents the starting point or the first node of the linked list, while the Tail represents the end or the last node of the linked list.
+//The arrow (->) indicates the direction of traversal from one node to the next.
+```
+
+---
+
+## Where are linked lists used:
+
+1. Used in many List, Queue & Stack implementations.
+2. Great for creating circular lists.
+3. Can easily model real world objects such as trains.
+4. Use in separate chaining, which is present certain Hashtable implementations to deal with hashing collisions.
+5. Often used in the implementation of adjacency lists for graphs
+
+---
+
+## Terminology:
+
+- **Head:** The first node in a linked list
+- **Tail:** The last node in a linked list
+- **Pointer:** Reference to another node
+- **Node:** An object containing data and pointer(s)
+  ![Linked List](linked-listPNG.PNG)
+
+---
+
+## Singly Linked vs. Doubly Linked:
+
+- Singly linked list only hold a reference to the next node. In the implementation you always maintain a reference to the **head** to the linked list and a reference to the **tail** node for quick additions/removals
+  ![Singly Linked List](singly-linked-list.PNG)
+- A doubly linked list each node holds a reference to the next and previous node. In The implementation you always maintain a reference to the **head** and the **tail** of the doubly linked list to do quick additions/removals from both ends of your list
+  ![Doubly Linked List](doubly-linked-list.PNG)
+
+  |     Lists     |                   Pros                    |     |                  Cons                  |
+  | :-----------: | :---------------------------------------: | --- | :------------------------------------: |
+  | Singly Linked | Uses Less memory & Simpler implementation |     | Cannot easily access previous elements |
+  | Doubly Linked |        Can be traversed backwards         |     |            Takes 2x memory             |
+
+---
+
+## Implementation Details:
+
+### How to insert new elements:
+
+---
+
+### How to remove elements:
+
+---
+
+## Complexity analysis:
+
+---
+
+## Code Implementation (Double linked list):
+
+---
+
+<!-- [Link to more info in this readme.md](readme.md) -->
