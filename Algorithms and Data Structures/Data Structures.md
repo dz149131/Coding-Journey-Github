@@ -277,6 +277,132 @@ array = [34, -7, 34];
 
 ## Code Implementation:
 
+```js
+class DynamicArray {
+	constructor(capacity = 16) {
+		if (capacity < 0) throw new Error('Illegal Capacity: ' + capacity);
+		this.arr = new Array(capacity);
+		this.len = 0;
+		this.capacity = capacity;
+	}
+	// The 'size' method returns the current number of elements in the array.
+	size() {
+		return this.len;
+	}
+	// The 'isEmpty' method checks if the array is empty by checking if the size is zero.
+	isEmpty() {
+		return this.size() === 0;
+	}
+	// The 'get' method returns the element at a specific index in the array.
+	get(index) {
+		return this.arr[index];
+	}
+	// The 'set' method sets the element at a specific index in the array.
+	set(index, elem) {
+		this.arr[index] = elem;
+	}
+	// The 'clear' method removes all elements from the array by setting them to null.
+	clear() {
+		for (let i = 0; i < this.len; i++) {
+			this.arr[i] = null;
+		}
+		this.len = 0;
+	}
+	// The 'add' method adds an element to the array. If the array is already full, it doubles the capacity by creating a new array and copying the existing elements into it.
+	add(elem) {
+		if (this.len + 1 >= this.capacity) {
+			if (this.capacity === 0) {
+				this.capacity = 1;
+			} else {
+				this.capacity *= 2;
+			}
+			const new_arr = new Array(this.capacity);
+			for (let i = 0; i < this.len; i++) {
+				new_arr[i] = this.arr[i];
+			}
+			this.arr = new_arr;
+		}
+		this.arr[this.len++] = elem;
+	}
+	// The 'removeAt' method removes an element at a specified index from the array. It shifts the remaining elements to fill the gap.
+	removeAt(rm_index) {
+		if (rm_index >= this.len || rm_index < 0) throw new Error('IndexOutOfBoundsException');
+		const data = this.arr[rm_index];
+		const new_arr = new Array(this.len - 1);
+		for (let i = 0, j = 0; i < this.len; i++, j++) {
+			if (i === rm_index) {
+				j--; // Skip over rm_index by fixing j temporarily
+			} else {
+				new_arr[j] = this.arr[i];
+			}
+		}
+		this.arr = new_arr;
+		this.capacity = --this.len;
+		return data;
+	}
+	// The 'remove' method removes the first occurrence of a specified object from the array by finding its index and calling removeAt method.
+	remove(obj) {
+		const index = this.indexOf(obj);
+		if (index === -1) return false;
+		this.removeAt(index);
+		return true;
+	}
+	// The 'indexOf' method returns the index of the first occurrence of a specified object in the array. It compares the objects using the equals method (if available) or strict equality (===).
+	indexOf(obj) {
+		for (let i = 0; i < this.len; i++) {
+			if (obj === null) {
+				if (this.arr[i] === null) return i;
+			} else {
+				if (obj.equals(this.arr[i])) return i;
+			}
+		}
+		return -1;
+	}
+	// The 'contains' method checks if the array contains a specified object by calling the 'indexOf' method and checking if the returned index is not -1.
+	contains(obj) {
+		return this.indexOf(obj) !== -1;
+	}
+	// This code defines a special method called [Symbol.iterator] using the * symbol, indicating that it's a generator function. It allows us to create an iterator for an object. In simpler terms, it enables us to loop over the object and retrieve its values one by one.
+
+	// Inside the iterator function:
+
+	// It initializes a variable called index to 0.
+	// It enters a while loop that continues as long as index is less than the length of the array.
+	// In each iteration, it uses the yield keyword to pause the execution and return the value at the current index of the array (this.arr[index]).
+	// After yielding the value, it increments index by 1 to move to the next element in the array.
+	// This process repeats until it has yielded all the values in the array.
+	*[Symbol.iterator]() {
+		let index = 0;
+		while (index < this.len) {
+			yield this.arr[index];
+			index++;
+		}
+	}
+	// This code defines a toString method, which is a common method available in many JavaScript objects. It converts the object to a string representation.
+
+	// Inside the toString method:
+
+	// It first checks if the length of the array (this.len) is equal to 0. If so, it returns an empty string ("[]").
+	// If the length is not 0, it proceeds to create a string representation of the array.
+	// It initializes a variable called result to "[" to denote the beginning of the array.
+	// Then, it enters a for loop that iterates over the array from the first element to the second-to-last element (i < this.len - 1).
+	// In each iteration, it appends the value at the current index (this.arr[i]) followed by a comma and a space to the result string.
+	// After the loop, it appends the last element of the array (this.arr[this.len - 1]) followed by "]" to close the array.
+	// Finally, it returns the resulting string representation of the array.
+	toString() {
+		if (this.len === 0) return '[]';
+		else {
+			let result = '[';
+			for (let i = 0; i < this.len - 1; i++) {
+				result += this.arr[i] + ', ';
+			}
+			result += this.arr[this.len - 1] + ']';
+			return result;
+		}
+	}
+}
+```
+
 ---
 
 [Link to more info in this readme.md](readme.md)
