@@ -21,7 +21,11 @@
   - [Singly Linked vs. Doubly Linked:](#singly-linked-vs-doubly-linked)
   - [Implementation Details:](#implementation-details)
     - [How to insert new elements:](#how-to-insert-new-elements)
+      - [Singly Linked List:](#singly-linked-list)
+      - [Doubly Linked List:](#doubly-linked-list)
     - [How to remove elements:](#how-to-remove-elements)
+      - [Singly Linked List](#singly-linked-list-1)
+      - [Doubly Linked List](#doubly-linked-list-1)
   - [Complexity analysis:](#complexity-analysis)
   - [Code Implementation (Double linked list):](#code-implementation-double-linked-list)
 
@@ -468,9 +472,34 @@ Head -> Node1 -> Node2 -> Node3 -> ... -> Tail -> null
 
 ### How to insert new elements:
 
+#### Singly Linked List:
+
+> ![Singly Linked List](insert-SLL.PNG)
+>
+> 1. Create new pointer (points to head)
+> 2. Seek ahead (23)
+> 3. Create new node (11)
+> 4. New node point to (7)
+> 5. Node (23) points to new node (11)
+
+#### Doubly Linked List:
+
+> ![Doubly Linked List](insert-DLL.PNG)
+>
+> 1. Create traverser pointer (points to head)
+> 2. Advance just before insertion position (23)
+> 3. Create new node (11)
+> 4. New node pointer to (7)
+> 5. New node (7) pointer to (23)
+> 6. (23) pointer to (11)
+
 ---
 
 ### How to remove elements:
+
+#### Singly Linked List
+
+#### Doubly Linked List
 
 ---
 
