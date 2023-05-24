@@ -27,7 +27,14 @@
       - [Singly Linked List](#singly-linked-list-1)
       - [Doubly Linked List](#doubly-linked-list-1)
   - [Complexity analysis:](#complexity-analysis)
-  - [Code Implementation (Double linked list):](#code-implementation-double-linked-list)
+  - [Basic Operations (Double linked list):](#basic-operations-double-linked-list)
+    - [1. The pointers are represented using **this.next** and **this.previous** for each node.](#1-the-pointers-are-represented-using-thisnext-and-thisprevious-for-each-node)
+    - [2. Both **head** and **tail** are pointing to the first node.](#2-both-head-and-tail-are-pointing-to-the-first-node)
+    - [3. **Prepend** adding a node at the start of the linked list.](#3-prepend-adding-a-node-at-the-start-of-the-linked-list)
+    - [4. **Append** adding a node at the end of the linked list.](#4-append-adding-a-node-at-the-end-of-the-linked-list)
+    - [5. **Insert** insert a node at a given index.](#5-insert-insert-a-node-at-a-given-index)
+    - [6. **Remove** delete a node at a given index.](#6-remove-delete-a-node-at-a-given-index)
+  - [Code Implementation:](#code-implementation-1)
 
 # Big-O Notation
 
@@ -499,16 +506,335 @@ Head -> Node1 -> Node2 -> Node3 -> ... -> Tail -> null
 
 #### Singly Linked List
 
+> ![remove-SLL](remove-SLL.PNG)
+>
+> 1. Create 2 pointers trav1 points to head trav2 points to heads next node
+> 2. Advance trav2 until we find node to remove while also advancing trav1
+> 3. Create another pointer for node to remove
+> 4. Advance trav2 to next node
+> 5. Set trav1's next pointer equal to trav2
+
 #### Doubly Linked List
 
----
+> ## ![remove-DLL](remove-DLL.PNG)
+>
+> 1. Create traverser point on head
+> 2. Seek until desired node is pointed at
+> 3. Remove (9) by setting (4)'s pointer = to (15) [vise versa]
 
 ## Complexity analysis:
 
+|                | Singly Linked |     | Doubly Linked |
+| :------------: | :-----------: | --- | :-----------: |
+|     Search     |    $0(n)$     |     |    $0(n)$     |
+| Insert at head |    $0(1)$     |     |    $0(1)$     |
+| Insert at tail |    $0(1)$     |     |    $0(1)$     |
+
+|                  | Singly Linked |     | Doubly Linked |
+| :--------------: | :-----------: | --- | :-----------: |
+|  Remove at head  |    $0(1)$     |     |    $0(1)$     |
+|  Remove at tail  |    $0(n)$     |     |    $0(1)$     |
+| Remove at middle |    $0(n)$     |     |    $0(n)$     |
+
 ---
 
-## Code Implementation (Double linked list):
+## Basic Operations (Double linked list):
+
+### 1. The pointers are represented using **this.next** and **this.previous** for each node.
+
+```js
+//defines a Node class for a doubly linked list
+class Node {
+	constructor(value) {
+		this.value = value;
+		this.previous = null;
+		this.next = null;
+	}
+}
+```
+
+### 2. Both **head** and **tail** are pointing to the first node.
+
+```js
+const morningRoutine = {
+	value: 'Drink Water',
+	previous: null,
+	next: null,
+};
+```
+
+### 3. **Prepend** adding a node at the start of the linked list.
+
+- Create a new node **Make Bed**. The **previous** and **next** pointers will be pointer to **null** for now.
+- The **this.head** will point to the new node.
+- No change for **this.tail**. It will point to the current node that is **Drink Water**.
+- The pointer **next** for the new node will point to the node **Drink Water**.
+- The pointer previous for the node **Drink Water** will point to the new node.
+
+![DLL prepend](Pictures/DoublyLinkedList/prependDLL.png)
+
+```js
+prepend('Make Bed');
+
+const morningRoutine = {
+	value: 'Make Bed',
+	previous: null,
+	next: {
+		value: 'Drink Water',
+		previous: '<REFERENCE TO NODE MAKE BED>',
+		next: null,
+	},
+};
+```
+
+### 4. **Append** adding a node at the end of the linked list.
+
+This is the straightforward operation where we change the reference for **this.tail**, **previous**, and **next** for the nodes. The time complexity for this operation is O(1).
+
+- Create a new node **Brush Teeth**.
+- The **this.tail** will point to the new node.
+- The pointer **next** for the node **Drink Water** will point to the new node Brush Teeth.
+- The pointer **previous** of the new node will point to the previous node **Drink Water**.
+
+![DLL append](Pictures/DoublyLinkedList/appendDLL.png)
+
+```js
+append('Brush Teeth');
+
+const morningRoutine = {
+	value: 'Make Bed',
+	previous: null,
+	next: {
+		value: 'Drink Water',
+		previous: '<REFERENCE TO NODE MAKE BED>',
+		next: {
+			value: 'Brush Teeth',
+			previous: '<REFERENCE TO NODE DRINK WATER>',
+			next: null,
+		},
+	},
+};
+```
+
+### 5. **Insert** insert a node at a given index.
+
+- Create a new node **Drink Lemon Water**.
+- Traverse to the index 2 and keep the reference for the node **Drink Water** and **Brush Teeth**.
+- Point **next** of the **Drink Water** node to the new node.
+- Point **previous** of the new node back to the node **Drink Water**.
+- Point **next** of the new node to the node Brush Teeth.
+- Point **previous** of the node **Brush Teeth** to the new node.
+
+![DLL insert](Pictures/DoublyLinkedList/insertDLL.png)
+
+```js
+insert('Drink Lemon Water', 2);
+
+const morningRoutine = {
+	value: 'Make Bed',
+	previous: null,
+	next: {
+		value: 'Drink Water',
+		previous: '<REFERENCE TO THE NODE MAKE BED>',
+		next: {
+			value: 'Drink Lemon Water',
+			previous: '<REFERENCE TO THE NODE DRINK WATER>',
+			next: {
+				value: 'Brush Teeth',
+				previous: '<REFERENCE TO THE NODE DRINK LEMON WATER>',
+				next: null,
+			},
+		},
+	},
+};
+```
+
+### 6. **Remove** delete a node at a given index.
+
+- Traverse to the node that is before the node to be deleted - **previousNode**.
+- Identify the node after the node to be deleted - **nextNode**.
+- Point the **next** pointer of the node **previousNode** to the nextNode node.
+- Point the **previous** pointer of the node **previousNode** to the **previousNode**.
+
+![Dll delete](Pictures/DoublyLinkedList/deleteDLL.png)
+
+```js
+delete ('Drink Water', 1);
+
+const morningRoutine = {
+	value: 'Make Bed',
+	previous: null,
+	next: {
+		value: 'Drink Lemon Water',
+		previous: `<REFERENCE TO NODE MAKE BED>`,
+		next: {
+			value: 'Brush Teeth',
+			previous: `<REFERENCE TO NODE DRINK LEMON WATER>`,
+			next: null,
+		},
+	},
+};
+```
 
 ---
+
+## Code Implementation:
+
+```js
+class Node {
+	constructor(value) {
+		this.value = value;
+		this.next = null;
+		this.previous = null;
+	}
+}
+
+class DoublyLinkedList {
+	constructor(value) {
+		this.head = {
+			value: value,
+			next: null,
+			previous: null,
+		};
+		this.length = 1;
+		this.tail = this.head;
+	}
+
+	printList() {
+		let array = [];
+		let currentList = this.head;
+		while (currentList !== null) {
+			array.push(currentList.value);
+			currentList = currentList.next;
+		}
+
+		console.log(array.join(' <--> '));
+		return this;
+	}
+
+	// Insert node at end of the list
+	append(value) {
+		let newNode = new Node(value);
+
+		this.tail.next = newNode;
+		newNode.previous = this.tail;
+		this.tail = newNode;
+
+		this.length++;
+		this.printList();
+	}
+
+	// Insert node at the start of the list
+	prepend(value) {
+		let newNode = new Node(value);
+
+		newNode.next = this.head;
+		this.head.previous = newNode;
+		this.head = newNode;
+
+		this.length++;
+		this.printList();
+	}
+
+	// Insert node at a given index
+	insert(index, value) {
+		if (!Number.isInteger(index) || index < 0 || index > this.length + 1) {
+			console.log(`Invalid index. Current length is ${this.length}.`);
+			return this;
+		}
+
+		// If index is 0, prepend
+		if (index === 0) {
+			this.prepend(value);
+			return this;
+		}
+
+		// If index is equal to this.length, append
+		if (index === this.length) {
+			this.append(value);
+			return this;
+		}
+
+		// Reach the node at that index
+		let newNode = new Node(value);
+		let previousNode = this.head;
+
+		for (let k = 0; k < index - 1; k++) {
+			previousNode = previousNode.next;
+		}
+
+		let nextNode = previousNode.next;
+
+		newNode.next = nextNode;
+		previousNode.next = newNode;
+		newNode.previous = previousNode;
+		nextNode.previous = newNode;
+
+		this.length++;
+		this.printList();
+	}
+
+	// Remove a node
+	remove(index) {
+		if (!Number.isInteger(index) || index < 0 || index > this.length) {
+			console.log(`Invalid index. Current length is ${this.length}.`);
+			return this;
+		}
+
+		// Remove head
+		if (index === 0) {
+			this.head = this.head.next;
+			this.head.previous = null;
+
+			this.length--;
+			this.printList();
+			return this;
+		}
+
+		// Remove tail
+		if (index === this.length - 1) {
+			this.tail = this.tail.previous;
+			this.tail.next = null;
+
+			this.length--;
+			this.printList();
+			return this;
+		}
+
+		// Remove node at an index
+		let previousNode = this.head;
+
+		for (let k = 0; k < index - 1; k++) {
+			previousNode = previousNode.next;
+		}
+		let deleteNode = previousNode.next;
+		let nextNode = deleteNode.next;
+
+		previousNode.next = nextNode;
+		nextNode.previous = previousNode;
+
+		this.length--;
+		this.printList();
+		return this;
+	}
+}
+
+let myDoublyList = new DoublyLinkedList(10);
+
+myDoublyList.append(5); // 10 <--> 5
+
+myDoublyList.append(16); // 10 <--> 5 <--> 16
+
+myDoublyList.prepend(1); // 1 <--> 10 <--> 5 <--> 16
+
+myDoublyList.insert(2, 99); // 1 <--> 10 <--> 99 <--> 5 <--> 16
+myDoublyList.insert(20, 88); // Invalid index. Current length is 5.
+myDoublyList.insert(5, 80); // 1 <--> 10 <--> 99 <--> 5 <--> 16 <--> 80
+myDoublyList.insert(0, 80); // 80 <--> 1 <--> 10 <--> 99 <--> 5 <--> 16 <--> 80
+
+myDoublyList.remove(0); // 1 <--> 10 <--> 99 <--> 5 <--> 16 <--> 80
+myDoublyList.remove(5); // 1 <--> 10 <--> 99 <--> 5 <--> 16
+myDoublyList.remove(2); // 1 <--> 10 <--> 5 <--> 16
+```
 
 <!-- [Link to more info in this readme.md](readme.md) -->
