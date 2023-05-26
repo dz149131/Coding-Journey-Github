@@ -35,6 +35,12 @@
     - [5. **Insert** insert a node at a given index.](#5-insert-insert-a-node-at-a-given-index)
     - [6. **Remove** delete a node at a given index.](#6-remove-delete-a-node-at-a-given-index)
   - [Code Implementation:](#code-implementation-1)
+- [Stack:](#stack)
+  - [What is a Stack?:](#what-is-a-stack)
+  - [](#)
+  - [When and where is a Stack used?:](#when-and-where-is-a-stack-used)
+  - [Complexity Analysis:](#complexity-analysis-1)
+  - [Code Implementation:](#code-implementation-2)
 
 # Big-O Notation
 
@@ -835,6 +841,101 @@ myDoublyList.insert(0, 80); // 80 <--> 1 <--> 10 <--> 99 <--> 5 <--> 16 <--> 80
 myDoublyList.remove(0); // 1 <--> 10 <--> 99 <--> 5 <--> 16 <--> 80
 myDoublyList.remove(5); // 1 <--> 10 <--> 99 <--> 5 <--> 16
 myDoublyList.remove(2); // 1 <--> 10 <--> 5 <--> 16
+```
+
+---
+
+# Stack:
+
+## What is a Stack?:
+
+> A stack is a one-ended linear data structure which models a real world stack by having two primary operations, namely push and pop.
+
+## ![Stack](stack.PNG)
+
+## When and where is a Stack used?:
+
+1. Used by undo mechanisms in text editors.
+2. Used in complier syntax checking for matching brackets and braces.
+3. Can be used to model a pile of books or plates.
+4. Used behind the scenes to support recursion by keeping track of previous function calls.
+5. Can be used to do a Depth First Search (DFS) on a graph.
+
+---
+
+## Complexity Analysis:
+
+|  Arrays   | Static Array |
+| :-------: | :----------: |
+|  Pushing  |    $O(1)$    |
+|  Popping  |    $O(1)$    |
+|  Peeking  |    $O(1)$    |
+| Searching |    $O(n)$    |
+|   Size    |    $O(1)$    |
+
+---
+
+## Code Implementation:
+
+```js
+class Stack {
+	constructor() {
+		this.items = [];
+	}
+
+	// Push element onto the stack
+	push(element) {
+		this.items.push(element);
+	}
+
+	// Pop element from the stack
+	pop() {
+		if (this.isEmpty()) {
+			return null;
+		}
+		return this.items.pop();
+	}
+
+	// Peek at the top element of the stack
+	peek() {
+		if (this.isEmpty()) {
+			return null;
+		}
+		return this.items[this.items.length - 1];
+	}
+
+	// Check if the stack is empty
+	isEmpty() {
+		return this.items.length === 0;
+	}
+
+	// Get the size of the stack
+	size() {
+		return this.items.length;
+	}
+
+	// Clear the stack
+	clear() {
+		this.items = [];
+	}
+}
+
+const stack = new Stack();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log(stack.peek()); // Output: 30
+console.log(stack.size()); // Output: 3
+
+stack.pop();
+console.log(stack.peek()); // Output: 20
+console.log(stack.size()); // Output: 2
+
+console.log(stack.isEmpty()); // Output: false
+
+stack.clear();
+console.log(stack.isEmpty()); // Output: true
 ```
 
 <!-- [Link to more info in this readme.md](readme.md) -->
