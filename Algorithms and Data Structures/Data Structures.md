@@ -37,10 +37,16 @@
   - [Code Implementation:](#code-implementation-1)
 - [Stack:](#stack)
   - [What is a Stack?:](#what-is-a-stack)
-  - [](#)
   - [When and where is a Stack used?:](#when-and-where-is-a-stack-used)
   - [Complexity Analysis:](#complexity-analysis-1)
   - [Code Implementation:](#code-implementation-2)
+- [Queue:](#queue)
+  - [What is a queue?:](#what-is-a-queue)
+  - [Terminology:](#terminology-1)
+  - [When and where is a queue used?](#when-and-where-is-a-queue-used)
+  - [Complexity Analysis:](#complexity-analysis-2)
+  - [Implementation Details:](#implementation-details-1)
+  - [Code Implementation:](#code-implementation-3)
 
 # Big-O Notation
 
@@ -851,7 +857,7 @@ myDoublyList.remove(2); // 1 <--> 10 <--> 5 <--> 16
 
 > A stack is a one-ended linear data structure which models a real world stack by having two primary operations, namely push and pop.
 
-## ![Stack](stack.PNG)
+![Stack](Pictures/Stack/stack.PNG)
 
 ## When and where is a Stack used?:
 
@@ -865,13 +871,13 @@ myDoublyList.remove(2); // 1 <--> 10 <--> 5 <--> 16
 
 ## Complexity Analysis:
 
-|  Arrays   | Static Array |
-| :-------: | :----------: |
-|  Pushing  |    $O(1)$    |
-|  Popping  |    $O(1)$    |
-|  Peeking  |    $O(1)$    |
-| Searching |    $O(n)$    |
-|   Size    |    $O(1)$    |
+|  Action   |  Time  |
+| :-------: | :----: |
+|  Pushing  | $O(1)$ |
+|  Popping  | $O(1)$ |
+|  Peeking  | $O(1)$ |
+| Searching | $O(n)$ |
+|   Size    | $O(1)$ |
 
 ---
 
@@ -936,6 +942,130 @@ console.log(stack.isEmpty()); // Output: false
 
 stack.clear();
 console.log(stack.isEmpty()); // Output: true
+```
+
+---
+
+# Queue:
+
+## What is a queue?:
+
+> A queue is a linear data structure which models real world queues by having two primary operations, namely enqueue and dequeue.
+
+---
+
+## Terminology:
+
+- **Enqueue** - adds an element to the queue
+- **Dequeue** - removes an element from a queue
+
+---
+
+## When and where is a queue used?
+
+- Any waiting line models a queue, for example a lineup at a movie theatre.
+- Can be used to efficiently keep track of the x most recently added elements.
+- A server responding to requests. First come first serve.
+- Breadth first search (BFS) graph traversal.
+
+---
+
+## Complexity Analysis:
+
+|  Action  |  Time  |
+| :------: | :----: |
+| Enqueue  | $O(1)$ |
+| Dequeue  | $O(1)$ |
+| Peeking  | $O(1)$ |
+| Contains | $O(n)$ |
+| Removal  | $O(n)$ |
+| Is Empty | $O(1)$ |
+
+---
+
+## Implementation Details:
+
+![queue](Pictures/Queue/queue.jpg)
+
+## Code Implementation:
+
+```js
+class Node {
+	constructor(data) {
+		this.data = data;
+	}
+}
+
+class Queue {
+	//The class again consists of a constructor which initializes the object. It also creates an empty array, which is used to create a queue.
+	constructor() {
+		this.elements = [];
+	}
+	//adds the node to the rear of the queue
+	enqueue(node) {
+		this.elements.push(node);
+	}
+	//removes the element from the front of the queue.
+	dequeue() {
+		if (this.elements.length > 0) {
+			return this.elements.shift();
+		} else {
+			return 'Underflow situation';
+		}
+	}
+	//checks whether the queue is empty or not. At the base level, it returns whether the length of the array is 0 or not.
+	isEmpty() {
+		return this.elements.length == 0;
+	}
+	//returns the first element of the queue. It checks whether the elements array's length is greater than 0 and, based on that returns a value
+	front() {
+		if (this.elements.length > 0) {
+			return this.elements[0];
+		} else {
+			return 'The Queue is empty!';
+		}
+	}
+	//returns the elements array.
+	print() {
+		return this.elements;
+	}
+}
+
+const queue = new Queue();
+
+queue.enqueue(new Node({ number: 1 }));
+queue.enqueue(new Node({ number: 2 }));
+queue.enqueue(new Node({ number: 3 }));
+queue.enqueue(new Node({ number: 4 }));
+queue.enqueue(new Node({ number: 5 }));
+
+//Logs: false
+console.log(queue.isEmpty());
+
+/* Logs:
+[
+     Node { data: { number: 1 } },
+     Node { data: { number: 2 } },
+     Node { data: { number: 3 } },
+     Node { data: { number: 4 } },
+     Node { data: { number: 5 } }
+]
+*/
+console.log(queue.print());
+queue.dequeue();
+
+//Logs: false
+console.log(queue.isEmpty());
+queue.dequeue();
+queue.dequeue();
+queue.dequeue();
+queue.dequeue();
+
+//Logs: true
+console.log(queue.isEmpty());
+
+//Logs: []
+console.log(queue.print());
 ```
 
 <!-- [Link to more info in this readme.md](readme.md) -->
