@@ -47,6 +47,13 @@
   - [Complexity Analysis:](#complexity-analysis-2)
   - [Implementation Details:](#implementation-details-1)
   - [Code Implementation:](#code-implementation-3)
+- [Priority Queue:](#priority-queue)
+  - [What is a Priority Queue?:](#what-is-a-priority-queue)
+  - [What is a heap?:](#what-is-a-heap)
+  - [When and where is a PQ used?:](#when-and-where-is-a-pq-used)
+  - [Complexity Analysis:](#complexity-analysis-3)
+  - [Implementation Details:](#implementation-details-2)
+  - [Code Implementation:](#code-implementation-4)
 
 # Big-O Notation
 
@@ -1067,5 +1074,61 @@ console.log(queue.isEmpty());
 //Logs: []
 console.log(queue.print());
 ```
+
+---
+
+# Priority Queue:
+
+## What is a Priority Queue?:
+
+> A priority queue is an Abstract Data Type that operates similar to a normal queue except that **each element has a certain priority.** The priority of the elements in the priority queue determine the order in which elements are removed from the PQ.
+>
+> > NOTE: Priority queues only supports **comparable data**, meaning the data inserted into the priority queue must be able to be ordered in some way either from least to greatest or greatest to least. This is so that we are able to assign relative priorities to each element.
+
+---
+
+## What is a heap?:
+
+> A heap is a **tree** based DS that satisfies the **heap invariant** (also called heap property): If A is a parent node of B then A is ordered with respect to B for all nodes A, B in the heap.
+
+---
+
+## When and where is a PQ used?:
+
+- Used in certain implementations of Dijkstra's Shortest Path algorithm.
+- Anytime you need the dynamically fetch the 'next best' or 'next worst' element.
+- Used in Huffman coding (which is often used for lossless data compression).
+- Best First Search (BFS) algorithms such as A\* use PQs to continuously grab the next most promising node.
+- Used by Minimum Spanning Tree (MST) algorithms.
+
+---
+
+## Complexity Analysis:
+
+|          Action          |    Time     |
+| :----------------------: | :---------: |
+| Binary Heap Construction |   $O(n)$    |
+|         Polling          | $O(log(n))$ |
+|         Peeking          |   $O(1)$    |
+|          Adding          | $O(log(n))$ |
+
+|                     Action                      |    Time     |
+| :---------------------------------------------: | :---------: |
+|                 Naive Removing                  |   $O(n)$    |
+| Advanced removing with help from a hash table\* | $O(log(n))$ |
+|                 Naive contains                  |   $O(n)$    |
+|   Contains check with help of a hash table\*    |   $O(1)$    |
+
+> \* Using a hash table to help optimize these operations does take up linear space and also adds some overhead to the binary heap implementation.
+
+---
+
+## Implementation Details:
+
+---
+
+## Code Implementation:
+
+---
 
 <!-- [Link to more info in this readme.md](readme.md) -->
